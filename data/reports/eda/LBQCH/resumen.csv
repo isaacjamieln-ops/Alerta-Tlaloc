@@ -1,0 +1,15 @@
+,valor
+clave,LBQCH
+desde,1995-01-01
+hasta,2026-10-26
+dias,11622
+volumen_min_Mm3,347.33
+volumen_max_Mm3,3076.61
+volumen_actual_Mm3,777.973
+llenado_actual_pct_NAMO,27.3
+dias_sobre_NAMO_pct,0.92
+dias_bajo_30pct_NAMO_pct,27.72
+dias_con_derrame,57
+dias_lluvia_cero_pct,84.9
+corr_lluvia_vs_cambio_mejor_rezago,k=2 (r=0.31)
+corr_nivel_volumen,0.9809

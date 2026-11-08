@@ -1,0 +1,15 @@
+,valor
+clave,INFMC
+desde,1995-01-01
+hasta,2026-10-26
+dias,11622
+volumen_min_Mm3,1810.44
+volumen_max_Mm3,10440.986
+volumen_actual_Mm3,4623.687
+llenado_actual_pct_NAMO,49.5
+dias_sobre_NAMO_pct,1.97
+dias_bajo_30pct_NAMO_pct,1.22
+dias_con_derrame,2
+dias_lluvia_cero_pct,80.9
+corr_lluvia_vs_cambio_mejor_rezago,k=1 (r=0.27)
+corr_nivel_volumen,0.978

@@ -1,0 +1,10 @@
+clave_sih,nombre_sih,estado,filas_originales,filas_desde_corte,primer_volumen,ultimo_volumen,vol_faltante_pct,dias_calendario_faltantes,fechas_duplicadas
+CCHNL,"Cuchillo Solidaridad, N.L.",Nuevo León,31190,11621,1995-01-01,2026-10-26,0.22,1,0
+CPRNL,"José López Portillo, N.L.",Nuevo León,23463,11621,1995-01-01,2026-10-26,0.0,1,0
+EPLGJ,"El Palote, Gto.",Guanajuato,27682,11618,1995-01-01,2026-10-28,0.11,6,0
+INFMC,"Infiernillo, Mich.",Michoacán de Ocampo,20850,11577,1995-01-01,2026-10-26,0.63,45,0
+LBQCH,"La Boquilla, Chih.",Chihuahua,33113,11622,1995-01-01,2026-10-26,0.0,0,0
+LDCJL,"Lago de Chapala, Jal.",Jalisco,31165,11622,1995-01-01,2026-10-26,0.0,0,0
+PMHSI,"Miguel Hidalgo, Sin.",Sinaloa,26114,11623,1995-01-01,2026-10-27,0.0,0,0
+SLSGJ,"Solís, Gto.",Guanajuato,28272,11622,1995-01-01,2026-10-26,0.01,0,0
+VBRMX,"Valle de Bravo, Méx.",México,17071,11601,1995-01-01,2026-10-26,0.21,21,0

@@ -1,0 +1,15 @@
+,valor
+clave,EPLGJ
+desde,1995-01-01
+hasta,2026-10-28
+dias,11624
+volumen_min_Mm3,0.0
+volumen_max_Mm3,14.671
+volumen_actual_Mm3,6.776
+llenado_actual_pct_NAMO,67.8
+dias_sobre_NAMO_pct,3.08
+dias_bajo_30pct_NAMO_pct,25.05
+dias_con_derrame,688
+dias_lluvia_cero_pct,76.8
+corr_lluvia_vs_cambio_mejor_rezago,k=0 (r=0.45)
+corr_nivel_volumen,0.9751

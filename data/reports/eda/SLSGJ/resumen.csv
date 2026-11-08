@@ -1,0 +1,15 @@
+,valor
+clave,SLSGJ
+desde,1995-01-01
+hasta,2026-10-26
+dias,11622
+volumen_min_Mm3,38.92
+volumen_max_Mm3,985.288
+volumen_actual_Mm3,851.95
+llenado_actual_pct_NAMO,108.5
+dias_sobre_NAMO_pct,16.56
+dias_bajo_30pct_NAMO_pct,5.86
+dias_con_derrame,7
+dias_lluvia_cero_pct,68.9
+corr_lluvia_vs_cambio_mejor_rezago,k=1 (r=0.30)
+corr_nivel_volumen,0.9788

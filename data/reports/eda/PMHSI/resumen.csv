@@ -1,0 +1,15 @@
+,valor
+clave,PMHSI
+desde,1995-01-01
+hasta,2026-10-27
+dias,11623
+volumen_min_Mm3,110.79
+volumen_max_Mm3,3353.12
+volumen_actual_Mm3,1132.835
+llenado_actual_pct_NAMO,33.7
+dias_sobre_NAMO_pct,0.0
+dias_bajo_30pct_NAMO_pct,39.9
+dias_con_derrame,20
+dias_lluvia_cero_pct,86.8
+corr_lluvia_vs_cambio_mejor_rezago,k=1 (r=0.19)
+corr_nivel_volumen,0.9696

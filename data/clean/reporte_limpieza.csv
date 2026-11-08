@@ -1,0 +1,10 @@
+clave_sih,dias_total,dias_ausentes_en_archivo,fechas_duplicadas,huecos_volumen,hueco_volumen_mas_largo_dias,huecos_volumen_rellenados,huecos_volumen_sin_rellenar,dias_volumen_sin_rellenar,dias_con_algo_imputado,lluvia_vacia_sin_tocar,negativos_corregidos,ceros_aislados_corregidos,volumen_sobre_NAME,saltos_diarios_grandes,lluvia_extrema,rupturas_curva_nivel_volumen,saltos_de_un_dia,dias_bajo_NAMINO_pct
+CCHNL,11622,1,0,4,17,2,2,24,183,1,0,0,0,35,0,0,0,3.64
+CPRNL,11622,1,0,1,1,1,0,0,8,1,0,0,0,23,0,0,0,8.94
+EPLGJ,11624,6,0,12,8,11,1,8,101,6,0,0,41,139,0,0,1,4.39
+INFMC,11622,45,0,51,25,47,4,53,813,45,0,0,0,8,1,0,0,0.0
+LBQCH,11622,0,0,0,0,0,0,0,5,0,0,0,0,1,0,0,0,0.0
+LDCJL,11622,0,0,0,0,0,0,0,58,10,0,0,0,0,0,0,0,5.52
+PMHSI,11623,0,0,0,0,0,0,0,61,0,0,0,0,1,0,0,0,16.8
+SLSGJ,11622,0,0,1,1,1,0,0,59,1,0,0,0,4,0,0,0,0.13
+VBRMX,11622,21,0,14,16,11,3,28,591,21,193,0,0,0,0,0,0,0.0

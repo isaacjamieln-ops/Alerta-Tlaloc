@@ -1,0 +1,15 @@
+,valor
+clave,LDCJL
+desde,1995-01-01
+hasta,2026-10-26
+dias,11622
+volumen_min_Mm3,1137.788
+volumen_max_Mm3,6711.15
+volumen_actual_Mm3,5553.085
+llenado_actual_pct_NAMO,68.3
+dias_sobre_NAMO_pct,0.0
+dias_bajo_30pct_NAMO_pct,13.06
+dias_con_derrame,0
+dias_lluvia_cero_pct,75.4
+corr_lluvia_vs_cambio_mejor_rezago,k=3 (r=0.35)
+corr_nivel_volumen,0.9983

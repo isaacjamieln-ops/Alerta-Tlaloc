@@ -1,0 +1,11 @@
+Archivo,Estacion,Nombre,Estado,Registros (>=1995),Faltantes Volumen
+ALMSI.csv,ALMSI,"Adolfo López Mateos, Sin.",Sinaloa,11523,0
+CCHNL.csv,CCHNL,"Cuchillo Solidaridad, N.L.",Nuevo León,11621,0
+CPRNL.csv,CPRNL,"José López Portillo, N.L.",Nuevo León,11621,0
+INFMC.csv,INFMC,"Infiernillo, Mich.",Michoacán de Ocampo,11577,0
+LBQCH.csv,LBQCH,"La Boquilla, Chih.",Chihuahua,11622,0
+LDCJL.csv,LDCJL,"Lago de Chapala, Jal.",Jalisco,11622,0
+PNDMX.csv,PNDMX,"Ñadó, Méx.",México,11313,0
+SLSGJ.csv,SLSGJ,"Solís, Gto.",Guanajuato,11622,0
+VBRMX.csv,VBRMX,"Valle de Bravo, Méx.",México,11601,0
+ZMPHD.csv,ZMPHD,"Ing. Fernando Hiriart Balderrama, Hgo.",Hidalgo,11479,0

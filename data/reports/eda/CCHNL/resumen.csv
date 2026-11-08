@@ -1,0 +1,15 @@
+,valor
+clave,CCHNL
+desde,1995-01-01
+hasta,2026-10-26
+dias,11622
+volumen_min_Mm3,138.57
+volumen_max_Mm3,1765.667
+volumen_actual_Mm3,704.408
+llenado_actual_pct_NAMO,62.7
+dias_sobre_NAMO_pct,17.29
+dias_bajo_30pct_NAMO_pct,20.83
+dias_con_derrame,13
+dias_lluvia_cero_pct,83.9
+corr_lluvia_vs_cambio_mejor_rezago,k=1 (r=0.38)
+corr_nivel_volumen,0.9822

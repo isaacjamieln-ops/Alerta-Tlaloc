@@ -1,0 +1,15 @@
+,valor
+clave,CPRNL
+desde,1995-01-01
+hasta,2026-10-26
+dias,11622
+volumen_min_Mm3,1.369
+volumen_max_Mm3,367.594
+volumen_actual_Mm3,247.632
+llenado_actual_pct_NAMO,82.5
+dias_sobre_NAMO_pct,21.17
+dias_bajo_30pct_NAMO_pct,15.01
+dias_con_derrame,0
+dias_lluvia_cero_pct,78.3
+corr_lluvia_vs_cambio_mejor_rezago,k=1 (r=0.32)
+corr_nivel_volumen,0.9676

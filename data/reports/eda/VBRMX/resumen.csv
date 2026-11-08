@@ -1,0 +1,15 @@
+,valor
+clave,VBRMX
+desde,1995-01-01
+hasta,2026-10-26
+dias,11622
+volumen_min_Mm3,104.246
+volumen_max_Mm3,396.368
+volumen_actual_Mm3,380.886
+llenado_actual_pct_NAMO,96.6
+dias_sobre_NAMO_pct,0.82
+dias_bajo_30pct_NAMO_pct,1.2
+dias_con_derrame,85
+dias_lluvia_cero_pct,67.4
+corr_lluvia_vs_cambio_mejor_rezago,k=0 (r=0.30)
+corr_nivel_volumen,0.999

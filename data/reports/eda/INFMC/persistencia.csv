@@ -1,0 +1,4 @@
+horizonte_dias,MAE_Mm3_toda_la_serie,MAE_Mm3_periodo_prueba,RMSE_Mm3_periodo_prueba,MAE_pct_NAMO_prueba,inicio_periodo_prueba
+7,199.0,190.7,288.2,2.04,2020-06-15
+15,409.0,382.8,534.5,4.1,2020-06-15
+30,775.7,719.0,952.2,7.7,2020-06-15
