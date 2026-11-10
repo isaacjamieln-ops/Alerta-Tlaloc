@@ -1,0 +1,808 @@
+
+/* =========================================
+   1. ESTRUCTURA PRINCIPAL
+========================================= */
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #080e18;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  width: 265px;
+  min-width: 265px;
+  height: 100vh;
+  padding: 28px 18px;
+  background: #0b1422;
+  border-right: 1px solid #1b3045;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.main-area {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+}
+
+/* =========================================
+   2. MARCA Y LOGOTIPO
+========================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 8px 32px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #087da5, #16c7e8);
+  color: #ffffff;
+  font-size: 23px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.brand-text strong {
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.brand-text span {
+  color: #7893a9;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+}
+
+/* =========================================
+   3. NAVEGACIÓN
+========================================= */
+
+.menu-label {
+  padding: 12px 10px;
+  color: #607b91;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  padding: 14px 13px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+  color: #9aafc2;
+  text-align: left;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.nav-item:hover {
+  background: #11263a;
+  color: #ffffff;
+}
+
+.nav-item.active {
+  border-color: #164e6c;
+  background: #102c42;
+  color: #42d9f2;
+}
+
+.nav-icon {
+  width: 22px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.active-indicator {
+  position: absolute;
+  right: 0;
+  width: 3px;
+  height: 23px;
+  border-radius: 5px 0 0 5px;
+  background: #39d9f2;
+}
+
+/* =========================================
+   4. ESTADO DEL SISTEMA
+========================================= */
+
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: auto;
+  padding: 20px 9px 5px;
+}
+
+.sidebar-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #8ca5b9;
+  font-size: 11px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #36d5a0;
+  box-shadow: 0 0 10px #36d5a066;
+}
+
+.sidebar-version {
+  color: #536b7e;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   5. BARRA SUPERIOR
+========================================= */
+
+.topbar {
+  height: 72px;
+  padding: 0 38px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1b3045;
+  background: #0b1422;
+}
+
+.topbar > div:first-child {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.topbar-label {
+  color: #607b91;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #829caf;
+  font-size: 11px;
+}
+
+.topbar-indicator {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #39d9f2;
+}
+
+/* =========================================
+   6. CONTENIDO
+========================================= */
+
+.page-content {
+  width: 100%;
+  max-width: 1500px;
+  flex: 1;
+  margin: 0 auto;
+  padding: 36px 42px 55px;
+}
+
+/* =========================================
+   7. PORTADA
+========================================= */
+
+.hero {
+  position: relative;
+  min-height: 390px;
+  padding: 48px 55px;
+  overflow: hidden;
+  border: 1px solid #17405a;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 80% 45%, #0c4261 0%, transparent 38%),
+    linear-gradient(120deg, #0c1c2e, #0a1422);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.eyebrow {
+  color: #40d6f0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  max-width: 650px;
+  margin: 23px 0 17px;
+  color: #f3f8fc;
+  font-size: clamp(35px, 4.3vw, 57px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  color: #36d3ee;
+}
+
+.hero-description {
+  max-width: 530px;
+  color: #a6bacb;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 13px;
+  margin-top: 29px;
+}
+
+.button-primary,
+.button-secondary {
+  min-height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 19px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.button-primary {
+  border: 1px solid #159ec4;
+  background: #087fa5;
+  color: #ffffff;
+}
+
+.button-primary:hover {
+  border-color: #39d9f2;
+  background: #0b9bc3;
+  color: #ffffff;
+  box-shadow: 0 0 22px #16bde444;
+}
+
+.button-secondary {
+  border: 1px solid #31536b;
+  background: transparent;
+  color: #b9d0df;
+}
+
+.button-secondary:hover {
+  border-color: #39d9f2;
+  color: #39d9f2;
+}
+
+/* =========================================
+   8. ELEMENTO VISUAL DEL AGUA
+========================================= */
+
+.hero-visual {
+  position: relative;
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+}
+
+.water-circle {
+  width: 235px;
+  height: 235px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #2a8ba9;
+  border-radius: 50%;
+  background: radial-gradient(circle, #126080 0%, #0b304b 53%, #0a1d30 75%);
+  box-shadow:
+    0 0 35px #14b9e633,
+    inset 0 0 35px #20b9dd22;
+}
+
+.water-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.water-icon {
+  color: #48e3f7;
+  font-size: 52px;
+  text-shadow: 0 0 25px #35d9f2;
+}
+
+.water-label {
+  color: #8ddcec;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+.water-inner strong {
+  color: #ffffff;
+  font-size: 23px;
+  letter-spacing: 3px;
+}
+
+.water-caption {
+  color: #90b8cc;
+  font-size: 10px;
+}
+
+.visual-decoration {
+  position: absolute;
+  border: 1px solid #1c7898;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 285px;
+  height: 285px;
+  opacity: 0.45;
+}
+
+.decoration-two {
+  width: 330px;
+  height: 330px;
+  opacity: 0.2;
+}
+
+/* =========================================
+   9. CONTEXTO Y OBJETIVOS
+========================================= */
+
+.project-section {
+  padding-top: 75px;
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  margin: 12px 0;
+  color: #f0f6fb;
+  font-size: 28px;
+  letter-spacing: -0.7px;
+}
+
+.section-heading p {
+  color: #91a8bb;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.info-card {
+  padding: 27px;
+  border: 1px solid #1d3a51;
+  border-radius: 12px;
+  background: #0d1928;
+  transition: 0.2s ease;
+}
+
+.info-card:hover,
+.identity-card:hover {
+  border-color: #1684a8;
+  transform: translateY(-3px);
+}
+
+.card-icon,
+.identity-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: #103b52;
+  color: #40d6f0;
+  font-size: 23px;
+}
+
+.info-card h3,
+.identity-card h3 {
+  margin: 0 0 12px;
+  color: #ecf5fa;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.info-card p,
+.identity-card p {
+  margin: 0;
+  color: #93aabe;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+/* =========================================
+   10. MISIÓN Y VISIÓN
+========================================= */
+
+.identity-grid {
+  padding-top: 20px;
+}
+
+.identity-card {
+  padding: 30px;
+  border: 1px solid #1d3a51;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #10263a, #0c1928);
+  transition: 0.2s ease;
+}
+
+.identity-icon {
+  margin-top: 18px;
+}
+
+.identity-card h3 {
+  font-size: 21px;
+}
+
+.vision-card {
+  background: linear-gradient(145deg, #102d43, #0c1928);
+}
+
+/* =========================================
+   11. CIERRE
+========================================= */
+
+.closing-section {
+  margin-top: 25px;
+  padding: 45px 25px;
+  border: 1px solid #15516d;
+  border-radius: 12px;
+  background: linear-gradient(110deg, #0b263a, #0d1928);
+  text-align: center;
+}
+
+.closing-icon {
+  display: block;
+  margin-bottom: 15px;
+  color: #39d9f2;
+  font-size: 34px;
+}
+
+.closing-section h2 {
+  margin: 16px 0 10px;
+  color: #f1f8fc;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.closing-section p {
+  color: #91b1c4;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   12. VISTAS PENDIENTES
+========================================= */
+
+.coming-soon {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.coming-icon {
+  width: 85px;
+  height: 85px;
+  display: grid;
+  place-items: center;
+  margin: 25px 0 10px;
+  border: 1px solid #1b7899;
+  border-radius: 22px;
+  background: #10354d;
+  color: #43d8f1;
+  font-size: 38px;
+}
+
+.coming-soon h1 {
+  margin: 15px 0 5px;
+  color: #f1f8fc;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.coming-soon p {
+  max-width: 420px;
+  margin-bottom: 25px;
+  color: #91a8bb;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================================
+   13. PIE DE PÁGINA
+========================================= */
+
+.footer {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 15px 42px;
+  border-top: 1px solid #1b3045;
+  color: #647f94;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+}
+
+.footer span:first-child {
+  color: #39cde8;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* =========================================
+   14. ENCABEZADO MÓVIL
+========================================= */
+
+.mobile-header {
+  position: relative;
+  min-height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 17px;
+  border-bottom: 1px solid #1b3045;
+  background: #0b1422;
+  z-index: 102;
+}
+
+.mobile-header .brand {
+  padding: 0;
+}
+
+.mobile-menu-button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #24516c;
+  border-radius: 9px;
+  background: #102c42;
+  color: #39d9f2;
+  font-size: 23px;
+}
+
+.mobile-menu-button:hover {
+  background: #16425c;
+}
+
+/* =========================================
+   15. MENÚ DESPLEGABLE MÓVIL
+========================================= */
+
+.mobile-menu {
+  display: none;
+  padding: 12px 17px 18px;
+  border-bottom: 1px solid #1b3045;
+  background: #0b1422;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu .menu-label {
+  padding: 8px 10px 12px;
+}
+
+.mobile-menu .sidebar-nav {
+  gap: 5px;
+}
+
+.mobile-menu .nav-item {
+  padding: 12px;
+}
+
+.mobile-menu .active-indicator {
+  right: 0;
+}
+
+/* =========================================
+   16. TABLETS
+========================================= */
+
+@media (min-width: 768px) and (max-width: 1050px) {
+  .sidebar {
+    width: 225px;
+    min-width: 225px;
+    padding: 25px 12px;
+  }
+
+  .page-content {
+    padding: 28px 25px 45px;
+  }
+
+  .hero {
+    padding: 35px 25px;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-visual {
+    transform: scale(0.85);
+  }
+
+  .topbar {
+    padding: 0 25px;
+  }
+}
+
+/* =========================================
+   17. CELULARES
+========================================= */
+
+@media (max-width: 767.98px) {
+  .page-content {
+    padding: 20px 15px 35px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 32px 22px 15px;
+  }
+
+  .hero h1 {
+    font-size: clamp(34px, 8vw, 43px);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .hero-visual {
+    min-height: 230px;
+  }
+
+  .water-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .decoration-one {
+    width: 245px;
+    height: 245px;
+  }
+
+  .decoration-two {
+    width: 285px;
+    height: 285px;
+  }
+
+  .project-section {
+    padding-top: 48px;
+  }
+
+  .section-heading h2 {
+    font-size: 24px;
+  }
+
+  .info-card,
+  .identity-card {
+    padding: 23px;
+  }
+
+  .closing-section {
+    padding: 35px 20px;
+  }
+
+  .closing-section h2 {
+    font-size: 21px;
+  }
+
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px 12px;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   18. CELULARES PEQUEÑOS
+========================================= */
+
+@media (max-width: 380px) {
+  .brand-text strong {
+    font-size: 12px;
+  }
+
+  .brand-text span {
+    font-size: 8px;
+  }
+
+  .brand-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero {
+    padding: 27px 17px 12px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero-actions .btn {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   19. ACCESIBILIDAD Y MOVIMIENTO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
