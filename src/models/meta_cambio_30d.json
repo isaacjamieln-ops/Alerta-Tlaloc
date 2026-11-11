@@ -1,0 +1,49 @@
+{
+  "horizonte_dias": 30,
+  "target": "obj_cambio_30d",
+  "normalizacion": "el modelo predice cambio/namo_hm3; variables de volumen divididas entre namo_hm3; la salida se multiplica por namo_hm3",
+  "features": [
+    "namo_hm3",
+    "llenado_pct",
+    "vol_lag_1",
+    "cambio_1d",
+    "vol_lag_7",
+    "cambio_7d",
+    "vol_lag_14",
+    "cambio_14d",
+    "vol_lag_30",
+    "cambio_30d",
+    "lluvia_1d",
+    "lluvia_3d",
+    "lluvia_7d",
+    "lluvia_15d",
+    "lluvia_30d",
+    "lluvia_faltante_30d",
+    "mes",
+    "dia_anio_sin",
+    "dia_anio_cos"
+  ],
+  "hiperparametros": {
+    "max_depth": 10,
+    "min_samples_leaf": 20,
+    "n_estimators": 200,
+    "max_features": 0.5
+  },
+  "mae_validacion_cronologica_frac_capacidad": 0.03732963149697426,
+  "nivel_intervalo": 0.9,
+  "semiancho_intervalo_hm3_por_presa": {
+    "CCHNL": 110.20659540448447,
+    "CPRNL": 16.06758917177102,
+    "EPLGJ": 1.4035838890437873,
+    "INFMC": 994.4351744277367,
+    "LBQCH": 176.34391152350332,
+    "LDCJL": 276.65905698899144,
+    "PMHSI": 338.9821062410448,
+    "SLSGJ": 73.18529046944292,
+    "VBRMX": 12.07911001685017
+  },
+  "semiancho_intervalo_hm3_global": 243.1442590686881,
+  "entrenado_con_filas": 82698,
+  "fecha_max_entrenamiento": "2020-05-15",
+  "fecha_entrenamiento": "2026-11-10T22:17:14"
+}
