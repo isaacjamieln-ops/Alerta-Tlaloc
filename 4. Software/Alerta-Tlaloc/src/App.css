@@ -591,6 +591,8 @@
 .mobile-header {
   position: relative;
   min-height: 70px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 10px 17px;

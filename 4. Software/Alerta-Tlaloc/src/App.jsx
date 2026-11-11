@@ -1,4 +1,5 @@
-
+import Inicio from './pages/Inicio';
+import Dashboard from './pages/Dashboard';
 import { useState } from 'react'
 import './App.css'
 
@@ -327,10 +328,14 @@ function App() {
         </header>
 
         <div className="page-content container-fluid">
-          {activeSection === 'inicio'
-            ? renderHome()
-            : renderComingSoon()}
-        </div>
+          {activeSection === 'inicio' ? (
+            <Inicio onNavigate={navigateTo} />
+            ) : activeSection === 'dashboard' ? (
+            <Dashboard />
+          ) : (
+        renderComingSoon()
+  )}
+</div>
 
         <footer className="footer">
           <span>ALERTA-TLALOC</span>
