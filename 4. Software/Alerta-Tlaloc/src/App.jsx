@@ -1,5 +1,6 @@
 import Inicio from './pages/Inicio';
 import Dashboard from './pages/Dashboard';
+import Predicciones from './pages/Predicciones';
 import { useState } from 'react'
 import './App.css'
 
@@ -332,6 +333,9 @@ function App() {
             <Inicio onNavigate={navigateTo} />
             ) : activeSection === 'dashboard' ? (
             <Dashboard />
+            ): activeSection === 'predicciones' ? (
+            <Predicciones/>
+            
           ) : (
         renderComingSoon()
   )}

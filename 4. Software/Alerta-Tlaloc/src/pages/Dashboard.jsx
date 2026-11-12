@@ -4,126 +4,152 @@ import autoTable from 'jspdf-autotable'
 import html2canvas from 'html2canvas'
 import './Dashboard.css'
 
-// =========================================
-// 1. DATOS DEMOSTRATIVOS
-// =========================================
+//Hook para el uso de la API
+function Dashboard() {
+  const [range, setRange] = useState('31')
+  const [showAllAlarms, setShowAllAlarms] = useState(false)
 
-const consumptionData = {
-  hoy: [12, 15, 21, 18, 13, 12, 16, 20, 24, 28, 25, 18],
-  7: [12, 15, 21, 18, 13, 12, 16],
-  14: [12, 15, 21, 18, 13, 12, 16, 20, 24, 28, 25, 18, 22, 27],
-  21: [12, 15, 21, 18, 13, 12, 16, 20, 24, 28, 25, 18, 22, 27, 29, 24, 20, 25, 30, 34, 31],
-  31: [12, 15, 21, 18, 13, 12, 16, 20, 24, 28, 25, 18, 22, 27, 29, 24, 20, 25, 30, 34, 31, 27, 24, 29, 26, 32, 25, 22, 28, 30, 26],
-}
+  // =========================================
+  // 1. ESTADOS PARA CONECTAR CON LA API
+  // =========================================
+  const [consumptionData, setConsumptionData] = useState({
+    hoy: [12, 15, 21, 18, 13, 12, 16, 20, 24, 28, 25, 18],
+    7: [120, 150, 140, 160, 180, 170, 190],
+    14: Array(14).fill(100),
+    21: Array(21).fill(100),
+    31: [12, 15, 21, 18, 13, 12, 16, 20, 24, 28, 25, 18, 20, 22, 19, 15, 14, 18, 22, 25, 27, 24, 20, 18, 16, 15, 19, 23, 26, 28, 25]
+  });
+  
+  const [sensors, setSensors] = useState([]);
+  const [sensorStatusData, setSensorStatusData] = useState({
+    total: 126,
+    online: 124,
+    warning: 1,
+    offline: 1
+  });
+  const [alarms, setAlarms] = useState([]);
 
-const installations = [
-  { id: 1, name: 'Administración A', percentage: 0.303 },
-  { id: 2, name: 'Edificio principal', percentage: 0.214 },
-  { id: 3, name: 'Almacén', percentage: 0.156 },
-  { id: 4, name: 'Instalación B', percentage: 0.149 },
-  { id: 5, name: 'Área tecnológica', percentage: 0.104 },
-  { id: 6, name: 'Otros', percentage: 0.074 },
-]
+  // Datos fijos de instalaciones (puedes moverlos a la API más adelante si lo requieres)
+  const installations = [
+    { id: '1', name: 'Tanque Principal Sur', percentage: 0.4 },
+    { id: '2', name: 'Planta de Bombeo Norte', percentage: 0.35 },
+    { id: '3', name: 'Tanque de Regulación Oriente', percentage: 0.25 },
+  ];
 
-const sensors = [
-  { id: 1, x: 18, y: 28, status: 'online', name: 'Sensor 01', location: 'Administración A' },
-  { id: 2, x: 38, y: 43, status: 'online', name: 'Sensor 02', location: 'Edificio principal' },
-  { id: 3, x: 56, y: 24, status: 'online', name: 'Sensor 03', location: 'Almacén' },
-  { id: 4, x: 73, y: 37, status: 'warning', name: 'Sensor 04', location: 'Instalación B' },
-  { id: 5, x: 84, y: 56, status: 'online', name: 'Sensor 05', location: 'Área tecnológica' },
-  { id: 6, x: 28, y: 69, status: 'online', name: 'Sensor 06', location: 'Administración A' },
-  { id: 7, x: 54, y: 72, status: 'alarm', name: 'Sensor 07', location: 'Edificio principal' },
-  { id: 8, x: 77, y: 79, status: 'offline', name: 'Sensor 08', location: 'Almacén' },
-]
+  // =========================================
+  // 2. PETICIÓN A LA API DE FASTAPI
+  // =========================================
+  useEffect(() => {
+    const controller = new AbortController();
 
-// Los conteos representan el conjunto demostrativo de 126 sensores.
-// Los ocho puntos del mapa son ubicaciones ilustrativas.
-const sensorStatusData = {
-  total: 126,
-  online: 124,
-  warning: 1,
-  offline: 1,
-}
+    async function fetchDashboardData() {
+      try {
+        const [resConsumo, resSensores, resAlarmas] = await Promise.all([
+          fetch(`http://localhost:8000/api/consumo?range=${range}`, {
+            signal: controller.signal,
+          }),
+          fetch('http://localhost:8000/api/sensores', {
+            signal: controller.signal,
+          }),
+          fetch(`http://localhost:8000/api/alarmas?range=${range}`, {
+            signal: controller.signal,
+          }),
+        ]);
 
-const alarms = [
-  {
-    id: 1,
-    title: 'Posible fuga de agua',
-    description: 'Se detectó un consumo anormal.',
-    type: 'critical',
-    dayOffset: 0,
-    time: '08:21',
-    sensor: 'Sensor 07',
-    location: 'Edificio principal',
-  },
-  {
-    id: 2,
-    title: 'Consumo inusual',
-    description: 'El consumo superó el promedio esperado.',
-    type: 'warning',
-    dayOffset: 1,
-    time: '22:15',
-    sensor: 'Sensor 04',
-    location: 'Instalación B',
-  },
-  {
-    id: 3,
-    title: 'Presión fuera de rango',
-    description: 'Se registró una variación de presión.',
-    type: 'warning',
-    dayOffset: 3,
-    time: '14:35',
-    sensor: 'Sensor 03',
-    location: 'Almacén',
-  },
-  {
-    id: 4,
-    title: 'Interrupción de comunicación',
-    description: 'El sensor dejó de transmitir información.',
-    type: 'warning',
-    dayOffset: 8,
-    time: '11:20',
-    sensor: 'Sensor 08',
-    location: 'Almacén',
-  },
-  {
-    id: 5,
-    title: 'Consumo elevado',
-    description: 'Se detectó un incremento considerable.',
-    type: 'critical',
-    dayOffset: 15,
-    time: '09:45',
-    sensor: 'Sensor 02',
-    location: 'Edificio principal',
-  },
-  {
-    id: 6,
-    title: 'Variación de presión',
-    description: 'La presión presentó cambios inusuales.',
-    type: 'warning',
-    dayOffset: 25,
-    time: '16:10',
-    sensor: 'Sensor 05',
-    location: 'Área tecnológica',
-  },
-]
+        // Evita intentar interpretar como JSON una respuesta HTTP fallida.
+        if (!resConsumo.ok || !resSensores.ok || !resAlarmas.ok) {
+          throw new Error(
+            `Error HTTP: consumo=${resConsumo.status}, sensores=${resSensores.status}, alarmas=${resAlarmas.status}`
+          );
+        }
+
+        const [dataConsumo, dataSensores, dataAlarmas] = await Promise.all([
+          resConsumo.json(),
+          resSensores.json(),
+          resAlarmas.json(),
+        ]);
+
+        // El endpoint de consumo debe responder: { "values": [números...] }.
+        const values = Array.isArray(dataConsumo)
+          ? dataConsumo
+          : dataConsumo?.values;
+
+        if (Array.isArray(values)) {
+          const validValues = values
+            .map(Number)
+            .filter((value) => Number.isFinite(value));
+
+          if (validValues.length > 0) {
+            setConsumptionData((prev) => ({
+              ...prev,
+              [range]: validValues,
+            }));
+          } else {
+            console.warn('La API de consumo no devolvió valores numéricos.', dataConsumo);
+          }
+        } else {
+          console.warn('Formato inesperado en /api/consumo. Se conservan los datos de demostración.', dataConsumo);
+        }
+
+        // El endpoint de sensores debe responder con sensors y statusSummary.
+        const sensorList = Array.isArray(dataSensores)
+          ? dataSensores
+          : dataSensores?.sensors;
+
+        if (Array.isArray(sensorList)) {
+          setSensors(sensorList);
+        } else {
+          console.warn('Formato inesperado en /api/sensores: se esperaba un arreglo "sensors".', dataSensores);
+        }
+
+        const summary = dataSensores?.statusSummary;
+        if (summary && typeof summary === 'object') {
+          setSensorStatusData((prev) => ({
+            total: Number(summary.total ?? prev.total) || 0,
+            online: Number(summary.online ?? prev.online) || 0,
+            warning: Number(summary.warning ?? prev.warning) || 0,
+            offline: Number(summary.offline ?? prev.offline) || 0,
+          }));
+        }
+
+        const alarmList = Array.isArray(dataAlarmas)
+          ? dataAlarmas
+          : dataAlarmas?.alarms;
+
+        if (Array.isArray(alarmList)) {
+          setAlarms(alarmList);
+        } else {
+          console.warn('Formato inesperado en /api/alarmas: se esperaba un arreglo.', dataAlarmas);
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          console.error('Error al conectar con la API de FastAPI:', error);
+        }
+      }
+    }
+
+    fetchDashboardData();
+
+    return () => controller.abort();
+  }, [range]);
+
 
 // =========================================
 // 2. FUNCIONES AUXILIARES
 // =========================================
 
-function getTotalConsumption(values) {
-  return values.reduce((total, value) => total + value, 0)
+function getTotalConsumption(values = []) {
+  return values.reduce((total, value) => total + (Number(value) || 0), 0)
 }
 
-function getAverageConsumption(values) {
-  if (!values.length) return 0
+function getAverageConsumption(values = []) {
+  if (!Array.isArray(values) || !values.length) return 0
 
   return getTotalConsumption(values) / values.length
 }
 
-function getConsumptionTrend(values) {
-  if (values.length < 2) {
+function getConsumptionTrend(values = []) {
+  if (!Array.isArray(values) || values.length < 2) {
     return { percentage: 0, direction: 'neutral' }
   }
 
@@ -178,11 +204,15 @@ function getAlarmDate(dayOffset) {
 }
 
 function formatNumber(value, decimals = 1) {
-  return value.toLocaleString('es-MX', {
+  const numericValue = Number(value);
+  return (Number.isFinite(numericValue) ? numericValue : 0).toLocaleString('es-MX', {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   })
 }
+
+
+
 
 // =========================================
 // 3. COMPONENTES DE VISUALIZACIÓN
@@ -811,9 +841,10 @@ function LocationMap() {
 function StatusChart() {
   const { total, online, warning, offline } = sensorStatusData
 
-  const onlinePercentage = (online / total) * 100
-  const warningPercentage = (warning / total) * 100
-  const offlinePercentage = (offline / total) * 100
+  const safeTotal = Number(total) > 0 ? Number(total) : 1
+  const onlinePercentage = (Number(online) / safeTotal) * 100
+  const warningPercentage = (Number(warning) / safeTotal) * 100
+  const offlinePercentage = (Number(offline) / safeTotal) * 100
 
   return (
     <div className="status-chart-content">
@@ -1002,12 +1033,8 @@ function AlarmHistoryModal({ onClose }) {
 }
 
 // =========================================
-// 8. COMPONENTE PRINCIPAL
+// 8. ESTADO Y LÓGICA PRINCIPAL DEL DASHBOARD
 // =========================================
-
-function Dashboard() {
-  const [range, setRange] = useState('31')
-  const [showAllAlarms, setShowAllAlarms] = useState(false)
 
   // Estado independiente para cada visualización.
   const [panelViews, setPanelViews] = useState({
@@ -1034,7 +1061,9 @@ function Dashboard() {
     { value: '31', label: '31 días' },
   ]
 
-  const selectedValues = consumptionData[range]
+  const selectedValues = Array.isArray(consumptionData[range])
+    ? consumptionData[range]
+    : []
   const totalConsumption = getTotalConsumption(selectedValues)
   const averageConsumption = getAverageConsumption(selectedValues)
   const consumptionTrend = getConsumptionTrend(selectedValues)
