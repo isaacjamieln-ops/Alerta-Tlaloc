@@ -1,6 +1,9 @@
 import Inicio from './pages/Inicio';
 import Dashboard from './pages/Dashboard';
 import Predicciones from './pages/Predicciones';
+import GestionAgua from './pages/GestionAgua';
+
+
 import { useState } from 'react'
 import './App.css'
 
@@ -328,18 +331,21 @@ function App() {
           </div>
         </header>
 
-        <div className="page-content container-fluid">
-          {activeSection === 'inicio' ? (
-            <Inicio onNavigate={navigateTo} />
-            ) : activeSection === 'dashboard' ? (
-            <Dashboard />
-            ): activeSection === 'predicciones' ? (
-            <Predicciones/>
-            
-          ) : (
-        renderComingSoon()
+        
+<div className="page-content container-fluid">
+  {activeSection === 'inicio' ? (
+    <Inicio onNavigate={navigateTo} />
+  ) : activeSection === 'dashboard' ? (
+    <Dashboard />
+  ) : activeSection === 'predicciones' ? (
+    <Predicciones />
+  ) : activeSection === 'gestion' ? (
+    <GestionAgua />
+  ) : (
+    renderComingSoon()
   )}
 </div>
+
 
         <footer className="footer">
           <span>ALERTA-TLALOC</span>

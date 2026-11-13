@@ -1,0 +1,915 @@
+
+/* =========================================
+   GESTIÓN DE AGUA - ALERTA TLÁLOC
+========================================= */
+
+.gestion-agua-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 20px;
+  padding: 24px;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  box-sizing: border-box;
+  background-color: #0b132b;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* =========================================
+   PANEL IZQUIERDO
+========================================= */
+
+.gestion-left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+  min-height: 0;
+  background: rgba(18, 27, 51, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.map-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.map-card-header h3 {
+  font-size: 16px;
+  margin: 5px 0 0;
+  color: #e2e8f0;
+}
+
+.live-indicator {
+  font-size: 12px;
+  color: #10b981;
+  white-space: nowrap;
+}
+
+.panel-title-tag {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   MAPA ESQUEMÁTICO
+========================================= */
+
+.interactive-map-wrapper {
+  flex: 1;
+  background: rgba(11, 19, 43, 0.8);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.schematic-map {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  position: relative;
+  background-image:
+    radial-gradient(
+      rgba(59, 130, 246, 0.15) 1px,
+      transparent 1px
+    );
+  background-size: 20px 20px;
+}
+
+/* Centro de distribución */
+
+.map-central-node {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+  background: #17294b;
+  border: 1px solid #38bdf8;
+  border-radius: 10px;
+  padding: 14px;
+  min-width: 145px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.map-central-node span {
+  color: #38bdf8;
+  font-size: 25px;
+}
+
+.map-central-node strong {
+  font-size: 11px;
+  color: #e2e8f0;
+}
+
+.map-central-node small {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+/* Líneas de conexión */
+
+.map-connections {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.connection-line {
+  position: absolute;
+  background: rgba(56, 189, 248, 0.45);
+}
+
+.line-main {
+  width: 2px;
+  height: 55%;
+  left: 50%;
+  top: 22%;
+}
+
+.line-north {
+  width: 2px;
+  height: 25%;
+  left: 50%;
+  top: 0;
+}
+
+.line-south {
+  width: 2px;
+  height: 25%;
+  left: 50%;
+  bottom: 0;
+}
+
+.line-east {
+  height: 2px;
+  width: 30%;
+  right: 0;
+  top: 50%;
+}
+
+.line-west {
+  height: 2px;
+  width: 30%;
+  left: 0;
+  top: 50%;
+}
+
+/* Nodos */
+
+.map-node {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid #3b82f6;
+  padding: 9px 12px;
+  border-radius: 7px;
+  font-size: 11px;
+  color: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.map-node:hover,
+.map-node.active {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.map-node.north {
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.map-node.oriente {
+  top: 50%;
+  right: 4%;
+  transform: translateY(-50%);
+}
+
+.map-node.sur {
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.map-node.poniente {
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+}
+
+.map-node small {
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+.node-indicator,
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  min-width: 7px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.node-open,
+.green {
+  background: #10b981;
+}
+
+.node-closed,
+.red {
+  background: #ef4444;
+}
+
+.blue {
+  background: #3b82f6;
+}
+
+/* Leyenda */
+
+.map-legend {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.map-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* =========================================
+   BITÁCORA
+========================================= */
+
+.audit-log-section {
+  background: rgba(11, 19, 43, 0.9);
+  border-radius: 8px;
+  padding: 12px 16px;
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.audit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.audit-header h4 {
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 8px;
+  letter-spacing: 0.5px;
+}
+
+.audit-header > span {
+  font-size: 10px;
+  color: #64748b;
+}
+
+.audit-log-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.audit-log-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #cbd5e1;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.log-time {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.log-user {
+  color: #a78bfa;
+}
+
+/* =========================================
+   PANEL DERECHO
+========================================= */
+
+.gestion-right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+  min-height: 0;
+  background: rgba(18, 27, 51, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.right-panel-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.simulation-switch-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.simulation-switch-wrapper input {
+  width: 15px;
+  height: 15px;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+/* =========================================
+   PESTAÑAS
+========================================= */
+
+.control-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: rgba(11, 19, 43, 0.6);
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.tab-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 9px 5px;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+}
+
+.tab-btn.active {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+/* =========================================
+   TARJETA DINÁMICA
+========================================= */
+
+.tab-content-card {
+  background: rgba(11, 19, 43, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.sector-header-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.sector-header-info h3 {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+/* =========================================
+   ESTADOS
+========================================= */
+
+.status-badge {
+  font-size: 10px;
+  padding: 5px 9px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.status-badge.open {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.status-badge.closed {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* =========================================
+   MÉTRICAS
+========================================= */
+
+.metrics-grid-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.metric-box {
+  background: rgba(18, 27, 51, 0.5);
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  min-width: 0;
+}
+
+.metric-label {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+.metric-val {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.metric-caption {
+  color: #64748b;
+  font-size: 9px;
+}
+
+/* Medidor de presión */
+
+.gauge-mock {
+  width: 100%;
+  height: 7px;
+  background: #1e293b;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gauge-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Barras de caudal */
+
+.bar-bars-mock {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 25px;
+}
+
+.bar-bars-mock span {
+  width: 8px;
+  border-radius: 3px;
+  background: #38bdf8;
+  transition: height 0.2s ease;
+}
+
+/* =========================================
+   VÁLVULAS
+========================================= */
+
+.valve-control-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: rgba(18, 27, 51, 0.5);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.valve-control-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.valve-toggle-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.valve-toggle-btn.cerrada {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.valve-toggle-btn.abierta {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+.valve-toggle-btn:hover {
+  filter: brightness(1.15);
+}
+
+/* =========================================
+   ACCIONES RÁPIDAS
+========================================= */
+
+.quick-actions-section h4 {
+  font-size: 11px;
+  color: #94a3b8;
+  margin: 0 0 10px;
+}
+
+.actions-buttons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.action-sub-btn {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.action-sub-btn:hover {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.action-sub-btn.danger {
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.action-sub-btn.danger:hover {
+  background: #ef4444;
+}
+
+.simulation-notice {
+  margin: 10px 0 0;
+  font-size: 10px;
+  color: #f59e0b;
+}
+
+/* =========================================
+   SIMULADOR
+========================================= */
+
+.sim-desc {
+  color: #94a3b8;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 12px;
+  color: #cbd5e1;
+}
+
+.slider-group label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider-group label strong {
+  color: #38bdf8;
+  white-space: nowrap;
+}
+
+.slider-group input[type="range"] {
+  width: 100%;
+  accent-color: #3b82f6;
+  cursor: pointer;
+}
+
+.slider-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #64748b;
+}
+
+/* Resultados */
+
+.simulation-result-box {
+  background: rgba(18, 27, 51, 0.7);
+  padding: 14px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12px;
+  border-left: 3px solid #3b82f6;
+}
+
+.simulation-result-title {
+  color: #94a3b8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.simulation-result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.simulation-result-row span {
+  color: #94a3b8;
+}
+
+.simulation-result-row strong {
+  color: #e2e8f0;
+  text-align: right;
+}
+
+.risk-high,
+.warning-text {
+  color: #ef4444 !important;
+}
+
+.risk-medium {
+  color: #f59e0b !important;
+}
+
+.risk-low {
+  color: #10b981 !important;
+}
+
+.simulation-disclaimer {
+  font-size: 9px;
+  line-height: 1.5;
+  color: #64748b;
+  margin: 0;
+}
+
+.reset-btn {
+  width: 100%;
+}
+
+/* =========================================
+   ZONAS
+========================================= */
+
+.zones-list-mini {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zone-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: rgba(18, 27, 51, 0.5);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid transparent;
+  color: #e2e8f0;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.zone-row:hover,
+.zone-row.zone-selected {
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.zone-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.zone-info small {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.badge-ok {
+  color: #10b981;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.badge-alert {
+  color: #f59e0b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.zones-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.zones-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: rgba(18, 27, 51, 0.6);
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.zones-summary span {
+  color: #94a3b8;
+  font-size: 10px;
+}
+
+.zones-summary strong {
+  font-size: 20px;
+}
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+.animate-fade {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+  .gestion-agua-container {
+    grid-template-columns: minmax(0, 1fr);
+    height: auto;
+    min-height: calc(100vh - 80px);
+    overflow: visible;
+  }
+
+  .gestion-left-panel {
+    min-height: 500px;
+  }
+
+  .gestion-right-panel {
+    min-height: 500px;
+  }
+
+  .tab-content-card {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 600px) {
+  .gestion-agua-container {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .gestion-left-panel,
+  .gestion-right-panel {
+    padding: 14px;
+  }
+
+  .map-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .interactive-map-wrapper,
+  .schematic-map {
+    min-height: 320px;
+  }
+
+  .map-node {
+    padding: 7px;
+    font-size: 9px;
+    gap: 4px;
+  }
+
+  .map-node.oriente {
+    right: 1%;
+  }
+
+  .map-node.poniente {
+    left: 1%;
+  }
+
+  .map-central-node {
+    min-width: 110px;
+    padding: 9px;
+  }
+
+  .map-central-node strong {
+    font-size: 9px;
+  }
+
+  .map-legend {
+    gap: 7px;
+    font-size: 9px;
+  }
+
+  .metrics-grid-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .right-panel-top-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .valve-control-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .actions-buttons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .audit-log-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
