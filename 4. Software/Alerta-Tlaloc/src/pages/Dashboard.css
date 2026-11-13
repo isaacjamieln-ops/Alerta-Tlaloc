@@ -3000,116 +3000,226 @@
 }
 
 
-  /* =========================================
-     EXPORTACIÓN DEL REPORTE PDF
-  ========================================= */
+/* =========================================
+   EXPORTACIÓN DEL REPORTE PDF
+========================================= */
 
+.dashboard-export {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 35px 0 15px;
+  text-align: center;
+}
+
+.export-pdf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 25px;
+  border: 1px solid #087f9b;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #087f9b, #07516e);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(0, 160, 190, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.export-pdf-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #099bb8, #08617e);
+  box-shadow: 0 8px 22px rgba(0, 190, 220, 0.22);
+}
+
+.export-pdf-button:focus-visible {
+  outline: 2px solid #00d5ed;
+  outline-offset: 4px;
+}
+
+.export-pdf-button span {
+  font-size: 19px;
+  line-height: 1;
+}
+
+.dashboard-export p {
+  margin: 0;
+  color: #8daabd;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 650px) {
   .dashboard-export {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    margin: 35px 0 15px;
-    text-align: center;
+    margin-top: 25px;
   }
 
   .export-pdf-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 13px 25px;
-    border: 1px solid #087f9b;
-    border-radius: 9px;
-    background: linear-gradient(135deg, #087f9b, #07516e);
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 5px 18px rgba(0, 160, 190, 0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease,
-      background 0.2s ease;
+    width: 100%;
+    max-width: 320px;
   }
+}
 
-  .export-pdf-button:hover {
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, #099bb8, #08617e);
-    box-shadow: 0 8px 22px rgba(0, 190, 220, 0.22);
-  }
-
-  .export-pdf-button:focus-visible {
-    outline: 2px solid #00d5ed;
-    outline-offset: 4px;
-  }
-
-  .export-pdf-button span {
-    font-size: 19px;
-    line-height: 1;
-  }
-
-  .dashboard-export p {
-    margin: 0;
-    color: #8daabd;
-    font-size: 12px;
-    line-height: 1.5;
-  }
-
-  @media (max-width: 650px) {
-    .dashboard-export {
-      margin-top: 25px;
-    }
-
-    .export-pdf-button {
-      width: 100%;
-      max-width: 320px;
-    }
-  }
-
-  /* =========================================
+/* =========================================
    VISUALIZACIONES INDEPENDIENTES DEL PDF
 ========================================= */
 
 .pdf-visual-card {
+  display: block;
+  position: relative;
+
   width: 1000px;
-  min-height: 420px;
+  min-width: 1000px;
+  max-width: 1000px;
+
+  min-height: 460px;
+  height: auto;
+
   box-sizing: border-box;
   padding: 36px;
   margin: 0;
-  overflow: visible;
+
+  overflow: visible !important;
+
   background: #0b1422;
   color: #eaf4fa;
+
   border: 1px solid #24384d;
   border-radius: 18px;
+
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
 }
 
 .pdf-visual-card h2 {
   margin: 10px 0;
   color: #f1f7fc;
   font-size: 26px;
+  line-height: 1.4;
 }
 
 .pdf-visual-card > p {
   margin-bottom: 28px;
   color: #9aafc2;
   font-size: 15px;
+  line-height: 1.5;
 }
 
-.pdf-visual-card .consumption-chart {
-  width: 100%;
-  min-height: 300px;
+/* =========================================
+   GRÁFICA DE CONSUMO
+========================================= */
+
+#pdf-chart-consumption {
+  min-height: 560px;
 }
 
-.pdf-visual-card .location-map-container {
+#pdf-chart-consumption .consumption-chart {
+  display: block;
+
   width: 100%;
+  height: 360px !important;
+  min-height: 360px !important;
+  max-height: 360px;
+
+  overflow: visible !important;
 }
+
+#pdf-chart-consumption .consumption-chart svg {
+  display: block;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  min-height: 0 !important;
+  max-height: none;
+
+  overflow: visible !important;
+}
+
+/* =========================================
+   GRÁFICAS DE BARRAS Y TENDENCIAS
+========================================= */
+
+#pdf-chart-installations,
+#pdf-chart-status,
+#pdf-chart-alerts,
+#pdf-chart-trends {
+  min-height: 460px;
+}
+
+#pdf-chart-installations .installations-chart,
+#pdf-chart-alerts .alerts-chart,
+#pdf-chart-trends .trend-comparison {
+  display: block;
+  width: 100%;
+  animation: none !important;
+}
+
+#pdf-chart-status .status-chart-content {
+  width: 100%;
+  animation: none !important;
+}
+
+/* Evitar deformaciones en las barras */
+
+.pdf-visual-card .installation-chart-track,
+.pdf-visual-card .alert-chart-track,
+.pdf-visual-card .trend-bar-track {
+  flex-shrink: 0;
+}
+
+/* =========================================
+   MAPA DE SENSORES
+========================================= */
 
 #pdf-map-sensors {
   min-height: 700px;
 }
 
-#pdf-map-sensors .location-map {
-  height: 480px;
-  min-height: 480px;
+#pdf-map-sensors .location-map-container {
+  display: block;
+  width: 100%;
 }
 
+#pdf-map-sensors .location-map {
+  display: block;
+
+  width: 100%;
+  height: 480px !important;
+
+  min-height: 480px !important;
+  max-height: 480px;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   MODO DE CAPTURA DEL PDF
+========================================= */
+
+body.pdf-capture-mode *,
+body.pdf-capture-mode *::before,
+body.pdf-capture-mode *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+  caret-color: transparent !important;
+}
+
+body.pdf-capture-mode .pdf-visual-card {
+  animation: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+body.pdf-capture-mode .pdf-visual-card * {
+  animation: none !important;
+  transition: none !important;
+}

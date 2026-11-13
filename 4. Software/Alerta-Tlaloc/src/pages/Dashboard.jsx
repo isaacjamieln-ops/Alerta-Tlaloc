@@ -3,6 +3,7 @@ import { jsPDF } from 'jspdf'
 import autoTable from 'jspdf-autotable'
 import html2canvas from 'html2canvas'
 import './Dashboard.css'
+import JSZip from 'jszip'
 
 //Hook para el uso de la API
 function Dashboard() {
@@ -572,7 +573,7 @@ function Dashboard() {
 
       return { x, y, value, index }
     })
-
+   
     const linePoints = points
       .map((point) => `${point.x},${point.y}`)
       .join(' ')
@@ -1159,70 +1160,49 @@ function Dashboard() {
     selectedAlarms.length,
   ])
 
+
+
   // =========================================
-  // EXPORTACIÓN DEL PDF
+  // EXPORTACIÓN DEL PDF Y ZIP
   // =========================================
 
+  // Esperar fuentes y estabilizar la interfaz antes de capturar.
+  const waitForDashboardAnimations = async () => {
+    if (document.fonts?.ready) {
+      await document.fonts.ready
+    }
+
+    document.body.classList.add('pdf-capture-mode')
+
+    await new Promise((resolve) =>
+      requestAnimationFrame(() =>
+        requestAnimationFrame(resolve)
+      )
+    )
+  }
+
   const exportDashboardPDF = async () => {
+    let zipUrl = null
+
     try {
+      console.log('Iniciando exportación de Alerta-Tlaloc...')
+
       const doc = new jsPDF({
         orientation: 'portrait',
         unit: 'mm',
         format: 'a4',
+        compress: true,
       })
 
       // =========================================
-      // 1. CAPTURA VISUAL DEL DASHBOARD
+      // 1. CONFIGURACIÓN DEL DOCUMENTO
       // =========================================
 
       const dashboardElement = document.querySelector('.dashboard-page')
 
       if (!dashboardElement) {
-        alert('No se encontró el dashboard para exportar.')
-        return
+        throw new Error('No se encontró el dashboard.')
       }
-
-      if (document.fonts?.ready) {
-        await document.fonts.ready
-      }
-
-      await new Promise((resolve) =>
-        requestAnimationFrame(() =>
-          requestAnimationFrame(resolve)
-        )
-      )
-
-      const dashboardWidth = dashboardElement.scrollWidth
-      const dashboardHeight = dashboardElement.scrollHeight
-
-      const dashboardCanvas = await html2canvas(dashboardElement, {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#080e18',
-
-        width: dashboardWidth,
-        height: dashboardHeight,
-
-        windowWidth: dashboardWidth,
-        windowHeight: dashboardHeight,
-
-        scrollX: 0,
-        scrollY: 0,
-
-        logging: false,
-
-        ignoreElements: (element) =>
-          element.classList?.contains('dashboard-export') ||
-          element.classList?.contains('pdf-visuals-source'),
-      })
-
-      if (!dashboardCanvas.width || !dashboardCanvas.height) {
-        throw new Error('No fue posible generar la captura del dashboard.')
-      }
-
-      // =========================================
-      // 2. CONFIGURACIÓN DE PÁGINAS A4
-      // =========================================
 
       const margin = 8
 
@@ -1232,153 +1212,128 @@ function Dashboard() {
       const contentWidth = pageWidth - margin * 2
       const contentHeight = pageHeight - margin * 2 - 8
 
-      const pixelsPerPage = Math.floor(
-        dashboardCanvas.width * (contentHeight / contentWidth)
-      )
-
-      let currentY = 0
-      let firstPage = true
+      const zip = new JSZip()
 
       // =========================================
-      // 3. DIVIDIR DASHBOARD EN PÁGINAS
+      // 2. VISUALIZACIONES PARA EXPORTAR
       // =========================================
 
-      while (currentY < dashboardCanvas.height) {
-        const remainingHeight =
-          dashboardCanvas.height - currentY
-
-        const sliceHeight = Math.min(
-          pixelsPerPage,
-          remainingHeight
-        )
-
-        const pageCanvas = document.createElement('canvas')
-
-        pageCanvas.width = dashboardCanvas.width
-        pageCanvas.height = sliceHeight
-
-        const context = pageCanvas.getContext('2d')
-
-        if (!context) {
-          throw new Error('No se pudo preparar la captura del PDF.')
-        }
-
-        context.drawImage(
-          dashboardCanvas,
-          0,
-          currentY,
-          dashboardCanvas.width,
-          sliceHeight,
-          0,
-          0,
-          dashboardCanvas.width,
-          sliceHeight
-        )
-
-        if (!firstPage) {
-          doc.addPage()
-        }
-
-        const imageHeight =
-          (sliceHeight * contentWidth) / dashboardCanvas.width
-
-        doc.addImage(
-          pageCanvas.toDataURL('image/png'),
-          'PNG',
-          margin,
-          margin,
-          contentWidth,
-          imageHeight,
-          undefined,
-          'FAST'
-        )
-
-        currentY += sliceHeight
-        firstPage = false
-      }
+      const visualizations = [
+        {
+          id: 'pdf-chart-consumption',
+          name: '01_Consumo_de_agua',
+        },
+        {
+          id: 'pdf-chart-installations',
+          name: '02_Consumo_por_instalacion',
+        },
+        {
+          id: 'pdf-chart-status',
+          name: '03_Estado_de_sensores',
+        },
+        {
+          id: 'pdf-chart-alerts',
+          name: '04_Distribucion_de_alertas',
+        },
+        {
+          id: 'pdf-chart-trends',
+          name: '05_Promedios_y_tendencias',
+        },
+        {
+          id: 'pdf-map-sensors',
+          name: '06_Mapa_de_sensores',
+        },
+      ]
 
       // =========================================
-      // 4. GRÁFICAS Y MAPA EN PÁGINAS INDEPENDIENTES
+      // 3. CAPTURA INDIVIDUAL DE VISUALIZACIONES
       // =========================================
 
-      const addVisualPage = async (elementId) => {
-        const element = document.getElementById(elementId)
+      const addVisualPage = async (visual) => {
+        const element = document.getElementById(visual.id)
 
         if (!element) {
-          console.warn(`No se encontró la visualización: ${elementId}`)
-          return
+          throw new Error(
+            `No se encontró la visualización: ${visual.id}`
+          )
         }
 
-        const visualCanvas = await html2canvas(element, {
-          scale: 2,
+        await waitForDashboardAnimations()
+
+        const canvas = await html2canvas(element, {
+          scale: 4,
           useCORS: true,
           backgroundColor: '#0b1422',
           logging: false,
           scrollX: 0,
           scrollY: 0,
+          imageTimeout: 15000,
+          removeContainer: true,
         })
 
-        if (!visualCanvas.width || !visualCanvas.height) {
-          throw new Error(`No se pudo capturar: ${elementId}`)
+        if (!canvas.width || !canvas.height) {
+          throw new Error(
+            `La captura de ${visual.name} está vacía.`
+          )
         }
 
-        doc.addPage()
+        const imageData = canvas.toDataURL('image/png')
+        const imageBase64 = imageData.split(',')[1]
 
-        const availableWidth = contentWidth
-        const availableHeight = contentHeight
-
-        const imageScale = Math.min(
-          availableWidth / visualCanvas.width,
-          availableHeight / visualCanvas.height
+        // Guardar PNG en la carpeta Graficas del ZIP.
+        zip.file(
+          `Graficas/${visual.name}.png`,
+          imageBase64,
+          { base64: true }
         )
 
-        const imageWidth = visualCanvas.width * imageScale
-        const imageHeight = visualCanvas.height * imageScale
+        // Agregar una página independiente al PDF.
+        doc.addPage('a4', 'portrait')
+
+        const imageScale = Math.min(
+          contentWidth / canvas.width,
+          contentHeight / canvas.height
+        )
+
+        const imageWidth = canvas.width * imageScale
+        const imageHeight = canvas.height * imageScale
 
         const imageX = (pageWidth - imageWidth) / 2
-        const imageY = margin + (availableHeight - imageHeight) / 2
+        const imageY = margin + (contentHeight - imageHeight) / 2
 
         doc.addImage(
-          visualCanvas.toDataURL('image/png'),
+          imageData,
           'PNG',
           imageX,
           imageY,
           imageWidth,
-          imageHeight,
-          undefined,
-          'FAST'
+          imageHeight
         )
+
+        console.log(`Visualización exportada: ${visual.name}`)
+
+        // Liberar memoria del canvas.
+        canvas.width = 0
+        canvas.height = 0
       }
 
-      await addVisualPage('pdf-chart-consumption')
-      await addVisualPage('pdf-chart-installations')
-      await addVisualPage('pdf-chart-status')
-      await addVisualPage('pdf-chart-alerts')
-      await addVisualPage('pdf-chart-trends')
-      await addVisualPage('pdf-map-sensors')
-
       // =========================================
-      // 4. NUEVA PÁGINA PARA LAS TABLAS
+      // 4. ENCABEZADO DEL REPORTE
       // =========================================
-
-      doc.addPage()
 
       const generatedAt = new Date().toLocaleString('es-MX')
 
       const periodName =
         range === 'hoy' ? 'Hoy' : `Últimos ${range} días`
 
-      let y = 20
-
-      // =========================================
-      // 5. ENCABEZADO DEL REPORTE
-      // =========================================
+      let y = 80
 
       doc.setFillColor(8, 20, 34)
       doc.rect(0, 0, pageWidth, 43, 'F')
 
       doc.setTextColor(0, 210, 230)
       doc.setFontSize(10)
+      doc.setFont('helvetica', 'normal')
       doc.text('SISTEMA DE MONITOREO HÍDRICO', 14, 14)
 
       doc.setTextColor(255, 255, 255)
@@ -1395,23 +1350,13 @@ function Dashboard() {
       doc.text(`Periodo consultado: ${periodName}`, 14, 53)
       doc.text(`Generado: ${generatedAt}`, 14, 60)
 
-      doc.setTextColor(190, 105, 20)
-      doc.setFontSize(9)
-      doc.text(
-        'NOTA: Este reporte contiene información demostrativa.',
-        14,
-        69
-      )
-
-      y = 80
-
       // =========================================
-      // 6. FUNCIÓN PARA AGREGAR TABLAS
+      // 5. FUNCIÓN PARA AGREGAR TABLAS
       // =========================================
 
       const addSection = (title, headers, rows) => {
         if (y > 250) {
-          doc.addPage()
+          doc.addPage('a4', 'portrait')
           y = 20
         }
 
@@ -1459,7 +1404,7 @@ function Dashboard() {
       }
 
       // =========================================
-      // 7. INDICADORES PRINCIPALES
+      // 6. INDICADORES PRINCIPALES
       // =========================================
 
       addSection(
@@ -1487,7 +1432,7 @@ function Dashboard() {
       )
 
       // =========================================
-      // 8. CONSUMO DE AGUA
+      // 7. REGISTRO DE CONSUMO
       // =========================================
 
       const consumptionRows = selectedValues.map((value, index) => [
@@ -1505,7 +1450,7 @@ function Dashboard() {
       )
 
       // =========================================
-      // 9. CONSUMO POR INSTALACIÓN
+      // 8. CONSUMO POR INSTALACIÓN
       // =========================================
 
       const installationRows = selectedInstallations.map((item) => [
@@ -1521,8 +1466,19 @@ function Dashboard() {
       )
 
       // =========================================
-      // 10. ESTADO DE SENSORES
+      // 9. ESTADO DE SENSORES
       // =========================================
+
+      const safeSensorTotal =
+        Number(sensorStatusData.total) || 0
+
+      const sensorPercentage = (value) =>
+        safeSensorTotal > 0
+          ? formatNumber(
+              (Number(value) / safeSensorTotal) * 100,
+              1
+            )
+          : '0.0'
 
       addSection(
         '4. Estado general de sensores',
@@ -1531,33 +1487,24 @@ function Dashboard() {
           [
             'En línea',
             sensorStatusData.online,
-            `${formatNumber(
-              (sensorStatusData.online / sensorStatusData.total) * 100,
-              1
-            )}%`,
+            `${sensorPercentage(sensorStatusData.online)}%`,
           ],
           [
             'Advertencia',
             sensorStatusData.warning,
-            `${formatNumber(
-              (sensorStatusData.warning / sensorStatusData.total) * 100,
-              1
-            )}%`,
+            `${sensorPercentage(sensorStatusData.warning)}%`,
           ],
           [
             'Desconectados',
             sensorStatusData.offline,
-            `${formatNumber(
-              (sensorStatusData.offline / sensorStatusData.total) * 100,
-              1
-            )}%`,
+            `${sensorPercentage(sensorStatusData.offline)}%`,
           ],
           ['Total', sensorStatusData.total, '100%'],
         ]
       )
 
       // =========================================
-      // 11. ALERTAS DEL PERIODO
+      // 10. HISTORIAL DE ALERTAS
       // =========================================
 
       const alarmRows = selectedAlarms.map((alarm) => [
@@ -1575,7 +1522,7 @@ function Dashboard() {
       )
 
       // =========================================
-      // 12. PROMEDIOS Y TENDENCIAS
+      // 11. PROMEDIOS Y TENDENCIAS
       // =========================================
 
       const midpoint = Math.floor(selectedValues.length / 2)
@@ -1608,15 +1555,105 @@ function Dashboard() {
             'Variación',
             `${consumptionTrend.percentage}%`,
           ],
-          [
-            'Comportamiento',
-            trendText,
-          ],
+          ['Comportamiento', trendText],
         ]
       )
 
       // =========================================
-      // 13. PIE DE PÁGINA Y NUMERACIÓN
+      // 12. EXPORTAR LAS SEIS VISUALIZACIONES
+      // =========================================
+
+      for (const visual of visualizations) {
+        await addVisualPage(visual)
+      }
+
+      // =========================================
+      // 13. CAPTURAR EL DASHBOARD COMPLETO
+      // =========================================
+
+      console.log('Capturando dashboard completo...')
+
+      await waitForDashboardAnimations()
+
+      const dashboardCanvas = await html2canvas(
+        dashboardElement,
+        {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#0b1422',
+          logging: false,
+          scrollX: 0,
+          scrollY: 0,
+          imageTimeout: 15000,
+          removeContainer: true,
+
+          // Excluir las gráficas auxiliares del PDF
+          // y el botón de exportación.
+          ignoreElements: (element) =>
+            element.classList?.contains('pdf-visuals-source') ||
+            element.classList?.contains('dashboard-export'),
+        }
+      )
+
+      if (!dashboardCanvas.width || !dashboardCanvas.height) {
+        throw new Error(
+          'No se pudo capturar el dashboard completo.'
+        )
+      }
+
+      const dashboardImage =
+        dashboardCanvas.toDataURL('image/png')
+
+      const dashboardBase64 =
+        dashboardImage.split(',')[1]
+
+      // Guardar el dashboard completo dentro de Graficas.
+      zip.file(
+        'Graficas/00_Dashboard_Completo.png',
+        dashboardBase64,
+        { base64: true }
+      )
+
+      // =========================================
+      // 14. AGREGAR DASHBOARD COMPLETO AL PDF
+      // =========================================
+
+      doc.addPage('a4', 'portrait')
+
+      const dashboardScale = Math.min(
+        contentWidth / dashboardCanvas.width,
+        contentHeight / dashboardCanvas.height
+      )
+
+      const dashboardWidth =
+        dashboardCanvas.width * dashboardScale
+
+      const dashboardHeight =
+        dashboardCanvas.height * dashboardScale
+
+      const dashboardX =
+        (pageWidth - dashboardWidth) / 2
+
+      const dashboardY =
+        margin + (contentHeight - dashboardHeight) / 2
+
+      doc.addImage(
+        dashboardImage,
+        'PNG',
+        dashboardX,
+        dashboardY,
+        dashboardWidth,
+        dashboardHeight
+      )
+
+      console.log('Dashboard completo agregado al PDF y ZIP.')
+
+      // Liberar memoria del canvas.
+      dashboardCanvas.width = 0
+      dashboardCanvas.height = 0
+
+      // =========================================
+      // 15. NUMERACIÓN DE TODAS LAS PÁGINAS
       // =========================================
 
       const pageCount = doc.internal.getNumberOfPages()
@@ -1625,6 +1662,7 @@ function Dashboard() {
         doc.setPage(page)
 
         doc.setDrawColor(210, 225, 232)
+
         doc.line(
           14,
           pageHeight - 15,
@@ -1637,7 +1675,7 @@ function Dashboard() {
         doc.setTextColor(110, 125, 135)
 
         doc.text(
-          'Alerta-Tlaloc | Reporte demostrativo',
+          'Alerta-Tlaloc | Sistema de Monitoreo Hídrico',
           14,
           pageHeight - 9
         )
@@ -1651,17 +1689,67 @@ function Dashboard() {
       }
 
       // =========================================
-      // 14. DESCARGAR DOCUMENTO
+      // 16. GENERAR Y DESCARGAR ZIP
       // =========================================
 
-      doc.save(`Alerta-Tlaloc_Reporte_${range}_dias.pdf`)
+      console.log('Generando ZIP...')
+
+      const zipBlob = await zip.generateAsync({
+        type: 'blob',
+        compression: 'DEFLATE',
+        compressionOptions: {
+          level: 6,
+        },
+      })
+
+      zipUrl = URL.createObjectURL(zipBlob)
+
+      const downloadLink = document.createElement('a')
+
+      downloadLink.href = zipUrl
+      downloadLink.download =
+        `Graficas_Alerta-Tlaloc_${range}_dias.zip`
+
+      document.body.appendChild(downloadLink)
+      downloadLink.click()
+      downloadLink.remove()
+
+      console.log('Descarga del ZIP iniciada.')
+
+      // =========================================
+      // 17. DESCARGAR PDF
+      // =========================================
+
+      await new Promise((resolve) =>
+        setTimeout(resolve, 1200)
+      )
+
+      console.log('Iniciando descarga del PDF...')
+
+      doc.save(
+        `Alerta-Tlaloc_Reporte_${range}_dias.pdf`
+      )
+
+      console.log('Exportación finalizada.')
 
     } catch (error) {
-      console.error('Error al generar el PDF:', error)
-      alert('Ocurrió un error al generar el reporte PDF. Revisa la consola.')
+      console.error('Error al generar el reporte:', error)
+
+      alert(
+        `Ocurrió un error al generar el reporte: ${error.message}`
+      )
+
+    } finally {
+      document.body.classList.remove('pdf-capture-mode')
+
+      if (zipUrl) {
+        setTimeout(() => {
+          URL.revokeObjectURL(zipUrl)
+        }, 5000)
+      }
     }
   }
-
+  
   return (
     <main className="dashboard-page">
 
@@ -1679,10 +1767,7 @@ function Dashboard() {
           </p>
         </div>
 
-        <div className="dashboard-demo">
-          <span className="demo-indicator" />
-          Datos demostrativos
-        </div>
+        
       </header>
 
       {/* FILTRO GLOBAL */}
@@ -2135,7 +2220,6 @@ function Dashboard() {
 
       <footer className="dashboard-footer">
         <span>Alerta-Tlaloc · Sistema de monitoreo hídrico</span>
-        <span>Panel de visualización demostrativo</span>
       </footer>
 
     </main>
