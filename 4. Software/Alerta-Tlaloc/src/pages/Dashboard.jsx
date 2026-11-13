@@ -10,6 +10,11 @@ function Dashboard() {
   const [range, setRange] = useState('31')
   const [showAllAlarms, setShowAllAlarms] = useState(false)
 
+  // ===== ESTADOS DE CARGA DE EXPORTACIÓN =====
+  const [isExporting, setIsExporting] = useState(false)
+  const [exportProgress, setExportProgress] = useState(0)
+  const [exportMessage, setExportMessage] = useState('')
+
   // =========================================
   // 1. ESTADOS PARA CONECTAR CON LA API
   // =========================================
@@ -130,7 +135,6 @@ function Dashboard() {
 
     return () => controller.abort()
   }, [range])
-
 
   // =========================================
   // 2. FUNCIONES AUXILIARES
@@ -573,7 +577,7 @@ function Dashboard() {
 
       return { x, y, value, index }
     })
-   
+
     const linePoints = points
       .map((point) => `${point.x},${point.y}`)
       .join(' ')
@@ -1025,7 +1029,6 @@ function Dashboard() {
   // 8. ESTADO Y LÓGICA PRINCIPAL DEL DASHBOARD
   // =========================================
 
-  // Estado independiente para cada visualización.
   const [panelViews, setPanelViews] = useState({
     consumption: 'chart',
     installations: 'chart',
@@ -1034,7 +1037,6 @@ function Dashboard() {
     trends: 'chart',
   })
 
-  // Cambia entre gráfica y datos en cada panel.
   const changePanelView = (panel, view) => {
     setPanelViews((current) => ({
       ...current,
@@ -1071,7 +1073,6 @@ function Dashboard() {
 
   const latestReading = selectedValues[selectedValues.length - 1] ?? 0
 
-  // 🔧 FIX: movido arriba para que exportDashboardPDF lo pueda usar sin problemas
   const trendText =
     consumptionTrend.direction === 'up'
       ? 'Incremento'
@@ -1079,17 +1080,13 @@ function Dashboard() {
         ? 'Disminución'
         : 'Sin variación significativa'
 
-  // 🔧 FIX: valor de sensores en línea como número reutilizable
   const onlinePercentage =
     sensorStatusData.total > 0
       ? (sensorStatusData.online / sensorStatusData.total) * 100
       : 0
 
   // =========================================
-  // 🔧 FIX: ANIMACIÓN DE KPIs
-  // Se re-ejecuta cuando cambia el periodo o cualquiera de los
-  // valores objetivo. Ahora lee `data-target` del DOM en lugar
-  // del texto visible (que puede estar en 0 o ya animado).
+  // ANIMACIÓN DE KPIs
   // =========================================
   useEffect(() => {
     const counters = document.querySelectorAll('.kpi-value')
@@ -1102,14 +1099,12 @@ function Dashboard() {
       const target = parseFloat(String(targetRaw).replace(/,/g, ''))
       if (!Number.isFinite(target)) return
 
-      // Busca el nodo de texto del número (ignora el <small>)
       let node = Array.from(counter.childNodes).find(
         (n) =>
           n.nodeType === Node.TEXT_NODE &&
           n.textContent.trim() !== ''
       )
 
-      // Si no existe (card sin <small> y ya animada), lo crea
       if (!node) {
         node = document.createTextNode('')
         counter.insertBefore(node, counter.firstChild)
@@ -1118,7 +1113,6 @@ function Dashboard() {
       const decimals = (String(targetRaw).split('.')[1] || '').length
       const duration = 1100
       const startTime = performance.now()
-      // 🔧 Transición suave: parte del valor actual en el DOM
       const startValue =
         parseFloat(node.textContent.replace(/[^\d.-]/g, '')) || 0
 
@@ -1135,7 +1129,6 @@ function Dashboard() {
         if (progress < 1) {
           rafIds.push(requestAnimationFrame(updateCounter))
         } else {
-          // Asegura el valor exacto al final (evita drift de coma flotante)
           node.textContent = target.toLocaleString('es-MX', {
             minimumFractionDigits: decimals,
             maximumFractionDigits: decimals,
@@ -1160,8 +1153,6 @@ function Dashboard() {
     selectedAlarms.length,
   ])
 
-
-
   // =========================================
   // EXPORTACIÓN DEL PDF Y ZIP
   // =========================================
@@ -1175,14 +1166,23 @@ function Dashboard() {
     document.body.classList.add('pdf-capture-mode')
 
     await new Promise((resolve) =>
-      requestAnimationFrame(() =>
-        requestAnimationFrame(resolve)
-      )
+      requestAnimationFrame(() => requestAnimationFrame(resolve))
     )
+  }
+
+  // ✅ Helper FUERA de waitForDashboardAnimations
+  const updateProgress = async (value, message) => {
+    setExportMessage(message)
+    setExportProgress(value)
+    await new Promise((r) => setTimeout(r, 120))
   }
 
   const exportDashboardPDF = async () => {
     let zipUrl = null
+
+    setIsExporting(true)
+    setExportProgress(0)
+    setExportMessage('Preparando exportación...')
 
     try {
       console.log('Iniciando exportación de Alerta-Tlaloc...')
@@ -1205,58 +1205,42 @@ function Dashboard() {
       }
 
       const margin = 8
-
       const pageWidth = doc.internal.pageSize.getWidth()
       const pageHeight = doc.internal.pageSize.getHeight()
-
       const contentWidth = pageWidth - margin * 2
       const contentHeight = pageHeight - margin * 2 - 8
-
       const zip = new JSZip()
+
+      await updateProgress(3, 'Preparando documento...')
 
       // =========================================
       // 2. VISUALIZACIONES PARA EXPORTAR
       // =========================================
 
       const visualizations = [
-        {
-          id: 'pdf-chart-consumption',
-          name: '01_Consumo_de_agua',
-        },
-        {
-          id: 'pdf-chart-installations',
-          name: '02_Consumo_por_instalacion',
-        },
-        {
-          id: 'pdf-chart-status',
-          name: '03_Estado_de_sensores',
-        },
-        {
-          id: 'pdf-chart-alerts',
-          name: '04_Distribucion_de_alertas',
-        },
-        {
-          id: 'pdf-chart-trends',
-          name: '05_Promedios_y_tendencias',
-        },
-        {
-          id: 'pdf-map-sensors',
-          name: '06_Mapa_de_sensores',
-        },
+        { id: 'pdf-chart-consumption',   name: '01_Consumo_de_agua' },
+        { id: 'pdf-chart-installations', name: '02_Consumo_por_instalacion' },
+        { id: 'pdf-chart-status',        name: '03_Estado_de_sensores' },
+        { id: 'pdf-chart-alerts',        name: '04_Distribucion_de_alertas' },
+        { id: 'pdf-chart-trends',        name: '05_Promedios_y_tendencias' },
+        { id: 'pdf-map-sensors',         name: '06_Mapa_de_sensores' },
       ]
 
       // =========================================
       // 3. CAPTURA INDIVIDUAL DE VISUALIZACIONES
       // =========================================
 
-      const addVisualPage = async (visual) => {
+      const addVisualPage = async (visual, index) => {
         const element = document.getElementById(visual.id)
 
         if (!element) {
-          throw new Error(
-            `No se encontró la visualización: ${visual.id}`
-          )
+          throw new Error(`No se encontró la visualización: ${visual.id}`)
         }
+
+        await updateProgress(
+          10 + (index / visualizations.length) * 50,
+          `Capturando ${visual.name.replace(/_/g, ' ')}...`
+        )
 
         await waitForDashboardAnimations()
 
@@ -1272,22 +1256,14 @@ function Dashboard() {
         })
 
         if (!canvas.width || !canvas.height) {
-          throw new Error(
-            `La captura de ${visual.name} está vacía.`
-          )
+          throw new Error(`La captura de ${visual.name} está vacía.`)
         }
 
         const imageData = canvas.toDataURL('image/png')
         const imageBase64 = imageData.split(',')[1]
 
-        // Guardar PNG en la carpeta Graficas del ZIP.
-        zip.file(
-          `Graficas/${visual.name}.png`,
-          imageBase64,
-          { base64: true }
-        )
+        zip.file(`Graficas/${visual.name}.png`, imageBase64, { base64: true })
 
-        // Agregar una página independiente al PDF.
         doc.addPage('a4', 'portrait')
 
         const imageScale = Math.min(
@@ -1297,22 +1273,13 @@ function Dashboard() {
 
         const imageWidth = canvas.width * imageScale
         const imageHeight = canvas.height * imageScale
-
         const imageX = (pageWidth - imageWidth) / 2
         const imageY = margin + (contentHeight - imageHeight) / 2
 
-        doc.addImage(
-          imageData,
-          'PNG',
-          imageX,
-          imageY,
-          imageWidth,
-          imageHeight
-        )
+        doc.addImage(imageData, 'PNG', imageX, imageY, imageWidth, imageHeight)
 
         console.log(`Visualización exportada: ${visual.name}`)
 
-        // Liberar memoria del canvas.
         canvas.width = 0
         canvas.height = 0
       }
@@ -1321,11 +1288,10 @@ function Dashboard() {
       // 4. ENCABEZADO DEL REPORTE
       // =========================================
 
+      await updateProgress(8, 'Construyendo encabezado...')
+
       const generatedAt = new Date().toLocaleString('es-MX')
-
-      const periodName =
-        range === 'hoy' ? 'Hoy' : `Últimos ${range} días`
-
+      const periodName = range === 'hoy' ? 'Hoy' : `Últimos ${range} días`
       let y = 80
 
       doc.setFillColor(8, 20, 34)
@@ -1368,21 +1334,14 @@ function Dashboard() {
         const tableRows =
           rows.length > 0
             ? rows
-            : [
-                headers.map((_, index) =>
-                  index === 0 ? 'Sin registros' : '—'
-                ),
-              ]
+            : [headers.map((_, index) => (index === 0 ? 'Sin registros' : '—'))]
 
         autoTable(doc, {
           startY: y + 5,
           head: [headers],
           body: tableRows,
           theme: 'grid',
-          margin: {
-            left: 14,
-            right: 14,
-          },
+          margin: { left: 14, right: 14 },
           styles: {
             font: 'helvetica',
             fontSize: 8,
@@ -1395,9 +1354,7 @@ function Dashboard() {
             textColor: [255, 255, 255],
             fontStyle: 'bold',
           },
-          alternateRowStyles: {
-            fillColor: [242, 248, 250],
-          },
+          alternateRowStyles: { fillColor: [242, 248, 250] },
         })
 
         y = doc.lastAutoTable.finalY + 12
@@ -1407,29 +1364,13 @@ function Dashboard() {
       // 6. INDICADORES PRINCIPALES
       // =========================================
 
-      addSection(
-        '1. Indicadores principales',
-        ['Indicador', 'Resultado'],
-        [
-          [
-            'Consumo acumulado',
-            `${formatNumber(totalConsumption, 1)} m³`,
-          ],
-          [
-            'Promedio por registro',
-            `${formatNumber(averageConsumption, 1)} m³`,
-          ],
-          [
-            'Último registro',
-            `${formatNumber(latestReading, 1)} m³`,
-          ],
-          [
-            'Sensores en línea',
-            `${formatNumber(onlinePercentage, 1)}%`,
-          ],
-          ['Alarmas del periodo', selectedAlarms.length],
-        ]
-      )
+      addSection('1. Indicadores principales', ['Indicador', 'Resultado'], [
+        ['Consumo acumulado', `${formatNumber(totalConsumption, 1)} m³`],
+        ['Promedio por registro', `${formatNumber(averageConsumption, 1)} m³`],
+        ['Último registro', `${formatNumber(latestReading, 1)} m³`],
+        ['Sensores en línea', `${formatNumber(onlinePercentage, 1)}%`],
+        ['Alarmas del periodo', selectedAlarms.length],
+      ])
 
       // =========================================
       // 7. REGISTRO DE CONSUMO
@@ -1469,39 +1410,19 @@ function Dashboard() {
       // 9. ESTADO DE SENSORES
       // =========================================
 
-      const safeSensorTotal =
-        Number(sensorStatusData.total) || 0
+      const safeSensorTotal = Number(sensorStatusData.total) || 0
 
       const sensorPercentage = (value) =>
         safeSensorTotal > 0
-          ? formatNumber(
-              (Number(value) / safeSensorTotal) * 100,
-              1
-            )
+          ? formatNumber((Number(value) / safeSensorTotal) * 100, 1)
           : '0.0'
 
-      addSection(
-        '4. Estado general de sensores',
-        ['Estado', 'Cantidad', 'Porcentaje'],
-        [
-          [
-            'En línea',
-            sensorStatusData.online,
-            `${sensorPercentage(sensorStatusData.online)}%`,
-          ],
-          [
-            'Advertencia',
-            sensorStatusData.warning,
-            `${sensorPercentage(sensorStatusData.warning)}%`,
-          ],
-          [
-            'Desconectados',
-            sensorStatusData.offline,
-            `${sensorPercentage(sensorStatusData.offline)}%`,
-          ],
-          ['Total', sensorStatusData.total, '100%'],
-        ]
-      )
+      addSection('4. Estado general de sensores', ['Estado', 'Cantidad', 'Porcentaje'], [
+        ['En línea', sensorStatusData.online, `${sensorPercentage(sensorStatusData.online)}%`],
+        ['Advertencia', sensorStatusData.warning, `${sensorPercentage(sensorStatusData.warning)}%`],
+        ['Desconectados', sensorStatusData.offline, `${sensorPercentage(sensorStatusData.offline)}%`],
+        ['Total', sensorStatusData.total, '100%'],
+      ])
 
       // =========================================
       // 10. HISTORIAL DE ALERTAS
@@ -1526,93 +1447,59 @@ function Dashboard() {
       // =========================================
 
       const midpoint = Math.floor(selectedValues.length / 2)
+      const firstAverage = getAverageConsumption(selectedValues.slice(0, midpoint))
+      const secondAverage = getAverageConsumption(selectedValues.slice(midpoint))
 
-      const firstAverage = getAverageConsumption(
-        selectedValues.slice(0, midpoint)
-      )
+      addSection('6. Análisis de promedios y tendencias', ['Indicador', 'Resultado'], [
+        ['Promedio general', `${formatNumber(averageConsumption, 1)} m³`],
+        ['Promedio de la primera mitad', `${formatNumber(firstAverage, 1)} m³`],
+        ['Promedio de la segunda mitad', `${formatNumber(secondAverage, 1)} m³`],
+        ['Variación', `${consumptionTrend.percentage}%`],
+        ['Comportamiento', trendText],
+      ])
 
-      const secondAverage = getAverageConsumption(
-        selectedValues.slice(midpoint)
-      )
-
-      addSection(
-        '6. Análisis de promedios y tendencias',
-        ['Indicador', 'Resultado'],
-        [
-          [
-            'Promedio general',
-            `${formatNumber(averageConsumption, 1)} m³`,
-          ],
-          [
-            'Promedio de la primera mitad',
-            `${formatNumber(firstAverage, 1)} m³`,
-          ],
-          [
-            'Promedio de la segunda mitad',
-            `${formatNumber(secondAverage, 1)} m³`,
-          ],
-          [
-            'Variación',
-            `${consumptionTrend.percentage}%`,
-          ],
-          ['Comportamiento', trendText],
-        ]
-      )
+      await updateProgress(10, 'Tablas generadas...')
 
       // =========================================
       // 12. EXPORTAR LAS SEIS VISUALIZACIONES
       // =========================================
 
-      for (const visual of visualizations) {
-        await addVisualPage(visual)
+      for (let i = 0; i < visualizations.length; i++) {
+        await addVisualPage(visualizations[i], i)
       }
 
       // =========================================
       // 13. CAPTURAR EL DASHBOARD COMPLETO
       // =========================================
 
+      await updateProgress(62, 'Capturando dashboard completo...')
+
       console.log('Capturando dashboard completo...')
 
       await waitForDashboardAnimations()
 
-      const dashboardCanvas = await html2canvas(
-        dashboardElement,
-        {
-          scale: 2,
-          useCORS: true,
-          backgroundColor: '#0b1422',
-          logging: false,
-          scrollX: 0,
-          scrollY: 0,
-          imageTimeout: 15000,
-          removeContainer: true,
-
-          // Excluir las gráficas auxiliares del PDF
-          // y el botón de exportación.
-          ignoreElements: (element) =>
-            element.classList?.contains('pdf-visuals-source') ||
-            element.classList?.contains('dashboard-export'),
-        }
-      )
+      const dashboardCanvas = await html2canvas(dashboardElement, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#0b1422',
+        logging: false,
+        scrollX: 0,
+        scrollY: 0,
+        imageTimeout: 15000,
+        removeContainer: true,
+        ignoreElements: (element) =>
+          element.classList?.contains('pdf-visuals-source') ||
+          element.classList?.contains('dashboard-export'),
+      })
 
       if (!dashboardCanvas.width || !dashboardCanvas.height) {
-        throw new Error(
-          'No se pudo capturar el dashboard completo.'
-        )
+        throw new Error('No se pudo capturar el dashboard completo.')
       }
 
-      const dashboardImage =
-        dashboardCanvas.toDataURL('image/png')
+      const dashboardImage = dashboardCanvas.toDataURL('image/png')
+      const dashboardBase64 = dashboardImage.split(',')[1]
 
-      const dashboardBase64 =
-        dashboardImage.split(',')[1]
-
-      // Guardar el dashboard completo dentro de Graficas.
-      zip.file(
-        'Graficas/00_Dashboard_Completo.png',
-        dashboardBase64,
-        { base64: true }
-      )
+      zip.file('Graficas/00_Dashboard_Completo.png', dashboardBase64, { base64: true })
 
       // =========================================
       // 14. AGREGAR DASHBOARD COMPLETO AL PDF
@@ -1625,17 +1512,10 @@ function Dashboard() {
         contentHeight / dashboardCanvas.height
       )
 
-      const dashboardWidth =
-        dashboardCanvas.width * dashboardScale
-
-      const dashboardHeight =
-        dashboardCanvas.height * dashboardScale
-
-      const dashboardX =
-        (pageWidth - dashboardWidth) / 2
-
-      const dashboardY =
-        margin + (contentHeight - dashboardHeight) / 2
+      const dashboardWidth = dashboardCanvas.width * dashboardScale
+      const dashboardHeight = dashboardCanvas.height * dashboardScale
+      const dashboardX = (pageWidth - dashboardWidth) / 2
+      const dashboardY = margin + (contentHeight - dashboardHeight) / 2
 
       doc.addImage(
         dashboardImage,
@@ -1648,7 +1528,6 @@ function Dashboard() {
 
       console.log('Dashboard completo agregado al PDF y ZIP.')
 
-      // Liberar memoria del canvas.
       dashboardCanvas.width = 0
       dashboardCanvas.height = 0
 
@@ -1656,59 +1535,52 @@ function Dashboard() {
       // 15. NUMERACIÓN DE TODAS LAS PÁGINAS
       // =========================================
 
+      await updateProgress(72, 'Numerando páginas...')
+
       const pageCount = doc.internal.getNumberOfPages()
 
       for (let page = 1; page <= pageCount; page++) {
         doc.setPage(page)
-
         doc.setDrawColor(210, 225, 232)
-
-        doc.line(
-          14,
-          pageHeight - 15,
-          pageWidth - 14,
-          pageHeight - 15
-        )
+        doc.line(14, pageHeight - 15, pageWidth - 14, pageHeight - 15)
 
         doc.setFont('helvetica', 'normal')
         doc.setFontSize(8)
         doc.setTextColor(110, 125, 135)
 
-        doc.text(
-          'Alerta-Tlaloc | Sistema de Monitoreo Hídrico',
-          14,
-          pageHeight - 9
-        )
-
-        doc.text(
-          `Página ${page} de ${pageCount}`,
-          pageWidth - 14,
-          pageHeight - 9,
-          { align: 'right' }
-        )
+        doc.text('Alerta-Tlaloc | Sistema de Monitoreo Hídrico', 14, pageHeight - 9)
+        doc.text(`Página ${page} de ${pageCount}`, pageWidth - 14, pageHeight - 9, {
+          align: 'right',
+        })
       }
 
       // =========================================
       // 16. GENERAR Y DESCARGAR ZIP
       // =========================================
 
+      await updateProgress(78, 'Comprimiendo archivos...')
+
       console.log('Generando ZIP...')
 
-      const zipBlob = await zip.generateAsync({
-        type: 'blob',
-        compression: 'DEFLATE',
-        compressionOptions: {
-          level: 6,
+      const zipBlob = await zip.generateAsync(
+        {
+          type: 'blob',
+          compression: 'DEFLATE',
+          compressionOptions: { level: 6 },
         },
-      })
+        (metadata) => {
+          // progreso REAL de compresión: 78 → 94 %
+          setExportProgress(78 + metadata.percent * 0.16)
+        }
+      )
+
+      await updateProgress(95, 'Descargando ZIP...')
 
       zipUrl = URL.createObjectURL(zipBlob)
 
       const downloadLink = document.createElement('a')
-
       downloadLink.href = zipUrl
-      downloadLink.download =
-        `Graficas_Alerta-Tlaloc_${range}_dias.zip`
+      downloadLink.download = `Graficas_Alerta-Tlaloc_${range}_dias.zip`
 
       document.body.appendChild(downloadLink)
       downloadLink.click()
@@ -1720,36 +1592,36 @@ function Dashboard() {
       // 17. DESCARGAR PDF
       // =========================================
 
-      await new Promise((resolve) =>
-        setTimeout(resolve, 1200)
-      )
+      await updateProgress(97, 'Descargando PDF...')
+
+      await new Promise((resolve) => setTimeout(resolve, 1200))
 
       console.log('Iniciando descarga del PDF...')
 
-      doc.save(
-        `Alerta-Tlaloc_Reporte_${range}_dias.pdf`
-      )
+      doc.save(`Alerta-Tlaloc_Reporte_${range}_dias.pdf`)
+
+      await updateProgress(100, '¡Reporte listo!')
+
+      await new Promise((resolve) => setTimeout(resolve, 600))
 
       console.log('Exportación finalizada.')
-
     } catch (error) {
       console.error('Error al generar el reporte:', error)
-
-      alert(
-        `Ocurrió un error al generar el reporte: ${error.message}`
-      )
-
+      setExportMessage(`Error: ${error.message}`)
+      await new Promise((resolve) => setTimeout(resolve, 2000))
     } finally {
+      setIsExporting(false)
+      setExportProgress(0)
+      setExportMessage('')
+
       document.body.classList.remove('pdf-capture-mode')
 
       if (zipUrl) {
-        setTimeout(() => {
-          URL.revokeObjectURL(zipUrl)
-        }, 5000)
+        setTimeout(() => URL.revokeObjectURL(zipUrl), 5000)
       }
     }
   }
-  
+
   return (
     <main className="dashboard-page">
 
@@ -1766,8 +1638,6 @@ function Dashboard() {
             instalaciones.
           </p>
         </div>
-
-        
       </header>
 
       {/* FILTRO GLOBAL */}
@@ -1794,8 +1664,6 @@ function Dashboard() {
       {/* INDICADORES PRINCIPALES */}
 
       <section className="dashboard-kpis">
-
-        {/* 🔧 FIX: data-target agregado a cada KPI */}
 
         <article className="dashboard-card kpi-card">
           <div className="kpi-top">
@@ -1881,7 +1749,6 @@ function Dashboard() {
             <span className="kpi-icon alarm-icon">!</span>
           </div>
 
-          {/* 🔧 FIX: la última card no tenía data-target */}
           <strong
             className="kpi-value"
             data-target={selectedAlarms.length}
@@ -1899,8 +1766,6 @@ function Dashboard() {
       {/* GRÁFICA Y MAPA */}
 
       <section className="dashboard-middle">
-
-        {/* CONSUMO DE AGUA */}
 
         <article className="dashboard-card consumption-card">
           <div className="panel-header">
@@ -1960,8 +1825,6 @@ function Dashboard() {
           </div>
         </article>
 
-        {/* MAPA DE SENSORES */}
-
         <article className="dashboard-card map-card">
           <div className="panel-header">
             <div>
@@ -1979,8 +1842,6 @@ function Dashboard() {
       {/* INFORMACIÓN COMPLEMENTARIA */}
 
       <section className="dashboard-bottom">
-
-        {/* CONSUMO POR INSTALACIÓN */}
 
         <article className="dashboard-card installations-card">
           <div className="panel-header">
@@ -2005,8 +1866,6 @@ function Dashboard() {
             <InstallationsDataTable items={selectedInstallations} />
           )}
         </article>
-
-        {/* ESTADO DE SENSORES */}
 
         <article className="dashboard-card status-card">
           <div className="panel-header">
@@ -2036,8 +1895,6 @@ function Dashboard() {
             <strong>Operativa</strong>
           </div>
         </article>
-
-        {/* ÚLTIMAS ALARMAS */}
 
         <article className="dashboard-card alerts-card">
           <div className="panel-header">
@@ -2073,8 +1930,6 @@ function Dashboard() {
             <span>→</span>
           </button>
         </article>
-
-        {/* PROMEDIOS Y TENDENCIAS */}
 
         <article className="dashboard-card trends-card">
           <div className="panel-header">
@@ -2198,10 +2053,29 @@ function Dashboard() {
           type="button"
           className="export-pdf-button"
           onClick={exportDashboardPDF}
+          disabled={isExporting}
         >
           <span>↓</span>
-          Exportar reporte en PDF
+          {isExporting ? 'Generando reporte...' : 'Exportar reporte en PDF'}
         </button>
+
+        {/* BARRA DE PROGRESO */}
+        {isExporting && (
+          <div className="export-progress">
+            <div className="export-progress-header">
+              <span>{exportMessage || 'Generando reporte...'}</span>
+              <span className="export-progress-percent">
+                {Math.round(exportProgress)}%
+              </span>
+            </div>
+            <div className="export-progress-track">
+              <div
+                className="export-progress-fill"
+                style={{ width: `${exportProgress}%` }}
+              />
+            </div>
+          </div>
+        )}
 
         <p>
           Descarga los indicadores, registros y análisis del periodo seleccionado.
@@ -2226,4 +2100,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard  
+export default Dashboard

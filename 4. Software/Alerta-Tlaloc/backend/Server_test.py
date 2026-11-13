@@ -86,3 +86,45 @@ async def get_alarms(range: str = "31"):
         return alarms_list
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+    # Consumo del Agua
+
+@app.get("/api/gestion-agua")
+async def get_gestion_agua():
+    try:
+        # 1. Obtener sectores de la base de datos (puedes usar tu colección de sensores o crear una de sectores)
+        cursor_sectores = db.sectores.find({})
+        sectors_list = await cursor_sectores.to_list(length=50)
+        
+        for s in sectors_list:
+            s["_id"] = str(s["_id"])
+            
+        # Si la colección está vacía, mandamos datos por defecto para respaldo
+        if not sectors_list:
+            sectors_list = [
+                { "name": "Sector Norte", "pressure": 4.5, "flow": 38, "status": "ABIERTA", "valveType": "Válvula Maestra", "condition": "Óptimo" },
+                { "name": "Sector Oriente", "pressure": 3.9, "flow": 29, "status": "ABIERTA", "valveType": "Válvula Maestra", "condition": "Óptimo" },
+                { "name": "Sector Sur", "pressure": 4.2, "flow": 32, "status": "CERRADA", "valveType": "Válvula Maestra", "condition": "Atención" },
+                { "name": "Sector Poniente", "pressure": 4.7, "flow": 35, "status": "ABIERTA", "valveType": "Válvula Maestra", "condition": "Óptimo" }
+            ]
+
+        # 2. Obtener bitácora de logs
+        cursor_logs = db.bitacora.find({}).sort("_id", -1).limit(20)
+        logs_list = await cursor_logs.to_list(length=20)
+        
+        for log in logs_list:
+            log["_id"] = str(log["_id"])
+            
+        if not logs_list:
+            logs_list = [
+                { "time": "10:12", "action": "Ajuste de caudal (Sector Oriente)", "user": "admin" },
+                { "time": "09:55", "action": "Cierre de emergencia (Sector Sur)", "user": "ismaeln" }
+            ]
+
+        return {
+            "sectors": sectors_list,
+            "auditLog": logs_list
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
