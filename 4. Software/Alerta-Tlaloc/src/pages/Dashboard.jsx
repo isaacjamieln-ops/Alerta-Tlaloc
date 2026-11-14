@@ -37,13 +37,13 @@ function Dashboard() {
 
   // Datos fijos de instalaciones
   const installations = [
-    { id: '1', name: 'Tanque Principal Sur', percentage: 0.4 },
+    { id: '1', name: 'Tanque Principal Sur', percentage: 0.20 },
     { id: '2', name: 'Planta de Bombeo Norte', percentage: 0.35 },
     { id: '3', name: 'Tanque de Regulación Oriente', percentage: 0.25 },
   ]
 
   // =========================================
-  // 2. PETICIÓN A LA API DE FASTAPI
+  // 2. PETICIÓN A LA API DE FASTAPI (AJUSTADA)
   // =========================================
   useEffect(() => {
     const controller = new AbortController()
@@ -51,13 +51,13 @@ function Dashboard() {
     async function fetchDashboardData() {
       try {
         const [resConsumo, resSensores, resAlarmas] = await Promise.all([
-          fetch(`http://localhost:8000/api/consumo?range=${range}`, {
+          fetch(`http://localhost:8000/api/consumo`, {
             signal: controller.signal,
           }),
           fetch('http://localhost:8000/api/sensores', {
             signal: controller.signal,
           }),
-          fetch(`http://localhost:8000/api/alarmas?range=${range}`, {
+          fetch(`http://localhost:8000/api/alarmas`, {
             signal: controller.signal,
           }),
         ])
@@ -71,14 +71,17 @@ function Dashboard() {
         const [dataConsumo, dataSensores, dataAlarmas] = await Promise.all([
           resConsumo.json(),
           resSensores.json(),
-          resAlarmas.json(),
+          resJsonOrEmpty(resAlarmas),
         ])
 
-        const values = Array.isArray(dataConsumo)
-          ? dataConsumo
-          : dataConsumo?.values
+        // 1. Mapeo de Consumo / Volúmenes de la API hidrológica
+        // La API devuelve { series: [ { clave_sih, values: [...], dates: [...] } ] }
+        const seriesList = dataConsumo?.series || []
+        if (seriesList.length > 0) {
+          // Tomamos la primera presa de la lista por defecto (ej. CCHNL)
+          const primarySeries = seriesList[0]
+          const values = primarySeries.values || []
 
-        if (Array.isArray(values)) {
           const validValues = values
             .map(Number)
             .filter((value) => Number.isFinite(value))
@@ -88,42 +91,49 @@ function Dashboard() {
               ...prev,
               [range]: validValues,
             }))
-          } else {
-            console.warn('La API de consumo no devolvió valores numéricos.', dataConsumo)
           }
-        } else {
-          console.warn('Formato inesperado en /api/consumo. Se conservan los datos de demostración.', dataConsumo)
         }
 
-        const sensorList = Array.isArray(dataSensores)
-          ? dataSensores
-          : dataSensores?.sensors
+        // 2. Mapeo de Sensores (Estaciones / Presas)
+        // Agregamos coordenadas x, y simuladas para que el mapa interactivo no falle al renderizar
+        const sensorList = Array.isArray(dataSensores?.sensors) ? dataSensores.sensors : []
+        const mappedSensors = sensorList.map((s, index) => ({
+          ...s,
+          id: s.id,
+          name: s.name,
+          status: s.status, // 'online' o 'warning'
+          location: `Estación Hidrológica ${s.id}`,
+          // Coordenadas simuladas en porcentaje para posicionar en el mapa visual
+          x: 25 + (index * 25) % 60,
+          y: 30 + (index * 20) % 50,
+        }))
+        setSensors(mappedSensors)
 
-        if (Array.isArray(sensorList)) {
-          setSensors(sensorList)
-        } else {
-          console.warn('Formato inesperado en /api/sensores: se esperaba un arreglo "sensors".', dataSensores)
-        }
-
+        // 3. Mapeo del Resumen de Estado
         const summary = dataSensores?.statusSummary
         if (summary && typeof summary === 'object') {
-          setSensorStatusData((prev) => ({
-            total: Number(summary.total ?? prev.total) || 0,
-            online: Number(summary.online ?? prev.online) || 0,
-            warning: Number(summary.warning ?? prev.warning) || 0,
-            offline: Number(summary.offline ?? prev.offline) || 0,
-          }))
+          setSensorStatusData({
+            total: Number(summary.total) || 0,
+            online: Number(summary.online) || 0,
+            warning: Number(summary.warning) || 0,
+            offline: Number(summary.offline) || 0,
+          })
         }
 
-        const alarmList = Array.isArray(dataAlarmas)
-          ? dataAlarmas
-          : dataAlarmas?.alarms
+        // 4. Mapeo de Alarmas (Lluvias intensas devueltas por la API)
+        const rawAlarms = Array.isArray(dataAlarmas) ? dataAlarmas : []
+        const mappedAlarms = rawAlarms.map((alarm, idx) => ({
+          id: alarm._id || idx,
+          title: `Lluvia intensa en ${alarm.clave_sih}`,
+          type: alarm.lluvia_1d > 30 ? 'critical' : 'warning',
+          location: `Presa ${alarm.clave_sih}`,
+          sensor: alarm.clave_sih,
+          description: alarm.mensaje,
+          dayOffset: 0,
+          time: alarm.fecha ? new Date(alarm.fecha).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '00:00',
+        }))
+        setAlarms(mappedAlarms)
 
-        if (Array.isArray(alarmList)) {
-          setAlarms(alarmList)
-        } else {
-          console.warn('Formato inesperado en /api/alarmas: se esperaba un arreglo.', dataAlarmas)
-        }
       } catch (error) {
         if (error.name !== 'AbortError') {
           console.error('Error al conectar con la API de FastAPI:', error)
@@ -136,6 +146,14 @@ function Dashboard() {
     return () => controller.abort()
   }, [range])
 
+  // Helper auxiliar por seguridad si la respuesta viene vacía
+  async function resJsonOrEmpty(res) {
+    try {
+      return await res.json()
+    } catch {
+      return []
+    }
+  }
   // =========================================
   // 2. FUNCIONES AUXILIARES
   // =========================================
@@ -179,11 +197,17 @@ function Dashboard() {
     }
   }
 
-  function getInstallationsData(total) {
-    return installations.map((installation) => ({
+function getInstallationsData(total) {
+    // Calculamos el valor de cada instalación basado en el total
+    const computed = installations.map((installation) => ({
       ...installation,
       value: total * installation.percentage,
     }))
+
+    // Ordenamos de mayor a menor consumo y tomamos las 3 principales
+    return computed
+      .sort((a, b) => b.value - a.value)
+      .slice(0, 3)
   }
 
   function getPeriodAlarms(range) {
@@ -297,34 +321,40 @@ function Dashboard() {
   // GRÁFICA DE INSTALACIONES
   // =========================================
 
-  function InstallationsChart({ items, maxValue }) {
+  function InstallationsChart({ items, maxValue, totalConsumption }) {
     return (
       <div className="installations-chart">
-        {items.map((item) => (
-          <div className="installation-chart-item" key={item.id}>
-            <div className="installation-chart-heading">
-              <span>{item.name}</span>
-              <strong>{formatNumber(item.value, 1)} m³</strong>
-            </div>
+        {items.map((item) => {
+          // Calculamos el porcentaje real respecto al consumo total del periodo
+          const percentage = totalConsumption > 0 
+            ? (item.value / totalConsumption) * 100 
+            : 0
 
-            <div className="installation-chart-track">
-              <div
-                className="installation-chart-bar"
-                style={{
-                  width: `${(item.value / maxValue) * 100}%`,
-                }}
-              />
-            </div>
+          return (
+            <div className="installation-chart-item" key={item.id}>
+              <div className="installation-chart-heading">
+                <span>{item.name}</span>
+                <strong>{formatNumber(item.value, 1)} m³</strong>
+              </div>
 
-            <span className="installation-chart-percentage">
-              {(item.percentage * 100).toFixed(1)}% del consumo
-            </span>
-          </div>
-        ))}
+              <div className="installation-chart-track">
+                <div
+                  className="installation-chart-bar"
+                  style={{
+                    width: `${(item.value / maxValue) * 100}%`,
+                  }}
+                />
+              </div>
+
+              <span className="installation-chart-percentage">
+                {percentage.toFixed(1)}% del consumo total
+              </span>
+            </div>
+          )
+        })}
       </div>
     )
   }
-
   function InstallationsDataTable({ items }) {
     const rows = items.map((item) => [
       item.name,
@@ -1088,70 +1118,114 @@ function Dashboard() {
   // =========================================
   // ANIMACIÓN DE KPIs
   // =========================================
-  useEffect(() => {
-    const counters = document.querySelectorAll('.kpi-value')
-    const rafIds = []
+useEffect(() => {
+    const controller = new AbortController()
 
-    counters.forEach((counter) => {
-      const targetRaw = counter.dataset.target
-      if (targetRaw === undefined) return
-
-      const target = parseFloat(String(targetRaw).replace(/,/g, ''))
-      if (!Number.isFinite(target)) return
-
-      let node = Array.from(counter.childNodes).find(
-        (n) =>
-          n.nodeType === Node.TEXT_NODE &&
-          n.textContent.trim() !== ''
-      )
-
-      if (!node) {
-        node = document.createTextNode('')
-        counter.insertBefore(node, counter.firstChild)
-      }
-
-      const decimals = (String(targetRaw).split('.')[1] || '').length
-      const duration = 1100
-      const startTime = performance.now()
-      const startValue =
-        parseFloat(node.textContent.replace(/[^\d.-]/g, '')) || 0
-
-      const updateCounter = (now) => {
-        const progress = Math.min((now - startTime) / duration, 1)
-        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress)
-        const current = startValue + (target - startValue) * ease
-
-        node.textContent = current.toLocaleString('es-MX', {
-          minimumFractionDigits: decimals,
-          maximumFractionDigits: decimals,
-        })
-
-        if (progress < 1) {
-          rafIds.push(requestAnimationFrame(updateCounter))
+    async function fetchDashboardData() {
+      try {
+        // Determinamos los días a consultar según el botón seleccionado
+        let queryParam = ''
+        if (range === 'hoy') {
+          queryParam = '?dias=1'
         } else {
-          node.textContent = target.toLocaleString('es-MX', {
-            minimumFractionDigits: decimals,
-            maximumFractionDigits: decimals,
+          queryParam = `?dias=${range}`
+        }
+
+        // Hacemos las peticiones enviando el parámetro de días basados en la última fecha de la BD
+        const [resConsumo, resSensores, resAlarmas] = await Promise.all([
+          fetch(`http://localhost:8000/api/consumo${queryParam}`, {
+            signal: controller.signal,
+          }),
+          fetch(`http://localhost:8000/api/sensores${queryParam}`, {
+            signal: controller.signal,
+          }),
+          fetch(`http://localhost:8000/api/alarmas${queryParam}`, {
+            signal: controller.signal,
+          }),
+        ])
+
+        if (!resConsumo.ok || !resSensores.ok || !resAlarmas.ok) {
+          throw new Error(
+            `Error HTTP: consumo=${resConsumo.status}, sensores=${resSensores.status}, alarmas=${resAlarmas.status}`
+          )
+        }
+
+        const [dataConsumo, dataSensores, dataAlarmas] = await Promise.all([
+          resConsumo.json(),
+          resSensores.json(),
+          resJsonOrEmpty(resAlarmas),
+        ])
+
+        // 1. Mapeo de Consumo
+        const seriesList = dataConsumo?.series || []
+        if (seriesList.length > 0) {
+          const primarySeries = seriesList[0]
+          const values = primarySeries.values || []
+
+          const validValues = values
+            .map(Number)
+            .filter((value) => Number.isFinite(value))
+
+          setConsumptionData((prev) => ({
+            ...prev,
+            [range]: validValues.length > 0 ? validValues : [0],
+          }))
+        } else {
+          setConsumptionData((prev) => ({
+            ...prev,
+            [range]: [],
+          }))
+        }
+
+        // 2. Mapeo de Sensores
+        const sensorList = Array.isArray(dataSensores?.sensors) ? dataSensores.sensors : []
+        const mappedSensors = sensorList.map((s, index) => ({
+          ...s,
+          id: s.id,
+          name: s.name,
+          status: s.status,
+          location: `Estación Hidrológica ${s.id}`,
+          x: 25 + (index * 25) % 60,
+          y: 30 + (index * 20) % 50,
+        }))
+        setSensors(mappedSensors)
+
+        // 3. Resumen de Estado
+        const summary = dataSensores?.statusSummary
+        if (summary && typeof summary === 'object') {
+          setSensorStatusData({
+            total: Number(summary.total) || 0,
+            online: Number(summary.online) || 0,
+            warning: Number(summary.warning) || 0,
+            offline: Number(summary.offline) || 0,
           })
         }
+
+        // 4. Mapeo de Alarmas
+        const rawAlarms = Array.isArray(dataAlarmas) ? dataAlarmas : []
+        const mappedAlarms = rawAlarms.map((alarm, idx) => ({
+          id: alarm._id || idx,
+          title: `Lluvia intensa en ${alarm.clave_sih}`,
+          type: alarm.lluvia_1d > 30 ? 'critical' : 'warning',
+          location: `Presa ${alarm.clave_sih}`,
+          sensor: alarm.clave_sih,
+          description: alarm.mensaje,
+          dayOffset: 0,
+          time: alarm.fecha ? new Date(alarm.fecha).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : '00:00',
+        }))
+        setAlarms(mappedAlarms)
+
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          console.error('Error al conectar con la API de FastAPI:', error)
+        }
       }
-
-      rafIds.push(requestAnimationFrame(updateCounter))
-    })
-
-    return () => {
-      rafIds.forEach((id) => cancelAnimationFrame(id))
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    range,
-    totalConsumption,
-    averageConsumption,
-    latestReading,
-    sensorStatusData.online,
-    sensorStatusData.total,
-    selectedAlarms.length,
-  ])
+
+    fetchDashboardData()
+
+    return () => controller.abort()
+  }, [range])
 
   // =========================================
   // EXPORTACIÓN DEL PDF Y ZIP
@@ -1861,6 +1935,7 @@ function Dashboard() {
             <InstallationsChart
               items={selectedInstallations}
               maxValue={maxInstallation}
+              totalConsumption={totalConsumption}
             />
           ) : (
             <InstallationsDataTable items={selectedInstallations} />

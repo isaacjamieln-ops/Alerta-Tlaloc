@@ -64,7 +64,7 @@
 ========================================= */
 
 .interactive-map-wrapper {
-  flex: 1;
+  flex: 5;
   background: rgba(11, 19, 43, 0.8);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -911,5 +911,368 @@
   .audit-log-item {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+
+
+/* ===== NUEVO MAPA INTERACTIVO DE PRESAS ===== */
+.interactive-map-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.schematic-map {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+  height: auto;
+  min-height: 300px;
+  padding: 22px;
+  overflow: visible;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(70, 130, 150, .16) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.map-central-node {
+  position: static;
+  align-self: center;
+  display: flex;
+  flex-direction: calc(-50%);
+  align-items: center;
+  gap: 4px;
+  padding: 24px 24px;
+  border: 1px solid rgba(60, 160, 180, .35);
+  border-radius: 14px;
+  background: rgba(15, 75, 90, .12);
+  text-align: center;
+}
+
+.map-central-node span {
+  font-size: 24px;
+}
+
+.map-central-node small {
+  opacity: .75;
+}
+
+.map-nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.map-node-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid rgba(100, 130, 150, .28);
+  border-radius: 14px;
+  background: var(--card-bg, rgba(255,255,255,.92));
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.map-node-card:hover {
+  transform: translateY(-3px);
+  border-color: #35a6bd;
+  box-shadow: 0 8px 22px rgba(20, 100, 120, .12);
+}
+
+.map-node-card.active {
+  border: 2px solid #249bb5;
+  background: rgba(36, 155, 181, .10);
+  box-shadow: 0 0 0 3px rgba(36, 155, 181, .12);
+}
+
+.map-node-card-icon {
+  font-size: 23px;
+  color: #249bb5;
+}
+
+.map-node-card-name {
+  font-weight: 700;
+}
+
+.map-node-card small,
+.map-node-card-date {
+  font-size: 11px;
+  opacity: .7;
+}
+
+.map-node-card-level {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.map-empty-state {
+  text-align: center;
+}
+
+.map-legend {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 4px;
+}
+
+.presa-history-section {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(120, 140, 150, .2);
+}
+
+.presa-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.presa-history-header h4 {
+  margin: 5px 0 0;
+}
+
+.presa-history-header > span {
+  white-space: nowrap;
+  font-size: 12px;
+  opacity: .7;
+}
+
+.presa-history-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.presa-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.presa-history-table th,
+.presa-history-table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid rgba(120, 140, 150, .18);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.presa-history-table th {
+  font-weight: 700;
+  opacity: .75;
+}
+
+@media (max-width: 650px) {
+  .schematic-map {
+    padding: 14px;
+  }
+
+  .map-nodes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .presa-history-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+
+/* ===== NUEVO MAPA INTERACTIVO DE PRESAS ===== */
+.interactive-map-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.schematic-map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  height: auto;
+  min-height: 280px;
+  padding: 16px;
+  overflow: visible;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(70, 130, 150, .16) 1px, transparent 0);
+  background-size: 22px 22px;
+}
+
+.map-central-node {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 8px 16px;
+  border: 1px solid rgba(60, 160, 180, .35);
+  border-radius: 10px;
+  background: rgba(15, 75, 90, .12);
+  text-align: center;
+}
+
+.map-central-node span {
+  font-size: 20px;
+}
+
+.map-central-node small {
+  font-size: 10px;
+  opacity: .75;
+}
+
+/* Distribución uniforme en cuadrícula flexible */
+.map-nodes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 8px;
+  width: 100%;
+  align-content: center;
+}
+
+/* Tarjetas más pequeñas y compactas (solo nombre) */
+.map-node-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  padding: 8px 10px;
+  border: 1px solid rgba(100, 130, 150, .28);
+  border-radius: 8px;
+  background: var(--card-bg, rgba(18, 27, 51, 0.85));
+  color: #e2e8f0;
+  text-align: center;
+  cursor: pointer;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.map-node-card:hover {
+  transform: translateY(-2px);
+  border-color: #35a6bd;
+  box-shadow: 0 4px 12px rgba(20, 100, 120, .2);
+  background: rgba(36, 155, 181, .15);
+}
+
+.map-node-card.active {
+  border: 2px solid #249bb5;
+  background: rgba(36, 155, 181, .25);
+  box-shadow: 0 0 0 2px rgba(36, 155, 181, .2);
+}
+
+/* Ocultamos elementos adicionales dentro de la card para que sea solo el nombre */
+.map-node-card-icon,
+.map-node-card small,
+.map-node-card-date,
+.map-node-card-level {
+  display: none !important;
+}
+
+.map-node-card-name {
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.map-empty-state {
+  text-align: center;
+  grid-column: 1 / -1;
+  color: #94a3b8;
+  font-size: 12px;
+  padding: 20px;
+}
+
+.map-legend {
+  position: static;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
+  font-size: 11px;
+}
+
+.presa-history-section {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(120, 140, 150, .2);
+}
+
+.presa-history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.presa-history-header h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.presa-history-header > span {
+  white-space: nowrap;
+  font-size: 11px;
+  opacity: .7;
+}
+
+.presa-history-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.presa-history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.presa-history-table th,
+.presa-history-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(120, 140, 150, .18);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.presa-history-table th {
+  font-weight: 700;
+  opacity: .75;
+}
+
+@media (max-width: 650px) {
+  .schematic-map {
+    padding: 10px;
+  }
+
+  .map-nodes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .presa-history-header {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
