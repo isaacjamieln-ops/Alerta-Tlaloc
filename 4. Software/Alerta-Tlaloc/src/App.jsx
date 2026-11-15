@@ -345,7 +345,10 @@ function App() {
     renderComingSoon()
   )}
 </div>
-
+- tapOn:
+    point: 89%, 18%
+- tapOn:
+    point: 83%, 18%
 
         <footer className="footer">
           <span>ALERTA-TLALOC</span>
