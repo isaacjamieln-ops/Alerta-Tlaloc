@@ -24,7 +24,7 @@ import numpy as np
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import GridSearchCV, TimeSeriesSplit
 
-import config as cfg
+import backend.models.src.models.config as cfg
 
 # Rejilla pequeña a proposito porque cada ajuste cuesta tiempo en CPU.
 REJILLA = {

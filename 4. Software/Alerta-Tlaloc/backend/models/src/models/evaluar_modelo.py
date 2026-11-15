@@ -23,7 +23,7 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import mean_absolute_error, r2_score, root_mean_squared_error
 
-import config as cfg
+import backend.models.src.models.config as cfg
 
 
 def tabla_md(df: pd.DataFrame) -> str:

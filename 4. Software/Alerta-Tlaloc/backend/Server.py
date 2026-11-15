@@ -33,12 +33,22 @@ collection_hidro = db.Data
 collection_predic = db.Predicciones
 
 
+import traceback
+
+ARTEFACTOS_ML = {}
+
 try:
+    print("[INFO] Cargando modelos predictivos...")
+
     ARTEFACTOS_ML = cargar_artefactos()
-    print("[info] Modelos predictivos cargados exitosamente.")
+
+    print("[OK] Modelos cargados correctamente.")
+    print("[INFO] Horizontes disponibles:", list(ARTEFACTOS_ML.keys()))
+
 except Exception as e:
-    ARTEFACTOS_ML = None
-    print(f"[warn] No se pudieron cargar los modelos predictivos: {e}")
+    print("[ERROR] No se pudieron cargar los modelos.")
+    print("[ERROR] Motivo:", str(e))
+    traceback.print_exc()
 
 # ---------------------------------------------------------------------------
 # Helpers
