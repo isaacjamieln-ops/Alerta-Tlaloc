@@ -8,6 +8,7 @@ import pandas as pd
 from backend.models.src.models.inferir import cargar_artefactos, predecir
 #import Alerta-Tlaloc.backend.models.src.models.config as cfg
 import backend.models.src.models.config as cfg
+import math
 
 # ---------------------------------------------------------------------------
 # App + CORS
@@ -53,6 +54,23 @@ except Exception as e:
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
+def limpiar_nan(obj):
+    """
+    Convierte valores NaN e infinitos a None
+    para permitir su serialización como JSON.
+    """
+    if isinstance(obj, dict):
+        return {k: limpiar_nan(v) for k, v in obj.items()}
+
+    if isinstance(obj, list):
+        return [limpiar_nan(v) for v in obj]
+
+    if isinstance(obj, float) and not math.isfinite(obj):
+        return None
+
+    return obj
+
 def _normalize_date_field(field: str = "fecha"):
     """
     Devuelve una expresión de agregación que convierte `field` a Date
@@ -232,6 +250,7 @@ async def get_consumption(
             "total_presas": len(series),
             "series": series,
         }
+        result = limpiar_nan(result)
         _cache_set(cache_key, result)
         return result
     except HTTPException:
@@ -645,6 +664,9 @@ async def get_gestion_agua(
             "historial": historial,
             "auditLog": audit_log
         }
+
+        #limpiar NaN e infinitos antes de cachear y devolver
+        result = limpiar_nan(result)
 
         _cache_set(cache_key, result)
 
