@@ -3,9 +3,9 @@ venv/
 env/
 __pycache__/
 *.py[cod]
-src/models/*.pkl
 *.joblib
 .vscode/
 .DS_Store
 Thumbs.db
 .env
+.pytest_cache/
