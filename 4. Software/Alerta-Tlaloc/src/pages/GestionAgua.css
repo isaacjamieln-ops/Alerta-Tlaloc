@@ -1276,3 +1276,293 @@
     flex-direction: column;
   }
 }
+
+
+
+
+/* =========================================
+   CONTENEDOR GENERAL DE LA PROYECCIÓN
+========================================= */
+
+.projection-container {
+  width: 100%;
+  padding: 22px;
+  border: 1px solid rgba(60, 160, 180, 0.2);
+  border-radius: 16px;
+  background: rgba(15, 75, 90, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   ENCABEZADOS
+========================================= */
+
+.projection-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.projection-title {
+  color: #e6f5f7;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.projection-subtitle {
+  color: #8caeb5;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.projection-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.projection-label.real {
+  color: #20c5a4;
+}
+
+.projection-label.future {
+  color: #64b8e4;
+}
+
+/* =========================================
+   VALOR PRINCIPAL
+========================================= */
+
+.projection-main-value {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.projection-main-value strong {
+  font-size: 32px;
+  color: #20c5a4;
+  font-weight: 700;
+}
+
+.projection-main-value span {
+  font-size: 13px;
+  color: #8caeb5;
+}
+
+/* =========================================
+   BARRA DE PROYECCIÓN
+========================================= */
+
+.projection-track {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 16px;
+  border-radius: 20px;
+  overflow: visible;
+  background: rgba(130, 160, 170, 0.15);
+  margin: 10px 0;
+}
+
+.projection-real {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #087e75,
+    #20c5a4
+  );
+  border-radius: 20px 0 0 20px;
+  transition: width 1.2s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.projection-future {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #38a6d2,
+    #75c9ed
+  );
+  border-radius: 0 20px 20px 0;
+  transition: width 1.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Separador entre dato real y predicción */
+
+.projection-divider {
+  position: absolute;
+  left: var(--real-position, 72.4%);
+  top: -7px;
+  height: 30px;
+  width: 2px;
+  background: #ffffff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  z-index: 4;
+  transform: translateX(-50%);
+}
+
+/* Punto que marca el valor real */
+
+.projection-marker {
+  position: absolute;
+  left: var(--real-position, 72.4%);
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border: 3px solid #20c5a4;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+/* =========================================
+   ESCALA DE LA BARRA
+========================================= */
+
+.projection-scale {
+  display: flex;
+  justify-content: space-between;
+  color: #789ba4;
+  font-size: 10px;
+  margin-top: 8px;
+}
+
+/* =========================================
+   DATOS DE PROYECCIÓN
+========================================= */
+
+.projection-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.projection-point {
+  padding: 12px 10px;
+  border-radius: 10px;
+  background: rgba(70, 150, 180, 0.08);
+  border: 1px solid rgba(100, 184, 228, 0.13);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.projection-point:hover {
+  background: rgba(70, 150, 180, 0.16);
+  border-color: rgba(100, 184, 228, 0.4);
+  transform: translateY(-3px);
+}
+
+.projection-point span {
+  font-size: 10px;
+  color: #8caeb5;
+}
+
+.projection-point strong {
+  font-size: 18px;
+  color: #75c9ed;
+}
+
+.projection-point small {
+  font-size: 9px;
+  color: #789ba4;
+}
+
+/* =========================================
+   LEYENDA
+========================================= */
+
+.projection-legend {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.projection-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #9bb8bf;
+  font-size: 10px;
+}
+
+.projection-legend-color {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.projection-legend-color.real {
+  background: #20c5a4;
+}
+
+.projection-legend-color.future {
+  background: #64b8e4;
+}
+
+/* =========================================
+   ANIMACIONES
+========================================= */
+
+@keyframes projectionGrow {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width);
+  }
+}
+
+.projection-real,
+.projection-future {
+  animation: projectionGrow 1.5s ease-out both;
+}
+
+@keyframes projectionPulse {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(32, 197, 164, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 13px rgba(32, 197, 164, 0.65);
+  }
+}
+
+.projection-marker {
+  animation: projectionPulse 2.5s infinite;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+  .projection-container {
+    padding: 16px;
+  }
+
+  .projection-details {
+    grid-template-columns: 1fr;
+  }
+
+  .projection-point {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .projection-main-value strong {
+    font-size: 27px;
+  }
+}

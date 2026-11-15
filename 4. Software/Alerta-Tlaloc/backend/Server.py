@@ -281,6 +281,7 @@ async def get_sensors(
         ]
 
         regs = await collection_hidro.aggregate(pipeline, allowDiskUse=True).to_list(length=None)
+        
 
         # Respaldo por si el rango de fechas es muy acotado y no devuelve nada:
         # Si no hay registros en el rango, traemos el último histórico general de la base de datos
@@ -386,18 +387,6 @@ async def get_alarms(
 # 4. /api/gestion-agua  -> resumen por presa + logs recientes
 # ---------------------------------------------------------------------------
 
-# ---------------------------------------------------------------------------
-# 4. /api/gestion-agua  -> resumen por presa + logs recientes (Corregido para GestionAgua.jsx)
-# ---------------------------------------------------------------------------
-# ---------------------------------------------------------------------------
-# 4. /api/gestion-agua  -> resumen por presa real + logs recientes
-# ---------------------------------------------------------------------------
-
-# ---------------------------------------------------------------------------
-# 4. /api/gestion-agua  -> resumen por presa real + logs recientes (Corregido)
-# ---------------------------------------------------------------------------
-# 4. /api/gestion-agua  -> resumen por presa real + logs recientes (Corregido)
-# ---------------------------------------------------------------------------
 
 
 @app.get("/api/gestion-agua")

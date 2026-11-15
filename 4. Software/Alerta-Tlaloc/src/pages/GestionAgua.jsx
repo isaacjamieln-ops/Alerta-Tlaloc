@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react'
 import './GestionAgua.css'
 
 const API_URL = 'http://localhost:8000/api/gestion-agua'
+const PREDICTIONS_URL = 'http://localhost:8000/api/predicciones'
 
 const GestionAgua = () => {
   const [activeTab, setActiveTab] = useState('enVivo')
-  const [simulationMode, setSimulationMode] = useState(false)
 
   // Lista completa de presas y presa actualmente seleccionada
   const [sectors, setSectors] = useState([])
   const [selectedClaveSih, setSelectedClaveSih] = useState(null)
   const [selectedPresa, setSelectedPresa] = useState(null)
   const [historialPresa, setHistorialPresa] = useState([])
-  const [auditLog, setAuditLog] = useState([])
+  const [predicciones, setPredicciones] = useState({})
+  const [loadingPredicciones, setLoadingPredicciones] = useState(false)
+  const [predictionError, setPredictionError] = useState('')
   const [loadingSectors, setLoadingSectors] = useState(true)
   const [loadingSelected, setLoadingSelected] = useState(false)
   const [apiError, setApiError] = useState('')
 
-  const [demandIncrease, setDemandIncrease] = useState(25)
-  const [pressureRestriction, setPressureRestriction] = useState(1.8)
 
   // 1. Obtener la lista completa de presas y la bitácora al entrar al componente.
   useEffect(() => {
@@ -38,7 +38,6 @@ const GestionAgua = () => {
         const lista = Array.isArray(data.sectors) ? data.sectors : []
 
         setSectors(lista)
-        setAuditLog(Array.isArray(data.auditLog) ? data.auditLog : [])
 
         // Seleccionar la primera presa disponible. El efecto siguiente pedirá su último registro.
         if (lista.length > 0) {
@@ -92,8 +91,6 @@ const GestionAgua = () => {
         setSelectedPresa(data.selectedPresa || null)
         setHistorialPresa(Array.isArray(data.historial) ? data.historial : [])
 
-        // Mantener sincronizada la bitácora si viene en la respuesta
-        if (Array.isArray(data.auditLog)) setAuditLog(data.auditLog)
       } catch (error) {
         if (error.name !== 'AbortError') {
           console.error('Error al consultar el último registro de la presa:', error)
@@ -116,7 +113,6 @@ const GestionAgua = () => {
     llenado_pct: 0,
     flow: 0,
     status: 'SIN DATOS',
-    valveType: '-',
     condition: '-',
   }
 
@@ -139,23 +135,6 @@ const GestionAgua = () => {
   }
 
   // =========================================
-  // REGISTRO DE ACCIONES LOCALES DE SIMULACIÓN
-  // =========================================
-  const addAuditLog = (action) => {
-    const now = new Date()
-    const timeStr = now.toLocaleTimeString('es-MX', {
-      hour: '2-digit',
-      minute: '2-digit',
-      hour12: false,
-    })
-
-    setAuditLog((previous) => [
-      { time: timeStr, action, user: 'admin' },
-      ...previous,
-    ])
-  }
-
-  // =========================================
   // SELECCIONAR PRESA
   // =========================================
   const selectSector = (sector) => {
@@ -169,93 +148,60 @@ const GestionAgua = () => {
     setActiveTab('enVivo')
   }
 
-  // =========================================
-  // CAMBIAR ESTADO DE VÁLVULA (SOLO SIMULACIÓN)
-  // =========================================
-  const toggleValve = () => {
-    if (!simulationMode) {
-      alert('Activa el Modo Simulación para realizar cambios de válvulas.')
+  // Consultar los tres horizontes del modelo para la presa seleccionada.
+  useEffect(() => {
+    if (selectedClaveSih === null || selectedClaveSih === undefined || selectedClaveSih === '') {
+      setPredicciones({})
       return
     }
 
-    const newStatus = selectedSector.status === 'ABIERTA' ? 'CERRADA' : 'ABIERTA'
+    const controller = new AbortController()
 
-    setSectors((previous) => previous.map((sector) =>
-      String(sector.clave_sih) === String(selectedClaveSih)
-        ? { ...sector, status: newStatus }
-        : sector
-    ))
+    async function fetchPredicciones() {
+      setLoadingPredicciones(true)
+      setPredictionError('')
+      setPredicciones({})
 
-    addAuditLog(`Cambio simulado de estado (${selectedSector.name}): ${newStatus}`)
-  }
+      try {
+        const horizontes = ['7d', '15d', '30d']
+        const respuestas = await Promise.all(horizontes.map(async (horizonte) => {
+          const params = new URLSearchParams({
+            horizonte,
+            clave_sih: String(selectedClaveSih),
+          })
+          const response = await fetch(`${PREDICTIONS_URL}?${params.toString()}`, {
+            signal: controller.signal,
+          })
+          if (!response.ok) {
+            const detalle = await response.json().catch(() => ({}))
+            throw new Error(detalle.detail || `Error HTTP ${response.status} al consultar ${horizonte}.`)
+          }
+          const data = await response.json()
+          return [horizonte, data]
+        }))
 
-  // =========================================
-  // CIERRE DE EMERGENCIA (SOLO SIMULACIÓN)
-  // =========================================
-  const emergencyClose = () => {
-    if (!simulationMode) {
-      alert('Activa el Modo Simulación para ejecutar esta acción de prueba.')
-      return
+        if (!controller.signal.aborted) {
+          setPredicciones(Object.fromEntries(respuestas))
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          console.error('Error al consultar predicciones:', error)
+          setPredictionError(error.message || 'No fue posible obtener las predicciones.')
+        }
+      } finally {
+        if (!controller.signal.aborted) setLoadingPredicciones(false)
+      }
     }
 
-    if (selectedSector.status === 'CERRADA') {
-      alert('La válvula seleccionada ya está cerrada.')
-      return
-    }
+    fetchPredicciones()
+    return () => controller.abort()
+  }, [selectedClaveSih])
 
-    setSectors((previous) => previous.map((sector) =>
-      String(sector.clave_sih) === String(selectedClaveSih)
-        ? { ...sector, status: 'CERRADA' }
-        : sector
-    ))
-
-    addAuditLog(`Cierre de emergencia simulado (${selectedSector.name})`)
-  }
-
-  // =========================================
-  // AJUSTE DE VOLUMEN (SOLO SIMULACIÓN)
-  // =========================================
-  const adjustFlow = () => {
-    if (!simulationMode) {
-      alert('Activa el Modo Simulación para probar el ajuste de caudal.')
-      return
-    }
-
-    const currentVolume = Number(volumenActual) || 0
-    const newVolume = Math.max(0, Number((currentVolume * 0.9).toFixed(2)))
-
-    setSectors((previous) => previous.map((sector) =>
-      String(sector.clave_sih) === String(selectedClaveSih)
-        ? { ...sector, flow: newVolume }
-        : sector
-    ))
-
-    addAuditLog(`Ajuste simulado de volumen (${selectedSector.name}): ${newVolume} hm³`)
-  }
-
-  // =========================================
-  // RESULTADOS DEL SIMULADOR (ILUSTRATIVOS)
-  // =========================================
-  const volumenBase = Number(volumenActual) || 0
-  const projectedFlow = (volumenBase * (1 + demandIncrease / 100)).toFixed(2)
-  const projectedDeficit = (volumenBase * (demandIncrease / 100)).toFixed(2)
-
-  const saturationRisk = pressureRestriction < 2
-    ? 'Alto'
-    : pressureRestriction < 3
-      ? 'Moderado'
-      : 'Bajo'
-
-  const saturationClass = saturationRisk === 'Alto'
-    ? 'risk-high'
-    : saturationRisk === 'Moderado'
-      ? 'risk-medium'
-      : 'risk-low'
-
-  const resetSimulation = () => {
-    setDemandIncrease(25)
-    setPressureRestriction(1.8)
-    addAuditLog('Restablecimiento de parámetros del simulador')
+  const obtenerPrediccion = (horizonte) => {
+    const data = predicciones[horizonte]
+    return data?.sensores?.find((sensor) => String(sensor.id) === String(selectedClaveSih))
+      || data?.sensores?.[0]
+      || null
   }
 
   return (
@@ -319,39 +265,12 @@ const GestionAgua = () => {
           </div>
         </div>
 
-        {/* BITÁCORA */}
-        <div className="audit-log-section">
-          <div className="audit-header">
-            <h4>BITÁCORA DE ACCIONES OPERATIVAS</h4>
-            <span>{auditLog.length} registros</span>
-          </div>
-
-          <div className="audit-log-list">
-            {auditLog.map((log, index) => (
-              <div key={`${log.time}-${index}`} className="audit-log-item">
-                <span className="log-time">{log.time}</span>
-                <span className="log-action">{log.action}</span>
-                <span className="log-user">Usuario: {log.user}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* PANEL DERECHO: CONTROL */}
       <section className="gestion-right-panel">
         <div className="right-panel-top-bar">
-          <span className="panel-title-tag">PANEL DE CONTROL INTEGRADO</span>
-
-          <label className="simulation-switch-wrapper">
-            <span>{simulationMode ? 'Simulación activa' : 'Modo simulación'}</span>
-            <input
-              type="checkbox"
-              checked={simulationMode}
-              onChange={(event) => setSimulationMode(event.target.checked)}
-            />
-            <span className="custom-switch" />
-          </label>
+          <span className="panel-title-tag">PANEL DE MONITOREO</span>
         </div>
 
         {/* PESTAÑAS */}
@@ -433,111 +352,212 @@ const GestionAgua = () => {
 
             <p className="metric-caption">Última actualización: {formatDate(fechaActualizacion)}</p>
 
-            <section className="presa-history-section">
-              <div className="presa-history-header">
-                <div>
-                  <span className="panel-title-tag">MONITOREO HISTÓRICO</span>
-                  <h4>Últimos registros de {selectedSector.name}</h4>
-                </div>
-                <span>{historialPresa.length} lecturas</span>
-              </div>
+            
 
-              {loadingSelected ? (
-                <p className="simulation-notice">Cargando historial...</p>
-              ) : historialPresa.length === 0 ? (
-                <p className="simulation-notice">No hay historial disponible para esta presa.</p>
-              ) : (
-                <div className="presa-history-table-wrapper">
-                  <table className="presa-history-table">
-                    <thead>
-                      <tr>
-                        <th>Fecha</th>
-                        <th>Llenado</th>
-                        <th>Volumen (hm³)</th>
-                        <th>Lluvia</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {historialPresa.map((registro, index) => (
-                        <tr key={`${registro.fecha || 'registro'}-${index}`}>
-                          <td>{formatDate(registro.fecha)}</td>
-                          <td>{registro.llenado_pct == null ? '—' : `${Number(registro.llenado_pct).toFixed(1)}%`}</td>
-                          <td>{registro.vol_hoy == null ? '—' : Number(registro.vol_hoy).toFixed(2)}</td>
-                          <td>{registro.lluvia_1d == null ? '—' : Number(registro.lluvia_1d).toFixed(2)}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              )}
-            </section>
-
-            <div className="valve-control-row">
-              <div>
-                <span className="metric-label">Control de válvula</span>
-                <strong>{selectedSector.valveType || 'No especificado'}</strong>
-              </div>
-              <button
-                type="button"
-                className={`valve-toggle-btn ${selectedSector.status === 'ABIERTA' ? 'abierta' : 'cerrada'}`}
-                onClick={toggleValve}
-              >
-                {selectedSector.status === 'ABIERTA' ? 'Cerrar válvula' : 'Abrir válvula'}
-              </button>
-            </div>
-
-            <div className="quick-actions-section">
-              <h4>Acciones rápidas</h4>
-              <div className="actions-buttons-grid">
-                <button type="button" className="action-sub-btn" onClick={adjustFlow}>
-                  Ajuste de volumen (simulación)
-                </button>
-                <button type="button" className="action-sub-btn danger" onClick={emergencyClose}>
-                  Cierre de emergencia (simulación)
-                </button>
-              </div>
-              {!simulationMode && (
-                <p className="simulation-notice">Activa el modo simulación para probar las operaciones. Estos cambios no modifican MongoDB.</p>
-              )}
-            </div>
           </div>
         )}
 
-        {/* PESTAÑA SIMULADOR */}
-        {activeTab === 'simulador' && (
-          <div className="tab-content-card animate-fade">
-            <div>
-              <span className="panel-title-tag">ENTORNO DE PRUEBAS</span>
-              <h3>Caja de Arena - Tláloc ML</h3>
-              <p className="sim-desc">Explora cómo los cambios de demanda y presión pueden afectar la distribución del agua.</p>
-            </div>
 
-            <div className="slider-group">
-              <label>Incremento de demanda <strong>+{demandIncrease}%</strong></label>
-              <input type="range" min="0" max="100" step="5" value={demandIncrease} onChange={(event) => setDemandIncrease(Number(event.target.value))} />
-              <div className="slider-limits"><span>0%</span><span>100%</span></div>
-            </div>
+{/* PESTAÑA SIMULADOR: DATO REAL Y PROYECCIÓN ML */}
+{activeTab === 'simulador' && (
+  <div className="tab-content-card animate-fade">
 
-            <div className="slider-group">
-              <label>Restricción de presión maestra <strong>{pressureRestriction.toFixed(1)} bar</strong></label>
-              <input type="range" min="1" max="5" step="0.1" value={pressureRestriction} onChange={(event) => setPressureRestriction(Number(event.target.value))} />
-              <div className="slider-limits"><span>1 bar</span><span>5 bar</span></div>
-            </div>
+    <div className="simulator-heading">
+      <span className="panel-title-tag">MONITOREO Y PREDICCIÓN</span>
+      <h3>{selectedSector.name}</h3>
+      <p className="sim-desc">
+        Comparación del último dato registrado con las estimaciones
+        generadas por Tláloc ML.
+      </p>
+    </div>
 
-            <div className="simulation-result-box">
-              <span className="simulation-result-title">RESULTADOS PROYECTADOS</span>
-              <div className="simulation-result-row"><span>Presa analizada</span><strong>{selectedSector.name}</strong></div>
-              <div className="simulation-result-row"><span>Volumen proyectado</span><strong>{projectedFlow} hm³</strong></div>
-              <div className="simulation-result-row"><span>Incremento estimado</span><strong>+{projectedDeficit} hm³</strong></div>
-              <div className="simulation-result-row"><span>Riesgo estimado</span><strong className={saturationClass}>{saturationRisk}</strong></div>
-              <p className="simulation-disclaimer">Modelo ilustrativo. No representa una predicción validada por Tláloc ML ni modifica los datos reales.</p>
-            </div>
+    {predictionError && (
+      <p className="simulation-notice">{predictionError}</p>
+    )}
 
-            <button type="button" className="action-sub-btn reset-btn" onClick={resetSimulation}>
-              Restablecer parámetros
-            </button>
+    <div className="projection-container">
+
+      {/* ENCABEZADO */}
+      <div className="projection-header">
+        <div>
+          <div className="projection-title">
+            Nivel de almacenamiento
           </div>
-        )}
+          <div className="projection-subtitle">
+            Estado actual y estimación futura
+          </div>
+        </div>
+
+        <span className="projection-label real">
+          DATO REAL
+        </span>
+      </div>
+
+      {loadingSelected ? (
+        <p className="simulation-notice">
+          Consultando último registro...
+        </p>
+      ) : (
+        <>
+          {/* VALOR REAL */}
+          <div className="projection-main-value">
+            <strong>
+              {llenadoActual == null
+                ? '—'
+                : `${Number(llenadoActual).toFixed(1)}%`}
+            </strong>
+            <span>de capacidad</span>
+          </div>
+
+          {/* BARRA DE NIVEL REAL */}
+          <div>
+            <div
+              className="projection-track"
+              style={{
+                '--real-position': `${
+                  Math.min(100, Math.max(0, Number(llenadoActual) || 0))
+                }%`
+              }}
+            >
+              <div
+                className="projection-real"
+                style={{
+                  width: `${
+                    Math.min(100, Math.max(0, Number(llenadoActual) || 0))
+                  }%`
+                }}
+              />
+
+              <div className="projection-divider" />
+              <div className="projection-marker" />
+            </div>
+
+            <div className="projection-scale">
+              <span>0%</span>
+              <span>100%</span>
+            </div>
+          </div>
+
+          {/* DATOS REALES COMPLEMENTARIOS */}
+          <div className="simulator-metrics">
+            <div className="simulator-metric">
+              <span>Volumen actual</span>
+              <strong>
+                {volumenActual == null ||
+                !Number.isFinite(Number(volumenActual))
+                  ? '—'
+                  : `${Number(volumenActual).toFixed(2)} hm³`}
+              </strong>
+            </div>
+
+            <div className="simulator-metric">
+              <span>Lluvia acumulada</span>
+              <strong>
+                {lluviaActual == null ||
+                !Number.isFinite(Number(lluviaActual))
+                  ? '—'
+                  : `${Number(lluviaActual).toFixed(2)} mm`}
+              </strong>
+            </div>
+
+            <div className="simulator-metric">
+              <span>Última actualización</span>
+              <strong className="simulator-date">
+                {formatDate(fechaActualizacion)}
+              </strong>
+            </div>
+          </div>
+        </>
+      )}
+
+      <div className="projection-divider-section" />
+
+      {/* PROYECCIÓN ML */}
+      <div className="projection-header">
+        <div>
+          <div className="projection-title">
+            Evolución estimada
+          </div>
+          <div className="projection-subtitle">
+            Predicciones generadas por el modelo
+          </div>
+        </div>
+
+        <span className="projection-label future">
+          PROYECCIÓN ML
+        </span>
+      </div>
+
+      {loadingPredicciones ? (
+        <p className="simulation-notice">
+          Generando predicciones para 7, 15 y 30 días...
+        </p>
+      ) : (
+        <div className="projection-details">
+          {[
+            { key: '7d', label: '7 días' },
+            { key: '15d', label: '15 días' },
+            { key: '30d', label: '30 días' }
+          ].map(({ key, label }) => {
+            const prediccion = obtenerPrediccion(key);
+
+            return (
+              <div className="projection-point" key={key}>
+                <span>{label}</span>
+
+                <strong>
+                  {prediccion?.llenado_pred_pct == null
+                    ? '—'
+                    : `${Number(
+                        prediccion.llenado_pred_pct
+                      ).toFixed(1)}%`}
+                </strong>
+
+                <small>
+                  {prediccion?.vol_pred == null
+                    ? 'Volumen: —'
+                    : `Volumen: ${Number(
+                        prediccion.vol_pred
+                      ).toFixed(2)} hm³`}
+                </small>
+
+                {prediccion?.desc && (
+                  <small
+                    className={`prediction-status ${
+                      prediccion.status || ''
+                    }`}
+                  >
+                    {prediccion.desc}
+                  </small>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {/* LEYENDA */}
+      <div className="projection-legend">
+        <div className="projection-legend-item">
+          <div className="projection-legend-color real" />
+          Dato registrado
+        </div>
+
+        <div className="projection-legend-item">
+          <div className="projection-legend-color future" />
+          Predicción del modelo
+        </div>
+      </div>
+
+      <p className="simulation-disclaimer">
+        Las estimaciones provienen del endpoint /api/predicciones
+        y de los modelos cargados en el servidor. No modifican
+        los registros reales.
+      </p>
+
+    </div>
+  </div>
+)}
 
         {/* PESTAÑA ZONAS */}
         {activeTab === 'zonas' && (
