@@ -1,0 +1,96 @@
+/* ==========================================
+   ESTILOS DE LA VISTA DE PREDICCIONES
+   ========================================== */
+
+.predicciones-container {
+  color: #f8fafc !important; /* Texto principal blanco claro para máxima visibilidad */
+}
+
+/* Tarjetas principales */
+.pred-card {
+  background-color: #11202c !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 1rem;
+  color: #f8fafc !important;
+}
+
+.pred-card-inner {
+  background-color: #0d1822 !important;
+  border: 1px solid #1e293b !important;
+  border-radius: 0.75rem;
+  color: #f8fafc !important;
+}
+
+/* Textos y etiquetas */
+.pred-title {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.pred-subtitle {
+  color: #94a3b8 !important; /* Gris claro legible */
+  font-size: 0.875rem;
+}
+
+.pred-cyan {
+  color: #22d3ee !important;
+}
+
+.pred-emerald {
+  color: #34d399 !important;
+}
+
+.pred-warning {
+  color: #fbbf24 !important;
+}
+
+/* Botones de horizonte de predicción */
+.btn-horizonte {
+  background-color: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  border-radius: 50rem;
+  padding: 0.375rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-horizonte:hover {
+  border-color: #22d3ee;
+  color: #ffffff;
+}
+
+.btn-horizonte.active {
+  background-color: #22d3ee !important;
+  border-color: #22d3ee !important;
+  color: #0a131a !important;
+  font-weight: 700;
+}
+
+/* Mapa interactivo */
+.pred-map-box {
+  background-color: #162736 !important;
+  border: 1px solid #334155 !important;
+  border-radius: 1rem;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pred-map-badge {
+  background-color: #0a131add !important;
+  border: 1px solid #334155;
+  color: #ffffff !important;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50rem;
+  font-size: 0.75rem;
+}
+
+/* Barras de progreso XAI */
+.pred-progress {
+  background-color: #0a131a !important;
+  border-radius: 50rem;
+  height: 6px;
+  overflow: hidden;
+}

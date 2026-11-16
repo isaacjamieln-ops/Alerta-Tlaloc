@@ -1,0 +1,143 @@
+
+/* =========================================
+   1. VARIABLES GLOBALES
+========================================= */
+
+:root {
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+
+  --tl-black: #080e18;
+  --tl-dark: #0b1422;
+  --tl-blue: #087fa5;
+  --tl-cyan: #39d9f2;
+  --tl-white: #eaf4fb;
+  --tl-gray: #91a8bb;
+  --tl-border: #1b3045;
+
+  --bs-body-bg: var(--tl-black);
+  --bs-body-color: var(--tl-white);
+  --bs-primary: var(--tl-blue);
+  --bs-info: var(--tl-cyan);
+
+  color: var(--tl-white);
+  background: var(--tl-black);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================================
+   2. REINICIO GENERAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 25px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--tl-black);
+  color: var(--tl-white);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================================
+   3. CONTENEDOR PRINCIPAL DE REACT
+========================================= */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  text-align: left;
+}
+
+/* =========================================
+   4. ELEMENTOS TIPOGRÁFICOS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================================
+   5. ELEMENTOS DE FORMULARIO
+========================================= */
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* =========================================
+   6. SELECCIÓN DE TEXTO
+========================================= */
+
+::selection {
+  color: #ffffff;
+  background: #087fa5;
+}
+
+/* =========================================
+   7. BARRA DE DESPLAZAMIENTO
+========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080e18;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #23445b;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #087fa5;
+}
+
+/* =========================================
+   8. ACCESIBILIDAD
+========================================= */
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--tl-cyan);
+  outline-offset: 3px;
+}
