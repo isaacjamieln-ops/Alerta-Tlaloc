@@ -1,0 +1,310 @@
+{
+  "attributes" : {
+    "text" : "          \n\n",
+    "bounds" : "[0,-1984][1358,924]",
+    "url" : "http://localhost:5173/#contexto"
+  },
+  "children" : [ {
+    "attributes" : {
+      "bounds" : "[0,-1984][1358,924]",
+      "resource-id" : "root"
+    },
+    "children" : [ {
+      "attributes" : {
+        "bounds" : "[0,-1984][1358,924]"
+      },
+      "children" : [ {
+        "attributes" : {
+          "bounds" : "[0,0][265,585]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[18,28][246,106]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[26,32][68,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[36,35][59,71]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[80,32][229,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "ALERTA-TLALOC",
+                "bounds" : "[80,32][229,55]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "SMART WATER MANAGEMENT",
+                "bounds" : "[80,60][229,74]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "text" : "MENÚ PRINCIPAL",
+            "bounds" : "[18,106][246,146]"
+          }
+        }, {
+          "attributes" : {
+            "bounds" : "[18,146][246,412]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[18,146][246,206]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,161][54,191]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Inicio",
+                "bounds" : "[67,166][98,187]"
+              }
+            }, {
+              "attributes" : {
+                "bounds" : "[242,165][245,188]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,214][246,275]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,229][54,260]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Dashboard",
+                "bounds" : "[67,234][130,255]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,283][246,343]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,298][54,328]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Predicciones",
+                "bounds" : "[67,303][139,323]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,351][246,412]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,366][54,397]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión del agua",
+                "bounds" : "[67,371][164,392]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[18,484][246,557]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[27,504][237,522]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[27,509][35,517]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Plataforma en desarrollo",
+                "bounds" : "[44,504][163,522]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "text" : "ALERTA-TLALOC © 2026",
+              "bounds" : "[27,538][237,552]"
+            }
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "text" : "- tapOn: point: 89%, 18% - tapOn: point: 83%, 18%",
+          "bounds" : "[265,-1984][1358,924]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[265,-1912][1358,842]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[307,-659][1316,48]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[295,-202][1328,48]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[295,-178][639,48]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[307,-178][627,48]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Organizar y visualizar datos para facilitar su interpretación e identificar comportamientos relevantes.",
+                      "bounds" : "[335,-54][599,20]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[639,-178][984,48]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[651,-178][972,48]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Incorporar herramientas de predicción que permitan explorar posibles comportamientos futuros.",
+                      "bounds" : "[679,-54][944,20]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[984,-178][1328,48]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[996,-178][1316,48]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Facilitar información que contribuya a una mayor conciencia sobre el uso y aprovechamiento del agua.",
+                      "bounds" : "[1024,-54][1288,20]"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[307,48][1316,492]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[307,123][957,191]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "text" : "03 · IDENTIDAD DEL PROYECTO",
+                  "bounds" : "[307,128][509,142]"
+                }
+              }, {
+                "attributes" : {
+                  "text" : "Nuestra misión y visión",
+                  "bounds" : "[307,157][957,191]"
+                }
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[295,195][1328,492]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[295,239][812,492]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[307,236][800,489]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[338,285][382,329]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[349,288][372,325]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Misión",
+                      "bounds" : "[338,347][769,372]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "Proporcionar una plataforma tecnológica que facilite el acceso, análisis e interpretación de información relacionada con la gestión del agua, apoyando decisiones más informadas.",
+                      "bounds" : "[338,384][769,458]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[812,239][1328,492]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[824,239][1316,492]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[855,288][899,332]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[865,291][888,328]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Visión",
+                      "bounds" : "[855,350][1285,375]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "Ser una propuesta tecnológica que impulse el uso de datos y herramientas digitales como apoyo para una gestión del agua más eficiente, consciente y sostenible.",
+                      "bounds" : "[855,387][1285,461]"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[307,517][1316,787]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[333,563][1290,617]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[795,567][829,613]"
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

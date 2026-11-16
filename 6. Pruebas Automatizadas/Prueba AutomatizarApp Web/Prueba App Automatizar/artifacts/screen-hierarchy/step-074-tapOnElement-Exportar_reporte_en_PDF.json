@@ -1,0 +1,543 @@
+{
+  "attributes" : {
+    "text" : "          \n\n",
+    "bounds" : "[0,-986][1358,1441]",
+    "url" : "http://localhost:5173/#contexto"
+  },
+  "children" : [ {
+    "attributes" : {
+      "bounds" : "[0,-986][1358,1441]",
+      "resource-id" : "root"
+    },
+    "children" : [ {
+      "attributes" : {
+        "bounds" : "[0,-986][1358,1441]"
+      },
+      "children" : [ {
+        "attributes" : {
+          "bounds" : "[0,0][265,585]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[18,28][246,106]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[26,32][68,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[36,35][59,71]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[80,32][229,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "ALERTA-TLALOC",
+                "bounds" : "[80,32][229,55]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "SMART WATER MANAGEMENT",
+                "bounds" : "[80,60][229,74]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "text" : "MENÚ PRINCIPAL",
+            "bounds" : "[18,106][246,146]"
+          }
+        }, {
+          "attributes" : {
+            "bounds" : "[18,146][246,412]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[18,146][246,206]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,161][54,191]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Inicio",
+                "bounds" : "[67,166][98,187]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,214][246,275]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,229][54,260]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Dashboard",
+                "bounds" : "[67,234][130,255]"
+              }
+            }, {
+              "attributes" : {
+                "bounds" : "[242,233][245,256]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,283][246,343]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,298][54,328]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Predicciones",
+                "bounds" : "[67,303][139,323]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,351][246,412]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,366][54,397]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión del agua",
+                "bounds" : "[67,371][164,392]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[18,484][246,557]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[27,504][237,522]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[27,509][35,517]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Plataforma en desarrollo",
+                "bounds" : "[44,504][163,522]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "text" : "ALERTA-TLALOC © 2026",
+              "bounds" : "[27,538][237,552]"
+            }
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "text" : "- tapOn: point: 89%, 18% - tapOn: point: 83%, 18%",
+          "bounds" : "[265,-986][1358,1441]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[265,-914][1358,1359]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[307,-878][1316,1304]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[337,-429][1286,44]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,-429][871,44]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[358,7][850,23]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : " Consumo registrado",
+                      "bounds" : "[358,7][462,23]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[358,11][365,18]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Unidad: m³",
+                      "bounds" : "[801,7][850,23]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[891,-429][1286,44]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[912,-320][1265,17]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Representación ilustrativa de ubicaciones. Los puntos no representan el total de sensores instalados.",
+                      "bounds" : "[912,-10][1265,17]"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[337,64][1286,1094]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,64][802,556]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[358,85][781,219]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[358,85][618,154]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "DISTRIBUCIÓN",
+                        "bounds" : "[358,85][618,101]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Consumo por instalación",
+                        "bounds" : "[358,108][618,129]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Participación del consumo de los últimos 31 días.",
+                        "bounds" : "[358,136][618,154]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[358,172][520,219]",
+                      "resource-id" : "Cambiar visualización"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : " Gráfica",
+                        "bounds" : "[363,177][440,214]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "▥",
+                          "bounds" : "[374,186][385,205]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "text" : " Datos",
+                        "bounds" : "[444,177][515,214]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "☷",
+                          "bounds" : "[455,186][466,205]"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[358,239][781,532]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[358,243][781,306]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[358,243][781,259]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "Planta de Bombeo Norte",
+                          "bounds" : "[358,243][467,259]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "7,153.3 m³",
+                          "bounds" : "[730,243][781,259]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[358,275][781,285]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "bounds" : "[358,275][781,285]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "text" : "35.0% del consumo total",
+                        "bounds" : "[358,292][781,306]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[358,344][781,408]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[358,344][781,360]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "Tanque de Regulación Oriente",
+                          "bounds" : "[358,344][490,360]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "5,109.5 m³",
+                          "bounds" : "[730,344][781,360]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[358,376][781,386]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "bounds" : "[358,376][660,386]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "text" : "25.0% del consumo total",
+                        "bounds" : "[358,393][781,408]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[358,446][781,509]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[358,446][781,462]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "Tanque Principal Sur",
+                          "bounds" : "[358,446][447,462]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "4,087.6 m³",
+                          "bounds" : "[730,446][781,462]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[358,478][781,488]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "bounds" : "[358,478][599,488]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "text" : "20.0% del consumo total",
+                        "bounds" : "[358,495][781,509]"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[822,64][1286,556]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[843,85][1265,154]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[843,85][1049,154]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "DISPOSITIVOS",
+                        "bounds" : "[843,85][1049,101]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Estado de sensores",
+                        "bounds" : "[843,108][1049,129]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Estado general de la red de monitoreo.",
+                        "bounds" : "[843,136][1049,154]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[1103,85][1265,132]",
+                      "resource-id" : "Cambiar visualización"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : " Gráfica",
+                        "bounds" : "[1108,90][1186,127]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "▥",
+                          "bounds" : "[1119,99][1130,118]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "text" : " Datos",
+                        "bounds" : "[1190,90][1260,127]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "☷",
+                          "bounds" : "[1201,99][1212,118]"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[843,174][1265,505]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[979,182][1128,331]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[996,199][1111,314]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "9",
+                          "bounds" : "[1043,249][1084,264]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "Sensores",
+                          "bounds" : "[1024,236][1040,276]"
+                        }
+                      } ]
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[843,354][1265,487]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[843,354][1265,389]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "bounds" : "[843,368][851,376]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "En línea",
+                          "bounds" : "[860,364][894,380]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "7",
+                          "bounds" : "[1259,363][1265,380]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[843,402][1265,438]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "bounds" : "[843,416][851,424]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "Advertencia",
+                          "bounds" : "[860,412][912,428]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "2",
+                          "bounds" : "[1259,411][1265,429]"
+                        }
+                      } ]
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[843,451][1265,487]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "bounds" : "[843,465][851,473]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "Desconectados",
+                          "bounds" : "[860,461][926,477]"
+                        }
+                      }, {
+                        "attributes" : {
+                          "text" : "0",
+                          "bounds" : "[1259,460][1265,478]"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[843,505][1265,535]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Red de monitoreo",
+                      "bounds" : "[843,519][927,534]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[843,523][850,530]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Operativa",
+                      "bounds" : "[1219,519][1265,535]"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

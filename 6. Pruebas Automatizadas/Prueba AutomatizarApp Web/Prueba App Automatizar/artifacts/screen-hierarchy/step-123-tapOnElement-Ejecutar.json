@@ -1,0 +1,458 @@
+{
+  "attributes" : {
+    "text" : "          \n\n",
+    "bounds" : "[0,-575][1358,894]",
+    "url" : "http://localhost:5173/#contexto"
+  },
+  "children" : [ {
+    "attributes" : {
+      "bounds" : "[0,-575][1358,894]",
+      "resource-id" : "root"
+    },
+    "children" : [ {
+      "attributes" : {
+        "bounds" : "[0,-575][1358,894]"
+      },
+      "children" : [ {
+        "attributes" : {
+          "bounds" : "[0,0][265,585]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[18,28][246,106]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[26,32][68,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[36,35][59,71]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[80,32][229,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "ALERTA-TLALOC",
+                "bounds" : "[80,32][229,55]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "SMART WATER MANAGEMENT",
+                "bounds" : "[80,60][229,74]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "text" : "MENÚ PRINCIPAL",
+            "bounds" : "[18,106][246,146]"
+          }
+        }, {
+          "attributes" : {
+            "bounds" : "[18,146][246,412]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[18,146][246,206]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,161][54,191]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Inicio",
+                "bounds" : "[67,166][98,187]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,214][246,275]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,229][54,260]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Dashboard",
+                "bounds" : "[67,234][130,255]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,283][246,343]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,298][54,328]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Predicciones",
+                "bounds" : "[67,303][139,323]"
+              }
+            }, {
+              "attributes" : {
+                "bounds" : "[242,301][245,324]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,351][246,412]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,366][54,397]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión del agua",
+                "bounds" : "[67,371][164,392]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[18,484][246,557]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[27,504][237,522]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[27,509][35,517]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Plataforma en desarrollo",
+                "bounds" : "[44,504][163,522]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "text" : "ALERTA-TLALOC © 2026",
+              "bounds" : "[27,538][237,552]"
+            }
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "text" : "- tapOn: point: 89%, 18% - tapOn: point: 83%, 18%",
+          "bounds" : "[265,-575][1358,894]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[265,-503][1358,811]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[307,-467][1316,756]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[337,-16][1286,378]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,-16][871,378]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[358,5][850,73]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[358,5][623,73]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "MAPA ESPACIAL",
+                        "bounds" : "[358,5][623,21]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Simulación de Presas",
+                        "bounds" : "[358,28][623,48]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Estatus proyectado a 7d según modelo predictivo.",
+                        "bounds" : "[358,55][623,73]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[719,5][850,37]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "Actual",
+                        "bounds" : "[719,5][763,37]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Predicción (7d)",
+                        "bounds" : "[770,5][850,37]"
+                      }
+                    } ]
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[358,93][850,338]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[359,94][849,337]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[339,128][869,253]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[338,218][870,322]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[513,71][570,361]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "bounds" : "[686,72][757,359]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Cuenca Norte",
+                        "bounds" : "[398,123][454,138]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Sistema Central",
+                        "bounds" : "[555,218][618,233]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Cuenca Sur",
+                        "bounds" : "[702,298][748,313]"
+                      }
+                    } ]
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[358,342][850,357]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : " Normal",
+                      "bounds" : "[470,342][512,357]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[470,346][477,353]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : " Alerta Predictiva",
+                      "bounds" : "[524,342][600,357]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[524,346][531,353]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : " Alarma Activa",
+                      "bounds" : "[612,342][679,357]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[612,346][619,353]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : " Sin señal",
+                      "bounds" : "[691,342][738,357]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[691,346][698,353]"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[891,-16][1286,378]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[912,5][1265,73]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[912,5][1160,73]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "TENDENCIA POR PRESA",
+                        "bounds" : "[912,5][1160,21]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Proyección de Volumen",
+                        "bounds" : "[912,28][1160,48]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Volumen Actual vs. Estimación del Modelo (7d)",
+                        "bounds" : "[912,55][1160,73]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Pico: 0 hm³",
+                      "bounds" : "[1194,5][1265,37]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[912,93][1265,313]"
+                  }
+                }, {
+                  "attributes" : {
+                    "bounds" : "[912,327][1265,343]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : " Volumen Actual",
+                      "bounds" : "[912,327][995,343]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "bounds" : "[912,332][919,339]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "-- Proyección ML (7d)",
+                      "bounds" : "[1040,327][1135,343]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "Intervalo Confianza",
+                      "bounds" : "[1180,327][1265,343]"
+                    }
+                  } ]
+                } ]
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[337,398][1286,660]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,398][802,660]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[358,419][781,487]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[358,419][650,487]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "INTERPRETADORA IA",
+                        "bounds" : "[358,419][650,435]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Factores de Influencia (XAI)",
+                        "bounds" : "[358,442][650,462]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Variables que determinan la predicción actual en la red.",
+                        "bounds" : "[358,469][650,487]"
+                      }
+                    } ]
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[358,507][781,639]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[358,511][781,625]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "Diagnóstico del Modelo:",
+                        "bounds" : "[375,528][764,544]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Proyección calculada a  con base en los registros recientes de MongoDB Atlas.",
+                        "bounds" : "[375,552][764,608]"
+                      },
+                      "children" : [ {
+                        "attributes" : {
+                          "text" : "7d",
+                          "bounds" : "[498,554][528,587]"
+                        }
+                      } ]
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[822,398][1286,660]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[843,419][1265,487]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[843,419][1231,487]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "RESPUESTA OPERATIVA",
+                        "bounds" : "[843,419][1231,435]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Acciones Sugeridas",
+                        "bounds" : "[843,442][1231,462]"
+                      }
+                    }, {
+                      "attributes" : {
+                        "text" : "Recomendaciones automáticas basadas en el comportamiento predictivo.",
+                        "bounds" : "[843,469][1231,487]"
+                      }
+                    } ]
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[843,507][1265,507]"
+                  }
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

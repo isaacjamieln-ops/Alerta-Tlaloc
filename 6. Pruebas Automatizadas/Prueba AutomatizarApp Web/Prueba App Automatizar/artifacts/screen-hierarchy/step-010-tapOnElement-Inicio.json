@@ -1,0 +1,505 @@
+{
+  "attributes" : {
+    "text" : "          \n\n",
+    "bounds" : "[0,0][1358,2427]",
+    "url" : "http://localhost:5173/#contexto"
+  },
+  "children" : [ {
+    "attributes" : {
+      "bounds" : "[0,0][1358,2427]",
+      "resource-id" : "root"
+    },
+    "children" : [ {
+      "attributes" : {
+        "bounds" : "[0,0][1358,2427]"
+      },
+      "children" : [ {
+        "attributes" : {
+          "bounds" : "[0,0][265,585]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[18,28][246,106]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[26,32][68,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[36,35][59,71]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[80,32][229,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "ALERTA-TLALOC",
+                "bounds" : "[80,32][229,55]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "SMART WATER MANAGEMENT",
+                "bounds" : "[80,60][229,74]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "text" : "MENÚ PRINCIPAL",
+            "bounds" : "[18,106][246,146]"
+          }
+        }, {
+          "attributes" : {
+            "bounds" : "[18,146][246,412]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[18,146][246,206]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,161][54,191]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Inicio",
+                "bounds" : "[67,166][98,187]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,214][246,275]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,229][54,260]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Dashboard",
+                "bounds" : "[67,234][130,255]"
+              }
+            }, {
+              "attributes" : {
+                "bounds" : "[242,233][245,256]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,283][246,343]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,298][54,328]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Predicciones",
+                "bounds" : "[67,303][139,323]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,351][246,412]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,366][54,397]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión del agua",
+                "bounds" : "[67,371][164,392]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[18,484][246,557]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[27,504][237,522]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[27,509][35,517]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Plataforma en desarrollo",
+                "bounds" : "[44,504][163,522]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "text" : "ALERTA-TLALOC © 2026",
+              "bounds" : "[27,538][237,552]"
+            }
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "text" : "- tapOn: point: 89%, 18% - tapOn: point: 83%, 18%",
+          "bounds" : "[265,0][1358,2427]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[265,0][1358,72]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[303,25][459,46]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "PLATAFORMA /",
+                "bounds" : "[303,27][383,43]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Dashboard",
+                "bounds" : "[393,25][459,46]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[1168,27][1320,44]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[1168,32][1175,39]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión inteligente del agua",
+                "bounds" : "[1184,27][1320,44]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[265,72][1358,2345]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[307,108][1316,2290]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[337,138][1286,225]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,138][735,225]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "text" : "SISTEMA DE MONITOREO HÍDRICO",
+                    "bounds" : "[337,138][735,154]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Dashboard",
+                    "bounds" : "[337,162][735,198]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Visualiza el consumo de agua y el estado general de las instalaciones.",
+                    "bounds" : "[337,205][735,225]"
+                  }
+                } ]
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[337,255][1286,335]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[358,275][585,314]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "text" : "PERIODO DE CONSULTA",
+                    "bounds" : "[358,275][585,291]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Selecciona el intervalo que deseas analizar.",
+                    "bounds" : "[358,296][585,314]"
+                  }
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[955,273][1265,317]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "text" : "Hoy",
+                    "bounds" : "[960,278][1006,312]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "7 días",
+                    "bounds" : "[1011,278][1066,312]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "14 días",
+                    "bounds" : "[1071,278][1131,312]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "21 días",
+                    "bounds" : "[1136,278][1195,312]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "31 días",
+                    "bounds" : "[1200,278][1260,312]"
+                  }
+                } ]
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[337,355][1286,537]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,355][514,537]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[358,376][493,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Consumo del periodo",
+                      "bounds" : "[358,377][449,408]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[459,376][493,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "20,438",
+                    "bounds" : "[358,436][493,467]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "m³",
+                      "bounds" : "[445,448][464,465]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "Consumo acumulado de los últimos 31 días",
+                    "bounds" : "[358,486][493,516]"
+                  }
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[530,355][707,537]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[551,376][686,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Promedio por registro",
+                      "bounds" : "[551,377][642,408]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "∿",
+                      "bounds" : "[652,376][686,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "638.7",
+                    "bounds" : "[551,436][686,467]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "m³",
+                      "bounds" : "[623,448][642,465]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "Promedio del periodo seleccionado",
+                    "bounds" : "[551,486][686,516]"
+                  }
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[723,355][900,537]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[744,376][879,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Último registro",
+                      "bounds" : "[744,385][819,400]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "◉",
+                      "bounds" : "[845,376][879,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "704",
+                    "bounds" : "[744,436][879,467]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "m³",
+                      "bounds" : "[795,448][814,465]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "Último dato del periodo seleccionado",
+                    "bounds" : "[744,486][879,516]"
+                  }
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[916,355][1093,537]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[937,376][1072,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Sensores en línea",
+                      "bounds" : "[937,385][1023,400]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "⌁",
+                      "bounds" : "[1038,376][1072,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "77.8",
+                    "bounds" : "[937,443][1072,474]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "%",
+                      "bounds" : "[995,455][1007,472]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "7 de 9 sensores",
+                    "bounds" : "[937,501][1072,516]"
+                  }
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[1109,355][1286,537]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[1130,376][1265,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Alarmas del periodo",
+                      "bounds" : "[1130,377][1221,408]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "!",
+                      "bounds" : "[1231,376][1265,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "text" : "18",
+                    "bounds" : "[1130,436][1265,467]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Eventos registrados de los últimos 31 días",
+                    "bounds" : "[1130,486][1265,516]"
+                  }
+                } ]
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[337,557][1286,1030]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,557][871,1030]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[358,578][850,666]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[358,578][627,646]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "ANÁLISIS DE CONSUMO",
+                        "bounds" : "[358,578][627,594]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[688,578][850,666]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "31 días",
+                        "bounds" : "[797,578][850,610]"
+                      }
+                    } ]
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[891,557][1286,1030]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[912,578][1265,646]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "bounds" : "[912,578][1114,646]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "UBICACIÓN",
+                        "bounds" : "[912,578][1114,594]"
+                      }
+                    } ]
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

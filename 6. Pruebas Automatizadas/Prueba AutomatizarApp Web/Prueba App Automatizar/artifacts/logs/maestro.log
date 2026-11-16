@@ -1,0 +1,1262 @@
+19:37:39.740 [ INFO] maestro.Maestro.clearAppState$lambda$9: Clearing app state http://localhost:5173/#proyecto
+19:37:39.829 [ INFO] maestro.Maestro.launchApp$lambda$6: Launching app http://localhost:5173/#proyecto
+19:37:39.829 [ INFO] maestro.Maestro.launchApp$lambda$6: Stopping http://localhost:5173/#proyecto app during launch
+19:37:39.878 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:40.344 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:41.929 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:42.026 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:43.418 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:43.632 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:44.617 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:45.181 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:45.822 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:46.567 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:46.991 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:47.990 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:48.262 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:49.534 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:49.550 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:50.722 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:50.947 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:37:51.980 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:52.986 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:37:53.323 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:53.605 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:37:53.605 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:37:54.877 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:56.265 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:57.001 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:37:57.539 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:57.581 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:37:58.187 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:37:58.187 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:37:59.143 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:37:59.956 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:00.625 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Conocer el proyecto, bounds=[560,462][713,507]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=560, y=462, width=153, height=45))
+19:38:00.650 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:01.261 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:01.261 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (636, 484) using hierarchy based logic for wait
+19:38:02.232 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:03.519 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:03.742 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:03.760 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:04.764 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:06.009 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:06.250 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:07.271 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:07.740 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:08.642 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:09.319 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:09.964 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:10.797 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:11.348 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:12.508 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:12.826 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:14.114 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:14.269 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:15.674 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:15.761 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:17.112 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:17.893 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:18.636 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:19.529 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:19.992 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:21.412 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:21.670 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Ir al Dashboard, bounds=[732,357][891,402]}, children=[TreeNode(attributes={text=, bounds=[859,370][871,388]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=732, y=357, width=159, height=45))
+19:38:22.299 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:22.300 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (811, 379) using hierarchy based logic for wait
+19:38:23.334 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:25.160 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:25.813 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:26.428 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:38:26.480 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:27.077 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:27.077 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:38:28.330 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:29.498 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:29.997 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:30.434 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Explorar Dashboard, bounds=[363,462][547,507]}, children=[TreeNode(attributes={text=, bounds=[515,475][527,493]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=363, y=462, width=184, height=45))
+19:38:30.989 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:30.990 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (455, 484) using hierarchy based logic for wait
+19:38:32.483 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:34.093 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:34.490 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:35.108 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:38:35.437 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:35.725 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:35.726 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:38:36.968 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:37.795 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:38.430 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:38:38.577 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:39.342 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:39.343 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:38:40.695 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:42.393 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:42.572 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:42.581 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:43.795 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:44.240 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:45.168 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:45.739 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:46.734 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:47.362 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:48.138 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:48.805 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:49.388 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:50.283 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:50.888 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:51.964 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:38:52.211 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:53.366 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:53.924 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:38:54.451 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:54.452 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:38:54.613 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:56.134 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:57.137 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:38:57.401 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:38:57.772 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Hoy, bounds=[960,278][1006,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=960, y=278, width=46, height=34))
+19:38:58.438 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:38:58.438 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (983, 295) using hierarchy based logic for wait
+19:38:59.052 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:00.676 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:00.692 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:00.903 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:02.285 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:02.315 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:03.772 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:03.854 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:05.404 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:06.191 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:06.992 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:07.827 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:08.443 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:10.078 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:10.155 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:39:10.873 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:10.873 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:39:11.739 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:12.888 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:13.305 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:13.554 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=7 días, bounds=[1011,278][1066,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1011, y=278, width=55, height=34))
+19:39:14.119 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:14.122 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1038, 295) using hierarchy based logic for wait
+19:39:15.236 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:16.268 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:16.271 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:16.899 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:17.778 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:18.557 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:19.360 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:19.995 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:20.950 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:21.327 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:22.608 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:22.918 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:24.259 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:24.829 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:39:25.366 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:25.367 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:39:26.015 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:27.791 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:27.889 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:28.407 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=14 días, bounds=[1071,278][1131,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1071, y=278, width=60, height=34))
+19:39:28.987 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:28.988 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1101, 295) using hierarchy based logic for wait
+19:39:29.104 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:30.771 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:30.976 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:30.984 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:31.993 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:32.369 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:33.404 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:33.809 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:34.791 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:35.977 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:36.069 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:37.437 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:37.455 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:38.722 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:39.459 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:39:39.998 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:40.002 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:40.003 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:39:41.526 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:42.445 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:42.787 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:43.001 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=21 días, bounds=[1136,278][1195,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1136, y=278, width=59, height=34))
+19:39:43.554 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:43.554 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1165, 295) using hierarchy based logic for wait
+19:39:44.499 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:45.413 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:45.421 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:45.758 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:46.825 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:47.065 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:48.355 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:48.476 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:49.825 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:50.588 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:51.215 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:52.034 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:39:52.763 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:54.206 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:39:54.219 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:54.772 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:54.772 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:39:55.948 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:57.403 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:39:57.442 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:39:58.036 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=31 días, bounds=[1200,278][1260,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1200, y=278, width=60, height=34))
+19:39:58.654 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:39:58.654 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1230, 295) using hierarchy based logic for wait
+19:39:58.716 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:00.316 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:00.766 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:40:00.786 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:40:01.689 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:02.359 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:40:03.395 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:04.024 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:40:04.911 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:05.585 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:40:06.522 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:07.134 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:40:08.028 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:08.703 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:40:09.433 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:10.709 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:10.793 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Exportar reporte en PDF, bounds=[702,357][921,407]}, children=[TreeNode(attributes={text=?, bounds=[728,373][737,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=702, y=357, width=219, height=50))
+19:40:11.449 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:40:11.449 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (811, 382) using hierarchy based logic for wait
+19:40:13.685 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:34.658 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:50.768 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:52.081 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:53.604 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:54.997 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:56.423 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:57.191 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:40:57.853 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:40:57.927 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:40:57.930 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:40:59.787 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:00.647 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:00.662 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:41:01.137 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:02.513 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:02.695 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[774,331][845,368]}, children=[TreeNode(attributes={text=?, bounds=[785,340][796,359]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=774, y=331, width=71, height=37))
+19:41:03.937 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:03.937 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (809, 349) using hierarchy based logic for wait
+19:41:04.955 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:06.769 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:07.015 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:07.043 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:41:09.599 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:10.375 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=En línea, bounds=[962,80][1013,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=962, y=80, width=51, height=32))
+19:41:10.960 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:10.960 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (987, 96) using hierarchy based logic for wait
+19:41:11.065 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:12.721 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:12.895 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:13.286 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Advertencia, bounds=[1020,80][1087,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1020, y=80, width=67, height=32))
+19:41:13.898 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:13.901 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1053, 96) using hierarchy based logic for wait
+19:41:14.889 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:15.683 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:16.292 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Alarma, bounds=[1094,80][1142,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1094, y=80, width=48, height=32))
+19:41:16.472 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:16.931 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:16.931 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1118, 96) using hierarchy based logic for wait
+19:41:18.124 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:18.725 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:19.413 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Desconectados, bounds=[1149,80][1229,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1149, y=80, width=80, height=32))
+19:41:19.728 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:20.023 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:20.027 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1189, 96) using hierarchy based logic for wait
+19:41:21.246 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:22.495 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Todos, bounds=[912,80][955,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=912, y=80, width=43, height=32))
+19:41:22.796 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:23.124 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:23.125 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (933, 96) using hierarchy based logic for wait
+19:41:24.616 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:25.058 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:25.650 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=, bounds=[991,191][1010,210], resource-id=Seleccionar Estación / Presa CCHNL}, children=[TreeNode(attributes={text=, bounds=[998,198][1003,203]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=991, y=191, width=19, height=19))
+19:41:26.271 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:26.292 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:26.293 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1000, 200) using hierarchy based logic for wait
+19:41:28.375 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:28.425 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:28.744 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1065, 222) using hierarchy based logic for wait
+19:41:30.547 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:32.227 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:32.902 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=, bounds=[1184,288][1203,307], resource-id=Seleccionar Estación / Presa SLSGJ}, children=[TreeNode(attributes={text=, bounds=[1191,295][1196,300]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1184, y=288, width=19, height=19))
+19:41:33.093 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:33.499 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:33.499 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1193, 297) using hierarchy based logic for wait
+19:41:36.154 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:37.192 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:38.300 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=, bounds=[1079,239][1098,258], resource-id=Seleccionar Estación / Presa CPRNL}, children=[TreeNode(attributes={text=, bounds=[1086,246][1091,251]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1079, y=239, width=19, height=19))
+19:41:38.787 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:39.045 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:39.046 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1088, 248) using hierarchy based logic for wait
+19:41:40.663 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:40.995 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:41.736 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=×, bounds=[1226,420][1251,453], resource-id=Cerrar información del sensor}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1226, y=420, width=25, height=33))
+19:41:42.307 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:42.312 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:42.313 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1238, 436) using hierarchy based logic for wait
+19:41:44.074 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:44.385 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:44.789 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:41:45.373 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:45.374 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:41:46.442 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:47.505 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:48.155 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:41:48.339 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:48.754 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:48.754 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:41:49.897 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:50.558 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:51.172 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:41:51.600 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:51.924 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:51.925 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:41:53.525 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:53.897 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:54.595 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:41:55.126 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:55.372 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:55.373 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:41:57.160 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:41:57.220 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:41:57.857 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=?, bounds=[1227,292][1254,324], resource-id=Alejar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=292, width=27, height=32))
+19:41:58.484 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:41:58.486 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 308) using hierarchy based logic for wait
+19:41:58.740 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:00.515 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:00.879 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:01.247 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=?, bounds=[1227,328][1254,360], resource-id=Restablecer zoom}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=328, width=27, height=32))
+19:42:01.821 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:01.822 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 344) using hierarchy based logic for wait
+19:42:03.039 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:03.911 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:03.923 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:42:04.940 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:06.237 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[444,384][515,421]}, children=[TreeNode(attributes={text=?, bounds=[455,393][466,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=444, y=384, width=71, height=37))
+19:42:06.805 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:06.822 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:06.822 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (479, 402) using hierarchy based logic for wait
+19:42:08.955 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:09.601 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:10.269 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[363,384][440,421]}, children=[TreeNode(attributes={text=?, bounds=[374,393][385,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=363, y=384, width=77, height=37))
+19:42:10.595 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:10.810 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:10.812 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (401, 402) using hierarchy based logic for wait
+19:42:12.241 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:13.616 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:13.750 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:14.225 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[444,384][515,421]}, children=[TreeNode(attributes={text=?, bounds=[455,393][466,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=444, y=384, width=71, height=37))
+19:42:14.829 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:14.834 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (479, 402) using hierarchy based logic for wait
+19:42:15.994 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:18.006 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:18.294 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:18.795 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[363,384][440,421]}, children=[TreeNode(attributes={text=?, bounds=[374,393][385,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=363, y=384, width=77, height=37))
+19:42:19.350 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:19.350 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (401, 402) using hierarchy based logic for wait
+19:42:20.545 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:22.550 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:22.615 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:22.644 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:42:24.366 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:24.410 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:42:25.921 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:26.539 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[705,257][776,294]}, children=[TreeNode(attributes={text=?, bounds=[716,266][727,285]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=705, y=257, width=71, height=37))
+19:42:27.117 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:27.118 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (740, 275) using hierarchy based logic for wait
+19:42:28.427 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:30.275 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:30.406 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:31.023 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[624,257][701,294]}, children=[TreeNode(attributes={text=?, bounds=[635,266][646,285]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=624, y=257, width=77, height=37))
+19:42:31.737 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:31.738 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (662, 275) using hierarchy based logic for wait
+19:42:33.030 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:34.840 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:35.072 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:35.560 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Consultar todas las alarmas, bounds=[358,558][781,606]}, children=[TreeNode(attributes={text=?, bounds=[755,570][768,594]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=358, y=558, width=423, height=48))
+19:42:36.111 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:36.112 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (569, 582) using hierarchy based logic for wait
+19:42:37.216 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:38.991 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:39.275 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:39.791 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Críticas, bounds=[427,280][487,314]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=427, y=280, width=60, height=34))
+19:42:40.384 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:40.384 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (457, 297) using hierarchy based logic for wait
+19:42:41.620 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:42.269 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:42.854 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Advertencias, bounds=[494,280][579,314]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=494, y=280, width=85, height=34))
+19:42:43.533 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:43.533 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (536, 297) using hierarchy based logic for wait
+19:42:43.570 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:45.631 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:46.210 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:46.304 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Cerrar, bounds=[938,491][999,525]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=938, y=491, width=61, height=34))
+19:42:46.923 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:46.923 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (968, 508) using hierarchy based logic for wait
+19:42:48.508 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:49.938 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:50.358 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:50.593 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[929,309][999,346]}, children=[TreeNode(attributes={text=?, bounds=[940,318][951,337]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=929, y=309, width=70, height=37))
+19:42:51.118 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:51.120 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (964, 327) using hierarchy based logic for wait
+19:42:52.596 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:54.177 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:54.490 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:54.793 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[848,309][925,346]}, children=[TreeNode(attributes={text=?, bounds=[859,318][870,337]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=848, y=309, width=77, height=37))
+19:42:55.340 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:42:55.341 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (886, 327) using hierarchy based logic for wait
+19:42:56.450 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:42:58.444 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:42:58.463 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:42:58.533 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:00.404 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:00.817 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Predicciones, bounds=[67,303][139,323]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=303, width=72, height=20))
+19:43:01.436 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:43:01.438 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (103, 313) using hierarchy based logic for wait
+19:43:02.405 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:03.758 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:05.039 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:43:05.070 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:05.587 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=15 días, bounds=[1134,278][1194,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1134, y=278, width=60, height=34))
+19:43:06.238 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:43:06.240 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1164, 295) using hierarchy based logic for wait
+19:43:06.868 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:08.267 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:43:08.550 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:09.060 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=30 días, bounds=[1199,278][1260,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1199, y=278, width=61, height=34))
+19:43:09.880 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:43:09.880 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1229, 295) using hierarchy based logic for wait
+19:43:10.730 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:11.859 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:43:12.250 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:12.781 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=7 días, bounds=[1074,278][1129,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1074, y=278, width=55, height=34))
+19:43:13.402 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:43:13.402 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1101, 295) using hierarchy based logic for wait
+19:43:14.381 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:15.673 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:43:15.692 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:43:16.236 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:17.643 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:43:17.894 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:19.535 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:20.176 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Actual, bounds=[719,-6][763,26]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=719, y=-6, width=44, height=32))
+19:43:20.821 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:43:20.822 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (741, 10) using hierarchy based logic for wait
+19:43:21.042 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:23.420 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:24.187 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Predicción (7d), bounds=[770,-6][850,26]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=770, y=-6, width=80, height=32))
+19:43:24.987 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:43:24.987 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (810, 10) using hierarchy based logic for wait
+19:43:25.170 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:27.114 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:43:27.153 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:28.688 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:30.242 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:31.560 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:33.422 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:35.050 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:36.628 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:38.076 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:39.445 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:40.938 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:42.328 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:43.722 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:45.278 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:46.672 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:43:46.938 [ERROR] maestro.orchestra.Orchestra.executeCommands: [Command execution] CommandFailed: Element not found: Text matching regex: Ejecutar
+19:43:47.569 [ INFO] maestro.Maestro.takeScreenshot: Taking screenshot
+19:43:47.578 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:45:56.398 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:45:57.712 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:45:59.079 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:00.430 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:01.755 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:03.003 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:03.584 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Ejecutar, bounds=[1176,448][1251,485]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1176, y=448, width=75, height=37))
+19:46:04.400 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:05.543 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:05.544 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1213, 466) using hierarchy based logic for wait
+19:46:05.611 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:07.397 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:08.039 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Ejecutar, bounds=[1176,304][1251,341]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1176, y=304, width=75, height=37))
+19:46:08.582 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:08.583 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1213, 322) using hierarchy based logic for wait
+19:46:09.205 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:10.339 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:10.341 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:46:10.473 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:11.885 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:12.432 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:46:13.107 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:13.107 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:46:13.140 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:14.858 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:15.324 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:16.423 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=SIMULADOR, bounds=[1022,191][1142,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1022, y=191, width=120, height=35))
+19:46:16.944 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:17.336 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:17.336 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1082, 208) using hierarchy based logic for wait
+19:46:18.631 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:19.599 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:19.603 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:46:20.864 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:22.155 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:46:22.631 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:26.610 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:31.537 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:31.610 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:46:32.216 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:32.217 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:46:33.368 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:34.085 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:34.674 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:34.690 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=ZONAS, bounds=[1148,191][1267,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1148, y=191, width=119, height=35))
+19:46:35.288 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:35.289 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1207, 208) using hierarchy based logic for wait
+19:46:36.268 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:37.108 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:37.111 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:46:37.643 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:38.566 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:46:38.956 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:40.473 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:40.845 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:46:41.426 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:41.427 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:46:42.063 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:43.153 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:43.318 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:43.693 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=EN VIVO, bounds=[897,191][1016,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=897, y=191, width=119, height=35))
+19:46:44.241 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:44.242 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (956, 208) using hierarchy based logic for wait
+19:46:44.855 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:46.029 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:46.199 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:46.576 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa CPRNL, bounds=[553,432][630,451]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=553, y=432, width=77, height=19))
+19:46:47.069 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:47.069 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (591, 441) using hierarchy based logic for wait
+19:46:47.987 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:49.142 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:49.794 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:50.003 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa EPLGJ, bounds=[705,454][780,473]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=705, y=454, width=75, height=19))
+19:46:50.632 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:50.632 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (742, 463) using hierarchy based logic for wait
+19:46:51.919 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:52.872 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:53.290 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:53.688 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa INFMC, bounds=[403,500][478,519]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=403, y=500, width=75, height=19))
+19:46:54.360 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:54.360 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (440, 509) using hierarchy based logic for wait
+19:46:55.325 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:56.931 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:46:57.317 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:46:57.590 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa LBQCH, bounds=[552,499][631,518]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=552, y=499, width=79, height=19))
+19:46:58.173 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:46:58.174 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (591, 508) using hierarchy based logic for wait
+19:46:59.257 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:00.605 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:00.909 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:01.111 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa LDCJL, bounds=[705,499][780,518]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=705, y=499, width=75, height=19))
+19:47:01.967 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:01.970 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (742, 508) using hierarchy based logic for wait
+19:47:03.188 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:04.522 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:04.809 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:05.368 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa PMHSI, bounds=[403,545][478,565]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=403, y=545, width=75, height=20))
+19:47:05.898 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:05.898 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (440, 555) using hierarchy based logic for wait
+19:47:07.020 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:08.264 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:08.634 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:08.804 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa SLSGJ, bounds=[554,544][629,564]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=554, y=544, width=75, height=20))
+19:47:09.574 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:09.574 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (591, 554) using hierarchy based logic for wait
+19:47:10.698 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:11.642 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:12.085 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:12.385 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa VBRMX, bounds=[703,544][782,564]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=703, y=544, width=79, height=20))
+19:47:13.042 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:13.042 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (742, 554) using hierarchy based logic for wait
+19:47:14.356 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:15.774 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:16.086 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:16.378 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=SIMULADOR, bounds=[1022,191][1142,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1022, y=191, width=120, height=35))
+19:47:17.123 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:17.124 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1082, 208) using hierarchy based logic for wait
+19:47:17.790 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:19.159 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:19.164 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:47:19.704 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:21.446 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:47:21.468 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:22.883 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:23.946 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:47:24.526 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:24.527 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:47:24.552 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:26.424 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:26.771 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:27.365 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=ZONAS, bounds=[1148,191][1267,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1148, y=191, width=119, height=35))
+19:47:27.938 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:28.174 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:28.175 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1207, 208) using hierarchy based logic for wait
+19:47:29.461 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:30.266 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:47:30.270 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:47:31.335 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:32.127 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:47:32.949 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:34.419 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:34.668 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:47:35.325 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:47:35.325 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:47:36.369 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:47:37.630 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:48:08.418 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:09.821 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:10.608 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (13, 351) using hierarchy based logic for wait
+19:48:11.802 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:12.736 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (13, 351) using hierarchy based logic for wait
+19:48:14.060 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:14.802 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (13, 351) using hierarchy based logic for wait
+19:48:16.298 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:16.479 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa VBRMX, bounds=[703,545][782,565]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=703, y=545, width=79, height=20))
+19:48:17.231 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:48:17.233 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (742, 555) using hierarchy based logic for wait
+19:48:17.962 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:48:18.369 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:19.778 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:19.975 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:48:20.177 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:48:20.766 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=SIMULADOR, bounds=[1022,53][1142,88]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1022, y=53, width=120, height=35))
+19:48:21.297 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:21.449 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:48:21.450 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1082, 70) using hierarchy based logic for wait
+19:48:24.215 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:24.777 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:48:24.782 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:48:26.719 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:48:26.986 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:29.396 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:48:30.866 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:48:30.867 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:48:37.408 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:39.587 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:48:39.748 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:40.106 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=ZONAS, bounds=[1148,191][1267,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1148, y=191, width=119, height=35))
+19:48:40.710 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:48:40.710 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1207, 208) using hierarchy based logic for wait
+19:48:43.199 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:48:43.205 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:48:44.684 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:48:45.039 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:48:47.347 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:48:47.914 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:48:47.916 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:48:50.405 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:52:48.279 [ INFO] maestro.Maestro.clearAppState$lambda$9: Clearing app state http://localhost:5173/#proyecto
+19:52:48.404 [ INFO] maestro.Maestro.launchApp$lambda$6: Launching app http://localhost:5173/#proyecto
+19:52:48.405 [ INFO] maestro.Maestro.launchApp$lambda$6: Stopping http://localhost:5173/#proyecto app during launch
+19:52:48.475 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:52:49.393 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:52:50.272 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:52:51.087 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:52:52.049 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:52:52.396 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:52:53.664 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:52:53.719 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:52:55.040 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:52:55.289 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:52:56.290 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:52:56.830 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:52:57.641 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:52:58.345 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:52:58.926 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:00.087 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:00.415 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:01.726 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:02.221 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:53:02.740 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:02.741 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:53:03.350 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:04.956 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:05.752 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:06.364 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:53:06.377 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:06.983 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:06.986 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:53:08.092 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:08.855 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:09.400 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:09.455 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Conocer el proyecto, bounds=[560,462][713,507]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=560, y=462, width=153, height=45))
+19:53:10.087 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:10.087 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (636, 484) using hierarchy based logic for wait
+19:53:11.109 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:12.505 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:12.746 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:12.767 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:13.756 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:14.364 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:15.059 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:15.932 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:16.394 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:17.524 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:17.798 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:19.096 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:19.180 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:20.484 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:20.802 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:21.974 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:22.379 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:23.324 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:23.987 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:24.712 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:25.579 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:26.077 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:27.079 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:27.413 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:28.773 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:29.280 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Ir al Dashboard, bounds=[732,357][891,402]}, children=[TreeNode(attributes={text=, bounds=[859,370][871,388]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=732, y=357, width=159, height=45))
+19:53:29.816 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:29.816 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (811, 379) using hierarchy based logic for wait
+19:53:30.413 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:32.088 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:32.887 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:33.500 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:33.521 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:53:34.081 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:34.081 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:53:35.291 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:36.167 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:36.714 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Explorar Dashboard, bounds=[363,462][547,507]}, children=[TreeNode(attributes={text=, bounds=[515,475][527,493]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=363, y=462, width=184, height=45))
+19:53:36.811 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:37.405 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:37.405 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (455, 484) using hierarchy based logic for wait
+19:53:39.220 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:40.626 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:40.666 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:41.246 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:53:41.820 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:41.820 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:53:42.473 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:43.808 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:44.058 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:44.535 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:53:45.060 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:53:45.060 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:53:45.671 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:47.248 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:48.089 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:53:48.102 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:48.721 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:49.685 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:50.330 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:51.369 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:51.985 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:52.886 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:53.481 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:54.463 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:54.908 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:55.888 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:56.373 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:57.482 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:53:57.738 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:59.193 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:53:59.653 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:54:00.223 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:00.223 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:54:00.837 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:02.237 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:02.893 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:03.482 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Hoy, bounds=[960,278][1006,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=960, y=278, width=46, height=34))
+19:54:03.541 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:04.107 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:04.108 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (983, 295) using hierarchy based logic for wait
+19:54:05.576 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:06.330 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:06.337 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:06.956 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:08.067 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:08.746 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:09.581 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:10.257 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:11.834 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:12.033 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:13.402 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:13.622 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:14.733 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:15.775 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:54:16.178 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:16.404 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:16.404 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:54:17.670 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:19.041 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:19.095 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:19.804 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=7 días, bounds=[1011,278][1066,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1011, y=278, width=55, height=34))
+19:54:20.402 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:20.402 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1038, 295) using hierarchy based logic for wait
+19:54:20.454 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:22.402 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:22.645 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:22.656 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:23.904 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:24.193 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:25.353 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:25.789 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:26.818 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:28.015 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:28.321 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:29.519 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:29.789 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:31.249 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:31.674 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:54:32.238 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:32.242 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:54:32.880 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:34.367 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:34.900 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:35.473 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=14 días, bounds=[1071,278][1131,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1071, y=278, width=60, height=34))
+19:54:35.779 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:35.984 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:35.985 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1101, 295) using hierarchy based logic for wait
+19:54:37.362 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:37.984 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:37.994 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:38.817 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:39.577 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:40.474 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:41.084 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:42.027 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:42.684 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:43.570 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:44.153 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:45.095 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:46.331 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:54:46.610 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:46.963 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:46.965 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:54:48.167 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:49.590 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:49.770 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:50.298 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=21 días, bounds=[1136,278][1195,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1136, y=278, width=59, height=34))
+19:54:50.934 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:54:50.935 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1165, 295) using hierarchy based logic for wait
+19:54:50.944 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:52.471 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:52.915 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:54:52.928 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:53.844 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:54.497 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:55.399 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:56.102 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:56.944 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:58.389 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:54:58.462 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:54:59.938 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:00.009 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:55:01.337 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:02.213 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:55:02.788 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:02.811 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:55:02.813 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:55:04.465 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:05.523 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:55:05.896 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:06.160 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=31 días, bounds=[1200,278][1260,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1200, y=278, width=60, height=34))
+19:55:06.707 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:55:06.708 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1230, 295) using hierarchy based logic for wait
+19:55:07.974 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:08.948 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:55:08.958 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:55:09.363 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:10.653 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:55:10.814 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:12.240 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:55:12.372 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:13.981 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:14.579 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:55:15.499 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:16.100 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:55:16.981 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:17.639 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:55:18.500 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:19.859 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:19.883 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Exportar reporte en PDF, bounds=[702,357][921,407]}, children=[TreeNode(attributes={text=?, bounds=[728,373][737,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=702, y=357, width=219, height=50))
+19:55:20.460 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:55:20.462 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (811, 382) using hierarchy based logic for wait
+19:55:28.382 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:55:45.092 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:05.626 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:06.871 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:07.976 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:08.322 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:08.504 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Dashboard, bounds=[67,234][130,255]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=234, width=63, height=21))
+19:56:09.569 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:10.785 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:11.374 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:11.375 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (98, 244) using hierarchy based logic for wait
+19:56:13.227 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:14.343 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:14.346 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:56:14.935 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:16.696 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:16.957 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[774,331][845,368]}, children=[TreeNode(attributes={text=?, bounds=[785,340][796,359]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=774, y=331, width=71, height=37))
+19:56:17.831 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:17.831 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (809, 349) using hierarchy based logic for wait
+19:56:19.005 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:20.691 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:20.707 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:56:20.756 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:22.375 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:23.033 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=En línea, bounds=[962,80][1013,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=962, y=80, width=51, height=32))
+19:56:23.613 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:23.615 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (987, 96) using hierarchy based logic for wait
+19:56:24.733 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:25.486 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:26.053 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Advertencia, bounds=[1020,80][1087,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1020, y=80, width=67, height=32))
+19:56:26.095 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:26.690 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:26.691 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1053, 96) using hierarchy based logic for wait
+19:56:27.833 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:28.670 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:29.298 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Alarma, bounds=[1094,80][1142,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1094, y=80, width=48, height=32))
+19:56:29.583 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:30.084 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:30.085 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1118, 96) using hierarchy based logic for wait
+19:56:31.275 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:32.221 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:32.788 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Desconectados, bounds=[1149,80][1229,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1149, y=80, width=80, height=32))
+19:56:33.024 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:33.419 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:33.420 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1189, 96) using hierarchy based logic for wait
+19:56:34.723 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:35.877 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Todos, bounds=[912,80][955,112]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=912, y=80, width=43, height=32))
+19:56:36.155 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:36.445 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:36.447 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (933, 96) using hierarchy based logic for wait
+19:56:37.833 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:38.290 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:38.825 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=, bounds=[991,191][1010,210], resource-id=Seleccionar Estación / Presa CCHNL}, children=[TreeNode(attributes={text=, bounds=[998,198][1003,203]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=991, y=191, width=19, height=19))
+19:56:39.411 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:39.423 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:39.424 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1000, 200) using hierarchy based logic for wait
+19:56:41.249 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:41.458 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:41.760 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1065, 222) using hierarchy based logic for wait
+19:56:43.542 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:44.227 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:44.793 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=, bounds=[1184,288][1203,307], resource-id=Seleccionar Estación / Presa SLSGJ}, children=[TreeNode(attributes={text=, bounds=[1191,295][1196,300]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1184, y=288, width=19, height=19))
+19:56:44.988 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:45.476 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:45.476 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1193, 297) using hierarchy based logic for wait
+19:56:46.871 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:47.372 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:47.943 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=, bounds=[1079,239][1098,258], resource-id=Seleccionar Estación / Presa CPRNL}, children=[TreeNode(attributes={text=, bounds=[1086,246][1091,251]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1079, y=239, width=19, height=19))
+19:56:48.442 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:48.538 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:48.541 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1088, 248) using hierarchy based logic for wait
+19:56:50.361 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:50.446 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:51.037 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=×, bounds=[1226,420][1251,453], resource-id=Cerrar información del sensor}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1226, y=420, width=25, height=33))
+19:56:51.824 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:51.826 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1238, 436) using hierarchy based logic for wait
+19:56:52.486 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:53.977 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:54.339 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:54.685 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:56:55.287 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:55.289 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:56:56.513 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:57.417 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:56:58.035 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:56:58.289 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:56:58.621 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:56:58.622 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:56:59.825 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:00.464 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:01.028 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:57:01.432 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:01.705 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:01.706 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:57:03.030 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:03.542 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:04.078 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=+, bounds=[1227,256][1254,288], resource-id=Acercar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=256, width=27, height=32))
+19:57:04.677 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:04.712 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:04.715 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 272) using hierarchy based logic for wait
+19:57:06.528 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:06.793 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:07.563 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=?, bounds=[1227,292][1254,324], resource-id=Alejar mapa}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=292, width=27, height=32))
+19:57:08.159 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:08.159 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 308) using hierarchy based logic for wait
+19:57:09.058 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:10.206 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:10.816 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:10.843 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=?, bounds=[1227,328][1254,360], resource-id=Restablecer zoom}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1227, y=328, width=27, height=32))
+19:57:11.473 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:11.475 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1240, 344) using hierarchy based logic for wait
+19:57:12.800 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:13.553 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:13.560 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:57:14.696 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:15.998 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[444,384][515,421]}, children=[TreeNode(attributes={text=?, bounds=[455,393][466,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=444, y=384, width=71, height=37))
+19:57:16.367 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:16.675 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:16.677 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (479, 402) using hierarchy based logic for wait
+19:57:18.118 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:19.740 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:20.262 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:20.451 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[363,384][440,421]}, children=[TreeNode(attributes={text=?, bounds=[374,393][385,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=363, y=384, width=77, height=37))
+19:57:20.969 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:20.970 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (401, 402) using hierarchy based logic for wait
+19:57:22.342 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:24.187 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:24.468 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:25.033 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[444,384][515,421]}, children=[TreeNode(attributes={text=?, bounds=[455,393][466,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=444, y=384, width=71, height=37))
+19:57:25.597 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:25.597 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (479, 402) using hierarchy based logic for wait
+19:57:26.718 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:28.390 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:28.449 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:29.096 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[363,384][440,421]}, children=[TreeNode(attributes={text=?, bounds=[374,393][385,412]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=363, y=384, width=77, height=37))
+19:57:29.595 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:29.597 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (401, 402) using hierarchy based logic for wait
+19:57:30.710 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:32.598 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:32.910 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:32.920 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:57:34.453 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:34.499 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:57:36.264 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:36.932 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[705,257][776,294]}, children=[TreeNode(attributes={text=?, bounds=[716,266][727,285]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=705, y=257, width=71, height=37))
+19:57:37.508 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:37.508 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (740, 275) using hierarchy based logic for wait
+19:57:38.710 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:40.679 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:40.810 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:41.465 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[624,257][701,294]}, children=[TreeNode(attributes={text=?, bounds=[635,266][646,285]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=624, y=257, width=77, height=37))
+19:57:42.070 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:42.071 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (662, 275) using hierarchy based logic for wait
+19:57:43.426 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:45.137 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:45.428 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:45.888 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Consultar todas las alarmas, bounds=[358,558][781,606]}, children=[TreeNode(attributes={text=?, bounds=[755,570][768,594]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=358, y=558, width=423, height=48))
+19:57:46.485 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:46.485 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (569, 582) using hierarchy based logic for wait
+19:57:48.167 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:50.053 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:50.598 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:50.793 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Críticas, bounds=[427,280][487,314]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=427, y=280, width=60, height=34))
+19:57:51.332 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:51.335 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (457, 297) using hierarchy based logic for wait
+19:57:52.585 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:53.391 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:53.986 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Advertencias, bounds=[494,280][579,314]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=494, y=280, width=85, height=34))
+19:57:54.603 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:54.615 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:54.616 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (536, 297) using hierarchy based logic for wait
+19:57:56.532 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:57:56.789 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:57:57.211 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Cerrar, bounds=[938,491][999,525]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=938, y=491, width=61, height=34))
+19:57:57.739 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:57:57.739 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (968, 508) using hierarchy based logic for wait
+19:57:59.165 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:00.663 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:00.925 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:01.424 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Datos, bounds=[929,309][999,346]}, children=[TreeNode(attributes={text=?, bounds=[940,318][951,337]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=929, y=309, width=70, height=37))
+19:58:02.001 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:02.002 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (964, 327) using hierarchy based logic for wait
+19:58:03.324 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:05.012 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:05.091 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:05.670 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text= Gráfica, bounds=[848,309][925,346]}, children=[TreeNode(attributes={text=?, bounds=[859,318][870,337]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null)], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=848, y=309, width=77, height=37))
+19:58:06.281 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:06.281 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (886, 327) using hierarchy based logic for wait
+19:58:07.588 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:09.691 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:09.718 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:09.918 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:11.671 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:12.215 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Predicciones, bounds=[67,303][139,323]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=303, width=72, height=20))
+19:58:12.829 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:12.830 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (103, 313) using hierarchy based logic for wait
+19:58:13.838 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:15.220 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:16.342 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:16.525 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:16.907 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=15 días, bounds=[1134,278][1194,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1134, y=278, width=60, height=34))
+19:58:17.410 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:17.411 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1164, 295) using hierarchy based logic for wait
+19:58:18.058 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:19.223 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:19.559 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:19.944 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=30 días, bounds=[1199,278][1260,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1199, y=278, width=61, height=34))
+19:58:20.491 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:20.491 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1229, 295) using hierarchy based logic for wait
+19:58:21.093 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:22.275 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:22.550 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:22.911 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=7 días, bounds=[1074,278][1129,312]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1074, y=278, width=55, height=34))
+19:58:23.520 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:23.521 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1101, 295) using hierarchy based logic for wait
+19:58:24.135 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:25.288 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:25.327 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:25.630 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:26.982 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:27.002 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:28.319 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:29.120 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Actual, bounds=[719,-6][763,26]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=719, y=-6, width=44, height=32))
+19:58:29.656 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:29.670 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:29.670 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (741, 10) using hierarchy based logic for wait
+19:58:31.232 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:31.928 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Predicción (7d), bounds=[770,-6][850,26]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=770, y=-6, width=80, height=32))
+19:58:32.398 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:32.450 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:32.450 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (810, 10) using hierarchy based logic for wait
+19:58:33.993 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:34.210 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:35.256 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:35.689 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:36.628 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:37.860 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:37.912 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:58:38.458 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:38.458 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:58:39.422 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:40.201 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:40.688 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:40.884 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=SIMULADOR, bounds=[1022,191][1142,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1022, y=191, width=120, height=35))
+19:58:41.412 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:41.415 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1082, 208) using hierarchy based logic for wait
+19:58:42.251 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:43.846 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:43.860 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:43.884 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:45.389 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:45.450 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:46.701 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:48.107 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:48.358 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:58:48.914 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:48.914 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:58:49.817 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:50.879 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:51.298 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:51.531 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=ZONAS, bounds=[1148,191][1267,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1148, y=191, width=119, height=35))
+19:58:52.170 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:52.172 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1207, 208) using hierarchy based logic for wait
+19:58:53.012 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:54.013 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:58:54.021 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:54.334 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:55.483 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:58:55.590 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:56.749 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:57.488 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:58:57.977 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:58.041 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:58:58.042 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:58:59.491 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:58:59.704 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:00.251 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=EN VIVO, bounds=[897,191][1016,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=897, y=191, width=119, height=35))
+19:59:00.747 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:00.801 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:00.802 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (956, 208) using hierarchy based logic for wait
+19:59:02.339 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:02.566 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:03.202 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa CPRNL, bounds=[553,454][630,473]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=553, y=454, width=77, height=19))
+19:59:03.708 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:03.916 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:03.917 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (591, 463) using hierarchy based logic for wait
+19:59:05.095 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:05.697 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:06.274 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa EPLGJ, bounds=[705,454][780,473]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=705, y=454, width=75, height=19))
+19:59:06.486 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:06.839 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:06.839 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (742, 463) using hierarchy based logic for wait
+19:59:07.948 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:08.681 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:09.181 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:09.249 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa INFMC, bounds=[403,500][478,519]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=403, y=500, width=75, height=19))
+19:59:09.870 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:09.871 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (440, 509) using hierarchy based logic for wait
+19:59:10.886 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:11.796 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:12.185 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:12.362 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa LBQCH, bounds=[552,499][631,518]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=552, y=499, width=79, height=19))
+19:59:12.894 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:12.895 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (591, 508) using hierarchy based logic for wait
+19:59:13.884 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:14.888 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:15.182 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:15.513 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa LDCJL, bounds=[705,499][780,518]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=705, y=499, width=75, height=19))
+19:59:16.079 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:16.080 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (742, 508) using hierarchy based logic for wait
+19:59:16.961 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:17.926 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:18.317 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:18.493 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa PMHSI, bounds=[403,545][478,565]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=403, y=545, width=75, height=20))
+19:59:19.052 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:19.055 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (440, 555) using hierarchy based logic for wait
+19:59:19.975 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:20.976 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:21.317 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:21.514 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa SLSGJ, bounds=[554,544][629,564]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=554, y=544, width=75, height=20))
+19:59:22.029 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:22.029 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (591, 554) using hierarchy based logic for wait
+19:59:22.977 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:23.885 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:24.342 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:24.521 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Presa VBRMX, bounds=[703,544][782,564]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=703, y=544, width=79, height=20))
+19:59:25.050 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:25.051 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (742, 554) using hierarchy based logic for wait
+19:59:25.996 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:26.907 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:27.378 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:27.578 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=SIMULADOR, bounds=[1022,191][1142,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1022, y=191, width=120, height=35))
+19:59:28.124 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:28.125 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1082, 208) using hierarchy based logic for wait
+19:59:28.925 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:29.882 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:29.899 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:59:30.359 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:31.286 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:59:31.626 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:32.880 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:33.231 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Gestión del agua, bounds=[67,371][164,392]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=371, width=97, height=21))
+19:59:33.751 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:33.752 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (115, 381) using hierarchy based logic for wait
+19:59:34.570 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:35.605 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:35.956 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:36.192 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=ZONAS, bounds=[1148,191][1267,226]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=1148, y=191, width=119, height=35))
+19:59:36.802 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:36.803 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (1207, 208) using hierarchy based logic for wait
+19:59:37.627 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:38.522 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.
+19:59:38.532 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:59:38.944 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:40.022 [ INFO] maestro.Maestro.scrollVertical: Scrolling vertically
+19:59:40.226 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:41.463 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:42.142 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tapping on element:  UiElement(treeNode=TreeNode(attributes={text=Inicio, bounds=[67,166][98,187]}, children=[], clickable=null, enabled=null, focused=null, checked=null, selected=null), bounds=Bounds(x=67, y=166, width=31, height=21))
+19:59:42.694 [ INFO] maestro.Maestro.tap-HgV9Ck0: Tap aimed via settled hierarchy
+19:59:42.695 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Tapping at (82, 176) using hierarchy based logic for wait
+19:59:42.844 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:44.429 [TRACE] maestro.utils.ScreenshotUtils.takeScreenshot: Taking screenshot to output sink
+19:59:44.451 [ INFO] maestro.Maestro.hierarchyBasedTap-ogj28Uc: Something has changed in the UI judging by view hierarchy. Proceed.

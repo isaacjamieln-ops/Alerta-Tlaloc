@@ -1,0 +1,463 @@
+{
+  "attributes" : {
+    "text" : "          \n\n",
+    "bounds" : "[0,0][1358,1753]",
+    "url" : "http://localhost:5173/#proyecto\\"
+  },
+  "children" : [ {
+    "attributes" : {
+      "bounds" : "[0,0][1358,1753]",
+      "resource-id" : "root"
+    },
+    "children" : [ {
+      "attributes" : {
+        "bounds" : "[0,0][1358,1753]"
+      },
+      "children" : [ {
+        "attributes" : {
+          "bounds" : "[0,0][265,585]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[18,28][246,106]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[26,32][68,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[36,35][59,71]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[80,32][229,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "ALERTA-TLALOC",
+                "bounds" : "[80,32][229,55]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "SMART WATER MANAGEMENT",
+                "bounds" : "[80,60][229,74]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "text" : "MENÚ PRINCIPAL",
+            "bounds" : "[18,106][246,146]"
+          }
+        }, {
+          "attributes" : {
+            "bounds" : "[18,146][246,412]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[18,146][246,206]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,161][54,191]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Inicio",
+                "bounds" : "[67,166][98,187]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,214][246,275]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,229][54,260]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Dashboard",
+                "bounds" : "[67,234][130,255]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,283][246,343]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,298][54,328]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Predicciones",
+                "bounds" : "[67,303][139,323]"
+              }
+            }, {
+              "attributes" : {
+                "bounds" : "[242,301][245,324]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,351][246,412]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,366][54,397]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión del agua",
+                "bounds" : "[67,371][164,392]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[18,484][246,557]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[27,504][237,522]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[27,509][35,517]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Plataforma en desarrollo",
+                "bounds" : "[44,504][163,522]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "text" : "ALERTA-TLALOC © 2026",
+              "bounds" : "[27,538][237,552]"
+            }
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "text" : "- tapOn: point: 89%, 18% - tapOn: point: 83%, 18%",
+          "bounds" : "[265,0][1358,1753]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[265,0][1358,72]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[303,25][469,46]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "PLATAFORMA /",
+                "bounds" : "[303,27][383,43]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Predicciones",
+                "bounds" : "[393,25][469,46]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[1168,27][1320,44]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[1168,32][1175,39]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión inteligente del agua",
+                "bounds" : "[1184,27][1320,44]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[265,72][1358,1671]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[307,108][1316,1616]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[337,138][1286,225]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,138][790,225]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "text" : "INTELIGENCIA HÍDRICA Y MODELOS ML",
+                    "bounds" : "[337,138][790,154]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Predicciones del Sistema",
+                    "bounds" : "[337,162][790,198]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Análisis predictivo avanzado para la anticipación de eventos y riesgos en la red.",
+                    "bounds" : "[337,205][790,225]"
+                  }
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[1083,161][1286,201]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[1098,178][1105,185]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Modelo Activo: Tlaloc-ML (Atlas)",
+                    "bounds" : "[1114,172][1271,190]"
+                  }
+                } ]
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[337,255][1286,335]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[358,275][741,314]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "text" : "HORIZONTE DE PREDICCIÓN",
+                    "bounds" : "[358,275][741,291]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "Selecciona el intervalo de tiempo para evaluar la proyección del modelo.",
+                    "bounds" : "[358,296][741,314]"
+                  }
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[1069,273][1265,317]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "text" : "7 días",
+                    "bounds" : "[1074,278][1129,312]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "15 días",
+                    "bounds" : "[1134,278][1194,312]"
+                  }
+                }, {
+                  "attributes" : {
+                    "text" : "30 días",
+                    "bounds" : "[1199,278][1260,312]"
+                  }
+                } ]
+              } ]
+            }, {
+              "attributes" : {
+                "bounds" : "[337,355][1286,547]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[337,355][514,547]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[358,376][493,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Riesgo de Anomalía",
+                      "bounds" : "[358,377][449,408]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "!",
+                      "bounds" : "[459,376][493,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[358,432][493,526]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "ALTO",
+                      "bounds" : "[358,444][493,467]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "Probabilidad de variación crítica 25% en los próximos 30d.",
+                      "bounds" : "[358,472][493,526]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[530,355][707,547]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[551,376][686,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Pico Estimado",
+                      "bounds" : "[551,385][621,400]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "bounds" : "[652,376][686,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[551,442][686,526]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "5659.67 ",
+                      "bounds" : "[551,454][686,485]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "hm³",
+                        "bounds" : "[653,466][680,483]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Confianza del modelo predictivo: 92.6%",
+                      "bounds" : "[551,490][686,526]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[723,355][900,547]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[744,376][879,410]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Alertas Previas",
+                      "bounds" : "[744,385][817,400]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "i",
+                      "bounds" : "[845,376][879,410]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[744,424][879,526]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "3 ",
+                      "bounds" : "[744,436][879,467]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "Presas",
+                        "bounds" : "[766,448][808,465]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Requiere monitoreo preventivo en presas alertadas.",
+                      "bounds" : "[744,472][879,526]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[916,355][1093,547]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[937,376][1072,391]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Estabilidad Red",
+                      "bounds" : "[937,376][1013,391]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[937,442][1072,526]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "88.3 ",
+                      "bounds" : "[937,454][1072,485]"
+                    },
+                    "children" : [ {
+                      "attributes" : {
+                        "text" : "%",
+                        "bounds" : "[995,466][1007,483]"
+                      }
+                    } ]
+                  }, {
+                    "attributes" : {
+                      "text" : "Comportamiento estimado a 30d.",
+                      "bounds" : "[937,490][1072,526]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[1109,355][1286,547]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[1130,376][1265,391]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Estado Global",
+                      "bounds" : "[1130,376][1199,391]"
+                    }
+                  } ]
+                }, {
+                  "attributes" : {
+                    "bounds" : "[1130,447][1265,526]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "ALERTA",
+                      "bounds" : "[1130,459][1265,485]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "Proyección general del sistema hídrico.",
+                      "bounds" : "[1130,490][1265,526]"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

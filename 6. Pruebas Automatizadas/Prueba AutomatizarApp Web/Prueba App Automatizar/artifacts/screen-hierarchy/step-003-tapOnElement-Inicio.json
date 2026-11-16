@@ -1,0 +1,257 @@
+{
+  "attributes" : {
+    "text" : "          \n\n",
+    "bounds" : "[0,-2323][1358,585]",
+    "url" : "http://localhost:5173/#proyecto"
+  },
+  "children" : [ {
+    "attributes" : {
+      "bounds" : "[0,-2323][1358,585]",
+      "resource-id" : "root"
+    },
+    "children" : [ {
+      "attributes" : {
+        "bounds" : "[0,-2323][1358,585]"
+      },
+      "children" : [ {
+        "attributes" : {
+          "bounds" : "[0,0][265,585]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[18,28][246,106]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[26,32][68,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[36,35][59,71]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[80,32][229,74]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "text" : "ALERTA-TLALOC",
+                "bounds" : "[80,32][229,54]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "SMART WATER MANAGEMENT",
+                "bounds" : "[80,59][229,74]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "text" : "MENÚ PRINCIPAL",
+            "bounds" : "[18,106][246,146]"
+          }
+        }, {
+          "attributes" : {
+            "bounds" : "[18,146][246,412]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[18,146][246,206]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,161][54,191]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Inicio",
+                "bounds" : "[67,166][98,187]"
+              }
+            }, {
+              "attributes" : {
+                "bounds" : "[242,165][245,188]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,214][246,275]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,229][54,260]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Dashboard",
+                "bounds" : "[67,234][130,255]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,283][246,343]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,298][54,328]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Predicciones",
+                "bounds" : "[67,303][139,323]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[18,351][246,412]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[32,366][54,397]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Gestión del agua",
+                "bounds" : "[67,371][164,392]"
+              }
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[18,484][246,557]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[27,504][237,522]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[27,509][35,517]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Plataforma en desarrollo",
+                "bounds" : "[44,504][163,522]"
+              }
+            } ]
+          }, {
+            "attributes" : {
+              "text" : "ALERTA-TLALOC © 2026",
+              "bounds" : "[27,538][237,552]"
+            }
+          } ]
+        } ]
+      }, {
+        "attributes" : {
+          "text" : "- tapOn: point: 89%, 18% - tapOn: point: 83%, 18%",
+          "bounds" : "[265,-2323][1358,585]"
+        },
+        "children" : [ {
+          "attributes" : {
+            "bounds" : "[265,-2251][1358,503]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "bounds" : "[307,-291][1316,153]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[295,-144][1328,153]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[295,-100][812,153]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[307,-100][800,153]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Misión",
+                      "bounds" : "[338,11][769,36]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "Proporcionar una plataforma tecnológica que facilite el acceso, análisis e interpretación de información relacionada con la gestión del agua, apoyando decisiones más informadas.",
+                      "bounds" : "[338,48][769,122]"
+                    }
+                  } ]
+                } ]
+              }, {
+                "attributes" : {
+                  "bounds" : "[812,-100][1328,153]"
+                },
+                "children" : [ {
+                  "attributes" : {
+                    "bounds" : "[824,-100][1316,153]"
+                  },
+                  "children" : [ {
+                    "attributes" : {
+                      "text" : "Visión",
+                      "bounds" : "[855,11][1285,36]"
+                    }
+                  }, {
+                    "attributes" : {
+                      "text" : "Ser una propuesta tecnológica que impulse el uso de datos y herramientas digitales como apoyo para una gestión del agua más eficiente, consciente y sostenible.",
+                      "bounds" : "[855,48][1285,122]"
+                    }
+                  } ]
+                } ]
+              } ]
+            } ]
+          }, {
+            "attributes" : {
+              "bounds" : "[307,178][1316,448]"
+            },
+            "children" : [ {
+              "attributes" : {
+                "bounds" : "[333,224][1290,278]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[795,228][829,274]"
+                }
+              } ]
+            }, {
+              "attributes" : {
+                "text" : "La información también puede proteger el agua.",
+                "bounds" : "[333,294][1290,324]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Explora los datos y conoce las herramientas que forman parte de Alerta-Tlaloc.",
+                "bounds" : "[333,334][1290,357]"
+              }
+            }, {
+              "attributes" : {
+                "text" : "Ir al Dashboard",
+                "bounds" : "[732,357][891,402]"
+              },
+              "children" : [ {
+                "attributes" : {
+                  "bounds" : "[859,370][871,388]"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "attributes" : {
+            "bounds" : "[265,525][1358,585]"
+          },
+          "children" : [ {
+            "attributes" : {
+              "text" : "ALERTA-TLALOC",
+              "bounds" : "[307,547][397,563]"
+            }
+          }, {
+            "attributes" : {
+              "text" : "Tecnología orientada a un futuro sostenible.",
+              "bounds" : "[1101,547][1316,563]"
+            }
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

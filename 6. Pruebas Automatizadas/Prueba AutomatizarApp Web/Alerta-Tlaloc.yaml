@@ -1,0 +1,188 @@
+appId: http://localhost:5173/#proyecto
+---
+- launchApp:
+    clearState: true
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll  
+- tapOn: "Dashboard"
+- tapOn: "Inicio"
+- tapOn: "Conocer el proyecto"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 18000))
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll 
+- scroll
+- scroll
+- tapOn: "Ir al Dashboard"
+- tapOn: "Inicio"
+- tapOn: "Explorar Dashboard"
+- tapOn: "Inicio"
+- tapOn: "Dashboard"
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- tapOn: "Dashboard"
+- tapOn: "Hoy"
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- tapOn: "Dashboard"
+- tapOn: "7 días"
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- tapOn: "Dashboard"
+- tapOn: "14 días"
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- tapOn: "Dashboard"
+- tapOn: "21 días"
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- tapOn: "Dashboard"
+- tapOn: "31 días"
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll
+- scroll 
+- tapOn: "Exportar reporte en PDF"
+- tapOn: "Dashboard"
+- scroll
+- tapOn: " Datos"
+- scroll
+- tapOn: "En línea"
+- tapOn: "Advertencia"
+- tapOn: "Alarma"
+- tapOn: "Desconectados"
+- tapOn: "Todos"
+- tapOn:
+    id: " Presa CCHNL"
+- tapOn:
+    point: 78%,38%
+- tapOn:
+    id: " Presa SLSGJ"
+- tapOn:
+    id: " Presa CPRNL"
+- tapOn: "×"
+- tapOn: "+"
+- tapOn: "+"
+- tapOn: "+"
+- tapOn: "+"
+- tapOn: "−"
+- tapOn: "↺"
+- scroll
+- tapOn:
+    text: " Datos"
+    index: 1
+- tapOn:
+    text: " Gráfica"
+    index: 1
+- tapOn: " Datos"
+- tapOn: " Gráfica"
+- scroll
+- scroll
+- tapOn: " Datos"
+- tapOn: " Gráfica"
+- tapOn: "Consultar todas las alarmas"
+- tapOn:
+    text: "Críticas"
+    index: 1
+- tapOn:
+    text: "Advertencias"
+    index: 1
+- tapOn: "Cerrar"
+- tapOn:
+    text: " Datos"
+    index: 1
+- tapOn:
+    text: " Gráfica"
+    index: 1
+- scroll
+- tapOn: "Predicciones"
+- tapOn: "15 días"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "30 días"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "7 días"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- scroll
+- scroll
+- tapOn: "Actual"
+- tapOn: "Predicción (7d)"
+- scroll
+- scroll
+- tapOn: "Gestión del agua"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "SIMULADOR"
+- scroll
+- scroll
+- tapOn: "Gestión del agua"
+- tapOn: "ZONAS"
+- scroll
+- scroll
+- tapOn: "Gestión del agua"
+- tapOn: "EN VIVO"
+- tapOn: "Presa CPRNL"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "Presa EPLGJ"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "Presa INFMC"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "Presa LBQCH"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "Presa LDCJL"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "Presa PMHSI"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "Presa SLSGJ"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "Presa VBRMX"
+- evalScript: |-
+    new Promise(resolve => setTimeout(resolve, 60000))
+- tapOn: "SIMULADOR"
+- scroll
+- scroll
+- tapOn: "Gestión del agua"
+- tapOn: "ZONAS"
+- scroll
+- scroll
+- tapOn: "Inicio"
